@@ -1,0 +1,41 @@
+* {
+  font-family: "JetBrainsMono", monospace;
+  font-size: 18px;
+}
+
+window {
+  background-color: rgba(26, 29, 35, 0.9);
+  border-radius: 10px;
+}
+
+#entry {
+  padding: 4px;
+}
+
+#entry:selected {
+  background-color: #bcd;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #bcd, #639);
+}
+
+#text {
+  padding: 4px;
+  color: white;
+}
+
+#text:selected {
+  color: #333;
+}
+
+#input {
+  background-color: rgba(26, 29, 35, 0.1);
+  color: white;
+  border-radius: 10px;
+  margin: 5px;
+  border-color: #bcd;
+}
+
+#img {
+  margin-left: .25em;
+  margin-right: .25em;
+}
