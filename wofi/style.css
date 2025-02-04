@@ -10,18 +10,29 @@ window {
 
 #entry {
   padding: 4px;
+  /* background-color: red; */
 }
 
 #entry:selected {
   background-color: #bcd;
-  border-radius: 10px;
   background: linear-gradient(90deg, #bcd, #639);
+  border-radius: 10px;
+}
+
+#expander-box {
+  background-color: rgba(26, 29, 35, 0.9);
+  /* background-color: #bcd; */
+  border-radius: 12px;
 }
 
 #text {
   padding: 4px;
   color: white;
 }
+
+/* #expander-box #text { */
+/*   color: #333; */
+/* } */
 
 #text:selected {
   color: #333;
@@ -38,4 +49,8 @@ window {
 #img {
   margin-left: .25em;
   margin-right: .25em;
+}
+
+#scroll {
+  background-color: transparent;
 }
