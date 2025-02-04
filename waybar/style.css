@@ -53,6 +53,10 @@ window#waybar {
   padding: 2px 15px;
 }
 
+#tray {
+  padding: 2px 7px;
+}
+
 #pulseaudio {
   color: #FF9CCE;
   font-size: 14px;
@@ -110,7 +114,7 @@ window#waybar {
 tooltip {
   border-radius: 15px;
   background-color: rgba(26, 29, 35, 0.9);
-  border: 1px solid #BD9AC5;
+  border: 2px solid #BD9AC5;
 }
 
 tooltip label {

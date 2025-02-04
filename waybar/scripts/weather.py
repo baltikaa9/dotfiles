@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 
 import json
+import re
 import requests
 
 from pyquery import PyQuery
 
+
+# Source: https://gist.github.com/Surendrajat/ff3876fd2166dd86fb71180f4e9342d7
 
 ################################### CONFIGURATION ###################################
 
@@ -19,7 +22,7 @@ location_id = "3b28f68de46288e31b588025e9b10e0ec9ab91fd84df10904b50f787551e277a"
 unit = "metric"  # metric or imperial
 
 # forcase type
-forecast_type = "Daily"  # Hourly or Daily
+forecast_type = "Today"  # Hourly or Today
 
 ########################################## MAIN ##################################
 
@@ -57,7 +60,8 @@ temp = html_data("span[data-testid='TemperatureValue']").eq(0).text()
 
 # current status phrase
 status = html_data("div[data-testid='wxPhrase']").text()
-status = f"{status[:16]}.." if len(status) > 17 else status
+# status = f"{status[:16]}\n{status[16:]}" if len(status) > 17 else status
+status = re.sub(r"(\S+ \S+)\s+", r"\1\n", str(status))
 
 # status code
 status_code_class = html_data("#regionHeader").attr("class")
@@ -105,22 +109,26 @@ visbility_text = f"  {visbility}"
 air_quality_index = html_data("text[data-testid='DonutChartValue']").text()
 
 # rain prediction
-r_prediction_text = html_data(f"section[aria-label='{forecast_type} Forecast']")(
+# r_prediction_text = html_data(f"section[aria-label='{forecast_type} Forecast']")(
+r_prediction_text = html_data(f"section[data-testid='{forecast_type}WeatherModule']")(
     "div[data-testid='SegmentPrecipPercentage'] > span"
 ).text()
-r_prediction = str(r_prediction_text).replace("Chance of Rain", "")
 r_prediction = (
-    f"    ({forecast_type}) {r_prediction}" if len(r_prediction) > 0 else r_prediction
+    str(r_prediction_text)
+    .replace("Chance of Rain", "")
+    .replace("Вероятность дождя", "")
+    .replace(" ", "  ")
 )
 
+r_prediction = f"    {r_prediction}" if len(r_prediction) > 0 else r_prediction
+
 # temperature prediction
-t_prediction_text = html_data(f"section[aria-label='{forecast_type} Forecast']")(
+# t_prediction_text = html_data(f"section[aria-label='{forecast_type} Forecast']")(
+t_prediction_text = html_data(f"section[data-testid='{forecast_type}WeatherModule']")(
     "div[data-testid='SegmentHighTemp'] > span"
 ).text()
-t_prediction = str(t_prediction_text).replace(" /", "/")
-t_prediction = (
-    f"   ({forecast_type}) {t_prediction}" if len(t_prediction) > 0 else t_prediction
-)
+t_prediction = str(t_prediction_text).replace(" /", "/").replace(" ", "  ")
+t_prediction = f"    {t_prediction}" if len(t_prediction) > 0 else t_prediction
 
 # pretty print all data
 # print(f"temp: {temp}\nstatus: {status}\nstatus_code: {status_code}\nicon: {icon}\
@@ -150,7 +158,7 @@ if t_prediction:
 
 # print waybar module data
 out_data = {
-    "text": f"{icon}   {temp}",
+    "text": f"{icon}  {temp}",
     "alt": status,
     "tooltip": tooltip_text,
     "class": status_code,
