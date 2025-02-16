@@ -8,25 +8,25 @@ layer=overlay
 width=300
 height=500
 padding=10
-format=<b><span foreground="#BD9AC5">%a</span></b>\n<b>%s</b>\n%b
+format=<b><span color="#BD9AC5">%a</span></b>\n<b>%s</b>\n<span weight="light">%b</span>
 default-timeout=30000
-output=DP-1
+#output=DP-1
 progress-color=over #414559
 #group-by=app-name
 
 
 
 [grouped]
-format=<b><span foreground="#BD9AC5">%a</span></b>\n<b>%s (%g)</b>\n%b
+format=<b><span color="#BD9AC5">%a</span></b>\n<b>%s (%g)</b>\n<span weight="light">%b</span>
 
 [app-name="Telegram Desktop"]
 border-color=#24A1DE
 #group-by=summary
-format=<b><span foreground="#24A1DE">%a</span></b>\n<b>%s</b>\n%b
+format=<b><span color="#24A1DE">%a</span></b>\n<b>%s</b>\n<span weight="light">%b</span>
 
 [app-name=flameshot]
 border-color=#8800AA
-format=<b><span foreground="#8800AA">%a</span></b>\n<b>%s</b>\n%b
+format=<b><span color="#8800AA">%a</span></b>\n<b>%s</b>\n<span weight="light">%b</span>
 
 [body="grim's screenshot component is implemented based on wlroots, it may not be used in GNOME or similar desktop environments"]
 invisible=1

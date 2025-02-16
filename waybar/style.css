@@ -40,7 +40,10 @@ window#waybar {
 #language,
 #tray,
 #custom-mediaplayer,
-#custom-weather {
+#custom-weather,
+#window,
+#custom-menu,
+#backlight {
   background: rgb(26, 29, 35);
   padding: 2px 10px;
   margin: 5px;
@@ -48,12 +51,18 @@ window#waybar {
   font-weight: bold;
 }
 
+/* make window module transparent when no windows present */
+window#waybar.empty #window {
+  background-color: transparent;
+}
+
 #clock {
   color: #E6B9C6;
   padding: 2px 15px;
 }
 
-#tray {
+#tray,
+#window {
   padding: 2px 7px;
 }
 
@@ -76,7 +85,8 @@ window#waybar {
   color: #20B2AA;
 }
 
-#custom-brightness {
+#custom-brightness,
+#backlight {
   font-size: 14px;
 }
 

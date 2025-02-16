@@ -15,8 +15,9 @@ window {
 
 #entry:selected {
   background-color: #bcd;
-  background: linear-gradient(90deg, #bcd, #639);
+  /* background: linear-gradient(90deg, #bcd, #639); */
   border-radius: 10px;
+  margin: 0 5px;
 }
 
 #expander-box {
