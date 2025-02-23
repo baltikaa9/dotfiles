@@ -17,6 +17,7 @@ window#waybar {
   margin: 5px;
   padding: 0px 5px;
   border-radius: 15px;
+  /* box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.6); */
 }
 
 #workspaces button {
@@ -49,6 +50,8 @@ window#waybar {
   margin: 5px;
   border-radius: 15px;
   font-weight: bold;
+  /* box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.6); */
+  /* box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.6); */
 }
 
 /* make window module transparent when no windows present */

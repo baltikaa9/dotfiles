@@ -103,7 +103,7 @@ humidity_text = f"  {humidity}"
 
 # visibility
 visbility = html_data("span[data-testid='VisibilityValue']").text()
-visbility_text = f"  {visbility}"
+visbility_text = f" {visbility}"
 
 # air quality index
 air_quality_index = html_data("text[data-testid='DonutChartValue']").text()
