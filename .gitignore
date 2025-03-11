@@ -41,3 +41,36 @@ yandex-music*
 Code - OSS/
 Unknown Organization/
 obs-studio/
+KDE/
+PlasmaDiscoverUpdates
+PlasmaUserFeedback
+Trolltech.conf
+baloofilerc
+bluedevilglobalrc
+discoverrc
+gtkrc
+gtkrc-2.0
+kactivitymanagerd-statsrc
+kactivitymanagerdrc
+kcminputrc
+kconf_updaterc
+kde.org/
+kded5rc
+kdedefaults/
+kglobalshortcutsrc
+kioslaverc
+ksmserverrc
+ktimezonedrc
+kwalletrc
+kwinoutputconfig.json
+kwinrc
+libaccounts-glib/
+plasma-localerc
+plasma-org.kde.plasma.desktop-appletsrc
+plasma-welcomerc
+plasmanotifyrc
+plasmarc
+plasmashellrc
+powermanagementprofilesrc
+session/
+spectaclerc
