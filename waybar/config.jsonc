@@ -1,6 +1,6 @@
 {
     "layer": "top",
-    "modules-left": ["hyprland/workspaces", "custom/menu", "hyprland/window"],
+    "modules-left": ["hyprland/workspaces", "custom/menu"/*, "hyprland/window"*/],
     "modules-center": ["clock"],
     "modules-right": ["tray", "custom/weather", "custom/mediaplayer~", "pulseaudio", "backlight", "hyprland/language"],
     "reload_style_on_change": true,

@@ -9,7 +9,7 @@ width=300
 height=500
 padding=10
 format=<b><span color="#BD9AC5">%a</span></b>\n<b>%s</b>\n<span weight="light">%b</span>
-default-timeout=30000
+default-timeout=10000
 output=HDMI-A-1
 progress-color=over #414559
 #group-by=app-name

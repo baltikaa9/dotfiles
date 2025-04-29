@@ -140,3 +140,4 @@ alias p10k-colors='for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i
 # Created by `pipx` on 2025-02-01 20:12:14
 export PATH="$PATH:/home/baltika/.local/bin"
 ___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
+eval "$(uvx --generate-shell-completion zsh)"
