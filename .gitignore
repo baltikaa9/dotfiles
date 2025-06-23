@@ -81,3 +81,5 @@ clipse/*
 !clipse/config.json
 !clipse/custom_theme.json
 obsidian/
+CurseForge/
+ow-electron/
