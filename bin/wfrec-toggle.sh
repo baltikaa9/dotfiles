@@ -11,6 +11,6 @@ fi
 
 # иначе — стартуем новую запись
 mkdir -p "$VIDEDIR"
-wf-recorder -g "$(slurp)" -f "$VIDEODIR/$(date +'%Y_%m_%d_%H_%M_%S').mp4" &
+wf-recorder --audio --framerate 60 -g "$(slurp)" -f "$VIDEODIR/$(date +'%Y_%m_%d_%H_%M_%S').mp4" &
 echo $! > "$PIDFILE"
 
