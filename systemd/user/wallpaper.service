@@ -1,0 +1,6 @@
+[Unit]
+Description=Set half-day wallpaper (oneshot)
+
+[Service]
+Type=oneshot
+ExecStart=%h/.config/bin/wallpaper.sh
