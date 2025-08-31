@@ -1,5 +1,5 @@
 [Unit]
-Description=Run halfday-wallpaper at 06:00 and 18:00
+Description=Run wallpaper at 06:00 and 18:00
 
 [Timer]
 OnCalendar=*-*-* 06:00:00
