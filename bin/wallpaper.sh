@@ -11,7 +11,7 @@ else
   img="$nightImg"
 fi
 
-sleep 1
+# sleep 1
 
 if command -v swww >/dev/null 2>&1; then
   # Пример вызова swww (отредактируй опции если нужно)
