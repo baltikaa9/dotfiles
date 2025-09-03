@@ -1,9 +1,10 @@
 [Unit]
-Description=Set half-day wallpaper (oneshot)
+Description=Set half-day wallpaper
+After=graphical-session.target
 
 [Service]
 Type=oneshot
-ExecStart=%h/.config/bin/wallpaper.sh
+ExecStart=/home/baltika/.config/bin/wallpaper.sh
 
 [Install]
 WantedBy=default.target

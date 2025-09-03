@@ -6,16 +6,18 @@ nightImg="$HOME/Pictures/wallpapers/Forest-Dark.png"
 hours=$(date +%k)
 
 if (( hours >= 6 && hours < 18 )); then
-  img="$dayImg"
-else 
   img="$nightImg"
+else 
+  img="$dayImg"
 fi
+
+# hyprctl hyprpaper reload "DP-2,$img"
 
 sleep 1
 
 if command -v swww >/dev/null 2>&1; then
   # Пример вызова swww (отредактируй опции если нужно)
-  swww img $img -o DP-2
+  swww img "$img" -o DP-2 &
   exit $?
 fi
 
