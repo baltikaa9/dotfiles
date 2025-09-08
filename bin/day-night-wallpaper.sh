@@ -11,9 +11,10 @@ else
   img="$nightImg"
 fi
 
-sleep 1
+# sleep 1
 
 if command -v swww >/dev/null 2>&1; then
+  swww-daemon
   # Пример вызова swww (отредактируй опции если нужно)
   swww img $img -o DP-2
   exit $?

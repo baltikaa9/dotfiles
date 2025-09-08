@@ -4,7 +4,7 @@ After=graphical-session.target
 
 [Service]
 Type=oneshot
-ExecStart=/home/baltika/.config/bin/wallpaper.sh
+ExecStart=/home/baltika/.config/bin/day-night-wallpaper.sh
 
 [Install]
 WantedBy=default.target
