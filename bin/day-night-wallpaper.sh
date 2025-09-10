@@ -37,7 +37,8 @@ fi
 max_wait=30
 count=0
 
-while ! swww query 2>/dev/null && [ $count -lt $max_wait ]; do
+while ! swww query && [ $count -lt $max_wait ]; do
+    echo "swww-daemon не запущен"
     sleep 1
     count=$((count + 1))
 done
