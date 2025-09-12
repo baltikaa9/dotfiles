@@ -146,3 +146,7 @@ eval "$(uvx --generate-shell-completion zsh)"
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
 eval "$(uv generate-shell-completion zsh)"
+
+export PATH="$PATH:/usr/local/texlive/2025/bin/x86_64-linux"
+export MANPATH="$MANPATH:/usr/local/texlive/2025/texmf-dist/doc/man"
+export INFOPATH="$INFOPATH:/usr/local/texlive/2025/texmf-dist/doc/info"

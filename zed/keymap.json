@@ -41,5 +41,11 @@
     "bindings": {
       "shift-f10": "task::Rerun"
     }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-v": "terminal::Paste"
+    }
   }
 ]

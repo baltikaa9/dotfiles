@@ -2,7 +2,7 @@
     "layer": "top",
     "modules-left": ["hyprland/workspaces", "custom/menu"/*, "hyprland/window"*/],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "custom/weather", "custom/mediaplayer~", "pulseaudio", "backlight", "hyprland/language"],
+    "modules-right": ["tray", "cava", "custom/weather", "custom/mediaplayer~", "pulseaudio", "backlight", "hyprland/language"],
     "reload_style_on_change": true,
     "hyprland/window": {
         "max-length": 50
@@ -114,5 +114,30 @@
         "return-type": "json",
         "on-click": "xdg-open https://weather.com/ru-RU/weather/today/l/3b28f68de46288e31b588025e9b10e0ec9ab91fd84df10904b50f787551e277a/"
         // "format-alt": "{alt}"
+    },
+    "cava": {
+        // "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+        "framerate": 144,
+        "autosens": 1,
+        //"sensitivity": 10,
+        "bars": 10,
+        // "lower_cutoff_freq": 50,
+        // "higher_cutoff_freq": 10000,
+        "sleep_timer": 5,
+        "hide_on_silence": true,
+        // "format_silent": "quiet",
+        "method": "pulse",
+        "source": "auto",
+        "stereo": true,
+        "reverse": false,
+        "bar_delimiter": 0,
+        "monstercat": false,
+        "waves": false,
+        "noise_reduction": 0.77,
+        "input_delay": 2,
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+        "actions": {
+            "on-click-right": "mode"
+        }
     }
 }

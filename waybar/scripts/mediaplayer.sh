@@ -7,4 +7,5 @@ do
     elif [ "$player_status" = "Paused" ]; then
         echo " $(playerctl metadata title) - $(playerctl metadata artist)"
     fi
+    sleep 1
 done
