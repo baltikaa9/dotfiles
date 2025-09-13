@@ -2,7 +2,7 @@
     "layer": "top",
     "modules-left": ["hyprland/workspaces", "custom/menu"/*, "hyprland/window"*/],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "cava", "custom/weather", "custom/mediaplayer~", "pulseaudio", "backlight", "hyprland/language"],
+    "modules-right": ["tray", "custom/weather~", "custom/mediaplayer~", "cava", "pulseaudio", "backlight", "hyprland/language"],
     "reload_style_on_change": true,
     "hyprland/window": {
         "max-length": 50
@@ -106,6 +106,7 @@
         "max-length": 40,
         //"interval": 30, // Remove this if your script is endless and write in loop
         "exec": "~/.config/waybar/scripts/mediaplayer.sh 2> /dev/null" // Script in resources folder
+        // "exec": "echo ' '" // Script in resources folder
         //"exec-if": "pgrep spotify"
     },
     "custom/weather": {
@@ -123,12 +124,12 @@
         "bars": 10,
         // "lower_cutoff_freq": 50,
         // "higher_cutoff_freq": 10000,
-        "sleep_timer": 5,
-        "hide_on_silence": true,
-        // "format_silent": "quiet",
-        "method": "pulse",
-        "source": "auto",
-        "stereo": true,
+        "sleep_timer": 2,
+        // "hide_on_silence": true,
+        "format_silent": "⏸",
+        "method": "pipewire",
+        // "source": "alsa_output.pci-0000_0c_00.3.analog-stereo.monitor",
+        "stereo": false,
         "reverse": false,
         "bar_delimiter": 0,
         "monstercat": false,
