@@ -12,17 +12,23 @@
   },
   "agent": {
     "default_model": {
-      "provider": "openai",
-      "model": "gpt-5"
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4"
     },
     "default_profile": "ask"
   },
   "ui_font_size": 16,
   "buffer_font_size": 15,
-  "theme": {
-    "mode": "dark",
-    "light": "One Light",
-    "dark": "Ayu Mirage"
+  "theme": "Nightfox - blurred",
+  // "theme": "Duskfox - blurred",
+  "experimental.theme_overrides": {
+    "background": "#1a1d2380",
+    // "background": "#232136b2",
+    "syntax": {
+      "type": {
+        "color": "#8cb6ff"
+      }
+    }
   },
   "base_keymap": "JetBrains",
   "autosave": "on_focus_change",
@@ -36,5 +42,6 @@
         "parser": "php"
       }
     }
-  }
+  },
+  "proxy": "http://127.0.0.1:1080"
 }
