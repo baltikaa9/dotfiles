@@ -2,7 +2,7 @@
     "layer": "top",
     "modules-left": ["hyprland/workspaces", "custom/menu"/*, "hyprland/window"*/],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "custom/weather~", "custom/mediaplayer~", "cava", "pulseaudio", "backlight", "hyprland/language"],
+    "modules-right": ["tray", "custom/weather~", "custom/mediaplayer~", "cava", "wireplumber~", "pulseaudio", "backlight", "hyprland/language"],
     "reload_style_on_change": true,
     "hyprland/window": {
         "max-length": 50
@@ -38,6 +38,17 @@
         "on-click": "pavucontrol",
         "tooltip": false
     },
+    "wireplumber": { 
+        "format": "{icon}  {volume}%", 
+        "format-muted": "󰝟",
+        "format-icons": { 
+            "default": ["\uf026", "\uf027", "\uf028"] 
+        },
+        "scroll-step": 5,
+        "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click": "helvum",
+        "tooltip": false
+    },
     "tray": {
         "icon-size": 15,
         "spacing": 10
@@ -61,7 +72,7 @@
         "min": 0,
         "max": 100,
         "orientation": "horizontal",
-        "device": "intel_backlight"
+        "device": "ddcci1"
     },
     //ddcutil version
     "custom/brightness": {
