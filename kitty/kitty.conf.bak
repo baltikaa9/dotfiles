@@ -1,12 +1,62 @@
-background_opacity 0.6
+background_opacity 0.5
 
 font_size 12
 #disable_ligatures never
 
 
 # BEGIN_KITTY_FONTS
-font_family      family="MesloLGS NF"
+font_family      family="JetBrains Mono"
 bold_font        auto
 italic_font      auto
 bold_italic_font auto
 # END_KITTY_FONTS
+
+cursor_blink_interval -1 linear ease-out
+
+map ctrl+c copy_or_interrupt
+map ctrl+v paste_from_clipboard
+# foreground #cdd6f4
+#foreground #b4befe
+# background #1e1e2e
+# background #1A1D23
+# background #232136
+# color0 #45475a
+# color0 #2F3244
+# color0 #1A1D23
+# color1 #f38ba8
+# color2 #a6e3a1
+# color3 #f9e2af
+# color4 #89b4fa
+# color5 #cba6f7
+# color6 #94e2d5
+#color7 #b4befe
+# color7 #cdd6f4
+
+# color1 #D8688A
+# color2 #36718C
+# color3 #E5B574
+# color4 #93C0CB
+# color5 #B79CD9
+# color6 #8A66A3
+# color6 #DDB2B3
+
+#color8  #2A2D33
+# color9  #FF9DB8
+# color10 #4687A2
+# color11 #F5C584
+# color12 #A3D0DB
+# color13 #DBB6FF
+# color14 #9A76B3
+# color15 #DDE6FF
+
+#tab_bar_min_tabs            1
+#tab_bar_edge                bottom
+#tab_bar_style               powerline
+#tab_powerline_style         slanted
+#tab_title_template          {title}{' :{}:'.format(num_windows) if num_windows > 1 else ''}
+
+
+# BEGIN_KITTY_THEME
+# Catppuccin-Mocha
+include current-theme.conf
+# END_KITTY_THEME
