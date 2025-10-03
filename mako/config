@@ -19,14 +19,10 @@ progress-color=over #414559
 [grouped]
 format=<b><span color="#BD9AC5">%a</span></b>\n<b>%s (%g)</b>\n<span weight="light">%b</span>
 
-[app-name="Telegram Desktop" app-name="AyuGram Desktop"]
+[app-name="Telegram Desktop"]
 border-color=#24A1DE
 #group-by=summary
 format=<b><span color="#24A1DE">%a</span></b>\n<b>%s</b>\n<span weight="light">%b</span>
-
-[app-name=flameshot]
-border-color=#8800AA
-format=<b><span color="#8800AA">%a</span></b>\n<b>%s</b>\n<span weight="light">%b</span>
 
 [body="grim's screenshot component is implemented based on wlroots, it may not be used in GNOME or similar desktop environments"]
 invisible=1
