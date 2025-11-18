@@ -19,26 +19,47 @@
     }
   },
   {
+    "context": "Workspace",
+    "bindings": {
+      "alt-f10": "task::Spawn"
+    }
+  },
+  {
     "context": "Editor",
     "bindings": {
-      "shift-f10": "task::Spawn",
-      "ctrl-w": "pane::CloseActiveItem",
-      "alt-left": "pane::ActivatePreviousItem",
-      "alt-right": "pane::ActivateNextItem"
+      "shift-f10": null
     }
   },
   {
     "context": "Workspace",
     "bindings": {
-      "alt-f10": "task::Rerun"
+      "shift-f10": "task::Rerun"
     }
   },
   {
     "context": "Terminal",
     "bindings": {
-      "ctrl-v": "terminal::Paste",
-      "ctrl-c": "terminal::Copy",
+      "ctrl-v": "terminal::Paste"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-c": "terminal::Copy"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
       "ctrl-shift-c": ["terminal::SendKeystroke", "ctrl-c"]
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-w": "pane::CloseActiveItem",
+      "alt-left": "pane::ActivatePrevItem",
+      "alt-right": "pane::ActivateNextItem"
     }
   }
 ]

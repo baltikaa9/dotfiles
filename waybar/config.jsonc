@@ -159,7 +159,10 @@
 	    "title-len": 15,
 	    "player-icons": {
 		    "mpv": "🎵",
-		    "chromium": "🎵"
+		    "chromium": "🎵",
+		    "firefox": "🦊",
+		    "firefox": "🌸",
+		    "spotify": "♪"
 	    },
 	    "status-icons": {
 	        "paused": "▶",

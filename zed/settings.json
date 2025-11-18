@@ -13,10 +13,10 @@
   },
   "agent": {
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4"
+      "provider": "google",
+      "model": "gemini-2.5-pro"
     },
-    "default_profile": "ask"
+    "default_profile": "write"
   },
   "buffer_font_family": "JetBrains Mono",
   "ui_font_size": 16,
@@ -46,5 +46,6 @@
     }
   },
   "proxy": "http://127.0.0.1:1080",
-  "formatter": "prettier"
+  "formatter": "prettier",
+  "snippet_sort_order": "top"
 }

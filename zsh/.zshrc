@@ -128,7 +128,7 @@ alias gitlog='git log --oneline --graph --all'
 alias df='duf'
 alias find='fd'
 alias top='btop'
-alias man='tldr'
+# alias man='tldr'
 alias du='ncdu --color dark'
 alias ping='gping'
 alias backlight-reload='echo 0x37 | sudo tee /sys/bus/i2c/devices/i2c-1/delete_device && echo ddcci 0x37 | sudo tee /sys/bus/i2c/devices/i2c-1/new_device'
@@ -148,3 +148,4 @@ eval "$(uvx --generate-shell-completion zsh)"
 eval "$(uv generate-shell-completion zsh)"
 
 export PATH=$PATH:/home/baltika/.spicetify
+eval "$(uv generate-shell-completion zsh)"

@@ -44,7 +44,7 @@ while ! swww query && [ $count -lt $max_wait ]; do
 done
 
 if swww query 2>/dev/null; then
-    swww img "$img" -o DP-2
+    swww img "$img" -o DP-1
 else
   echo "Ошибка: swww-daemon не доступен после $max_wait секунд ожидания" >&2
   exit 1
