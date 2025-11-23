@@ -27,7 +27,7 @@ window#waybar {
 #backlight,
 #cava,
 #mpris {
-  background: rgba(26, 29, 35, 0.5);
+  background: rgba(26, 29, 35, 0.7);
   padding: 2px 10px;
   margin: 5px;
   border-radius: 15px;

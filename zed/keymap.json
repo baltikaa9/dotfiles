@@ -24,7 +24,19 @@
       "shift-f10": "task::Spawn",
       "ctrl-w": "pane::CloseActiveItem",
       "alt-left": "pane::ActivatePreviousItem",
-      "alt-right": "pane::ActivateNextItem"
+      "alt-right": "pane::ActivateNextItem",
+      "ctrl-.": [
+        "editor::ToggleComments",
+        {
+          "advance_downwards": true
+        }
+      ],
+      "ctrl-divide": [
+        "editor::ToggleComments",
+        {
+          "advance_downwards": true
+        }
+      ]
     }
   },
   {
@@ -36,6 +48,7 @@
   {
     "context": "Terminal",
     "bindings": {
+      "shift-f10": "task::Spawn",
       "ctrl-v": "terminal::Paste",
       "ctrl-c": "terminal::Copy",
       "ctrl-shift-c": ["terminal::SendKeystroke", "ctrl-c"]

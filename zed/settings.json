@@ -7,24 +7,97 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "prettier": {
+    "allowed": true
+  },
+  "vim_mode": false,
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "context_servers": {
+    "mcp-server-context7": {
+      "source": "extension",
+      "enabled": true,
+      "settings": {
+        "context7_api_key": "ctx7sk-0636e754-612a-45c2-87cc-35ba61ac1657"
+      }
+    }
+  },
   "icon_theme": "Catppuccin Frappé",
   "terminal": {
     "dock": "bottom"
   },
   "agent": {
+    "play_sound_when_agent_done": true,
+    "always_allow_tool_actions": true,
+    "profiles": {
+      "ask": {
+        "name": "Ask",
+        "tools": {
+          "diagnostics": true,
+          "fetch": true,
+          "list_directory": true,
+          "project_notifications": false,
+          "now": true,
+          "find_path": true,
+          "read_file": true,
+          "open": true,
+          "grep": true,
+          "thinking": true,
+          "web_search": true
+        },
+        "enable_all_context_servers": false,
+        "context_servers": {
+          "mcp-server-context7": {
+            "tools": {
+              "resolve-library-id": true,
+              "get-library-docs": true
+            }
+          }
+        }
+      },
+      "write": {
+        "name": "Write",
+        "tools": {
+          "copy_path": true,
+          "create_directory": true,
+          "delete_path": true,
+          "diagnostics": true,
+          "edit_file": true,
+          "fetch": true,
+          "list_directory": true,
+          "project_notifications": false,
+          "move_path": true,
+          "now": true,
+          "find_path": true,
+          "read_file": true,
+          "open": true,
+          "grep": true,
+          "terminal": true,
+          "thinking": true,
+          "web_search": true
+        },
+        "enable_all_context_servers": true,
+        "context_servers": {
+          "mcp-server-context7": {
+            "tools": {
+              "resolve-library-id": true,
+              "get-library-docs": true
+            }
+          }
+        }
+      }
+    },
     "default_model": {
-      "provider": "google",
-      "model": "gemini-2.5-pro"
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-5"
     },
     "default_profile": "write"
   },
-  "buffer_font_family": "JetBrains Mono",
   "ui_font_size": 16,
   "buffer_font_size": 14,
   "theme": "Catppuccin Frappé (Blur) [Light]",
   "experimental.theme_overrides": {
-    // "background": "#1a1d23b2",
-    "background": "#1a1d2380",
+    "background": "#1a1d23b2",
+    // "background": "#1a1d2380",
     // "background": "#232136b2",
     "syntax": {
       "type": {
@@ -35,6 +108,18 @@
   "base_keymap": "JetBrains",
   "autosave": "on_focus_change",
   "languages": {
+    "Python": {
+      "show_whitespaces": "selection",
+      "format_on_save": "on",
+      "formatter": "language_server",
+      "indent_guides": {
+        "background_coloring": "disabled",
+        "active_line_width": 1,
+        "line_width": 1,
+        "enabled": true,
+        "coloring": "indent_aware"
+      }
+    },
     "PHP": {
       "format_on_save": "off",
       "language_servers": ["phpactor", "!intelephense", "!phptools"],
