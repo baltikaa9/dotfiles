@@ -14,7 +14,6 @@
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "context_servers": {
     "mcp-server-context7": {
-      "source": "extension",
       "enabled": true,
       "settings": {
         "context7_api_key": "ctx7sk-0636e754-612a-45c2-87cc-35ba61ac1657"
@@ -90,7 +89,7 @@
       "provider": "zed.dev",
       "model": "claude-sonnet-4-5"
     },
-    "default_profile": "ask"
+    "default_profile": "write"
   },
   "ui_font_size": 16,
   "buffer_font_size": 14,
