@@ -36,7 +36,8 @@
         {
           "advance_downwards": true
         }
-      ]
+      ],
+      "ctrl-y": "editor::Redo"
     }
   },
   {

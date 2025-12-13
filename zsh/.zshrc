@@ -135,6 +135,7 @@ alias backlight-reload='echo 0x37 | sudo tee /sys/bus/i2c/devices/i2c-1/delete_d
 alias p10k-colors='for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done'
 alias wfrec='wf-recorder -g "$(slurp)" -f ~/Videos/$(date +'%Y_%m_%d_%H_%M_%S').mp4'
 alias wfrecf='wf-recorder -f ~/Videos/$(date +'%Y_%m_%d_%H_%M_%S').mp4'
+alias subo='sudo'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -149,3 +150,4 @@ eval "$(uv generate-shell-completion zsh)"
 
 export PATH=$PATH:/home/baltika/.spicetify
 eval "$(uv generate-shell-completion zsh)"
+
