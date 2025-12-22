@@ -1,8 +1,8 @@
 {
     "layer": "top",
-    "modules-left": ["hyprland/workspaces", "custom/menu", /*"hyprland/window", */"tray"],
+    "modules-left": ["hyprland/workspaces", "custom/menu", "cpu", "memory", /*"hyprland/window", */"tray"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/weather~", "custom/mediaplayer~", "mpris", "custom/cava", "pulseaudio", "wireplumber~", "backlight", "cpu", "memory", "hyprland/language"],
+    "modules-right": ["custom/weather~", "custom/mediaplayer~", "mpris", "custom/cava", "pulseaudio", "wireplumber~", "backlight", /*"cpu", "memory", */"hyprland/language"],
     "reload_style_on_change": true,
     "hyprland/window": {
         "max-length": 50
@@ -15,7 +15,7 @@
     "memory": {
         "interval": 10,
         "format": " {used:0.1f}/{total:0.1f}",
-        // "format": "{}% ",
+        // "format": " {}%",
     },
     "hyprland/window": {
         "format": "",
