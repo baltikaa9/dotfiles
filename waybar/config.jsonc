@@ -1,11 +1,21 @@
 {
     "layer": "top",
-    "modules-left": ["hyprland/workspaces", "custom/menu"/*, "hyprland/window"*/, "tray"],
+    "modules-left": ["hyprland/workspaces", "custom/menu", /*"hyprland/window", */"tray"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/weather~", "custom/mediaplayer~", "mpris", "cava", "pulseaudio", "wireplumber~", "backlight", "hyprland/language"],
+    "modules-right": ["custom/weather~", "custom/mediaplayer~", "mpris", "custom/cava", "pulseaudio", "wireplumber~", "backlight", "cpu", "memory", "hyprland/language"],
     "reload_style_on_change": true,
     "hyprland/window": {
         "max-length": 50
+    },
+    "cpu": {
+        "interval": 10,
+        "format": " {usage}%",
+        "max-length": 10,
+    },
+    "memory": {
+        "interval": 10,
+        "format": " {used:0.1f}/{total:0.1f}",
+        // "format": "{}% ",
     },
     "hyprland/window": {
         "format": "",
@@ -28,7 +38,7 @@
         "interval": 1
     },
     "pulseaudio": { 
-        "format": "{icon}  {volume}%", 
+        "format": "{icon} {volume}%", 
         "format-muted": "󰝟",
         "format-icons": { 
             "default": ["\uf026", "\uf027", "\uf028"] 
@@ -60,7 +70,7 @@
         "tooltip": false
     },
     "backlight": {
-        "format": "{icon}  {percent}%",
+        "format": "{icon} {percent}%",
         "format-icons": ["\uDB80\uDCDE", "\uDB80\uDCDF", "\uDB80\uDCE0"],
         "interval": 1,
         "tooltip": false,
@@ -151,6 +161,11 @@
         "actions": {
             "on-click-right": "mode"
         }
+    },
+    "custom/cava": {
+        "format": "{}",
+        "exec": "cava -p ~/.config/waybar/cava.conf | sed -u 's/;//g; s/0/ /g; s/1/▂/g; s/2/▃/g; s/3/▄/g; s/4/▅/g; s/5/▆/g; s/6/▇/g; s/7/█/g; s/^[[:space:]]*$//'",
+        "restart-interval": 1
     },
     "mpris": {
 	    "format": "{status_icon} {player_icon} {title} - {artist}",
