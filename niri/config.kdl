@@ -1,0 +1,172 @@
+// #######################################################################################
+// NIRI CONFIG (ADAPTED FROM HYPRLAND)
+// #######################################################################################
+
+environment {
+    // Nvidia & Wayland fixes
+    "LIBVA_DRIVER_NAME" "nvidia"
+    "__GLX_VENDOR_LIBRARY_NAME" "nvidia"
+    "QT_QPA_PLATFORMTHEME" "qt6ct"
+    "LC_TIME" "ru_RU.UTF-8"
+    "WEBKIT_DISABLE_DMABUF_RENDERER" "1"
+    
+    // Cursors
+    "XCURSOR_THEME" "Bibata-Modern-Classic"
+    "XCURSOR_SIZE" "20"
+}
+
+input {
+    keyboard {
+        xkb {
+            layout "us,ru"
+            options "grp:alt_shift_toggle,grp_led:scroll"
+        }
+    }
+    touchpad { off; }
+    mouse {
+        accel-speed -0.7
+    }
+}
+
+// Мониторы (Координаты считаются автоматически, если не указать)
+output "DP-1" {
+    mode "1920x1080@144"
+    scale 1.0
+    position x=0 y=0
+}
+
+output "HDMI-A-1" {
+    mode "1920x1080@60"
+    position x=-1920 y=0
+}
+
+layout {
+    gaps 5
+    // Отступы как в твоем Hyprland (0 сверху, 20 по бокам и снизу)
+    preset-column-widths {
+        proportion 0.33
+        proportion 0.5
+        proportion 0.66
+    }
+    
+    default-column-width { proportion 0.5; }
+
+    focus-ring {
+        width 0
+        // active-color "#CDD6F4"
+        inactive-color "#595959aa"
+    }
+
+    struts {
+        left 20
+        right 20
+        bottom 20
+        // top 0 (Waybar сам зарезервирует место)
+    }
+}
+
+spawn-at-startup "waybar"
+spawn-at-startup "swww-daemon"
+spawn-at-startup "mako"
+spawn-at-startup "/usr/lib/hyprpolkitagent/hyprpolkitagent"
+spawn-at-startup "hypridle"
+spawn-at-startup "clipse -listen"
+spawn-at-startup "gnome-keyring-daemon --start --components=secrets"
+spawn-at-startup "sslocal -b 127.0.0.1:1080 --server-url ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprNlM5bG56VE45YTA2OUN1SDBFZks5@46.32.186.62:64809/"
+// Твой live wallpaper
+spawn-at-startup "sh" "-c" "~/.config/bin/live-wallpaper.sh"
+
+animations {
+    // Настройка плавности похожая на easeOutQuint
+    slowdown 1.2
+}
+
+window-rule {
+    // Закругление как в конфиге
+    geometry-corner-radius 15
+    clip-to-geometry true
+}
+
+// --- ПРАВИЛА ОКОН (WINDOW RULES) ---
+window-rule {
+    match app-id="^org.gnome.Nautilus$"
+    match app-id="^spotify$"
+    match app-id="^yandex-music$"
+    opacity 0.7
+}
+
+window-rule {
+    match title="Картинка в картинке"
+    open-floating true
+    default-floating-position x=1252 y=692
+}
+
+window-rule {
+    match app-id="clipse"
+    open-floating true
+    default-column-width { fixed 622; }
+    // Niri не поддерживает фиксированную высоту так же как Hypr, 
+    // но можно ограничить через блоки
+}
+
+// --- ГОРЯЧИЕ КЛАВИШИ (KEYBINDINGS) ---
+binds {
+    // Системные
+    Mod+Return { spawn "kitty"; }
+    Mod+Z { spawn "kitty"; }
+    Mod+X { spawn "wofi" "--show" "drun"; }
+    Mod+C { close-window; }
+    Mod+Alt+M { quit; }
+    Mod+E { spawn "nautilus"; }
+    Mod+B { spawn "zen-browser"; }
+    Mod+L { spawn "hyprlock"; }
+    Mod+T { spawn "telegram-desktop"; }
+    Mod+W { spawn "waypaper" "--random"; }
+    
+    // Управление окнами
+    Mod+F { switch-preset-column-width; }
+    Mod+Alt+F { maximize-column; }
+    Mod+Shift+F { fullscreen-window; }
+    Mod+Space { toggle-window-floating; }
+
+    // Навигация (Стрелки)
+    Mod+Left  { focus-column-left; }
+    Mod+Right { focus-column-right; }
+    Mod+Up    { focus-window-or-workspace-up; }
+    Mod+Down  { focus-window-or-workspace-down; }
+
+    // Перемещение окон
+    Mod+Alt+Left  { move-column-left; }
+    Mod+Alt+Right { move-column-right; }
+    
+    // Изменение размера (Resizing)
+    Mod+Shift+Left  { set-column-width "-10%"; }
+    Mod+Shift+Right { set-column-width "+10%"; }
+
+    // Воркспейсы (В Niri они вертикальные по дефолту)
+    Mod+1 { focus-workspace 1; }
+    Mod+2 { focus-workspace 2; }
+    Mod+3 { focus-workspace 3; }
+    Mod+4 { focus-workspace 4; }
+    Mod+5 { focus-workspace 5; }
+    
+    Mod+Ctrl+1 { move-window-to-workspace 1; }
+    Mod+Ctrl+2 { move-window-to-workspace 2; }
+    Mod+Ctrl+3 { move-window-to-workspace 3; }
+    Mod+Ctrl+4 { move-window-to-workspace 4; }
+
+    // Мультимедиа
+    XF86AudioRaiseVolume  { spawn "pactl" "set-sink-volume" "@DEFAULT_SINK@" "+5%"; }
+    XF86AudioLowerVolume  { spawn "pactl" "set-sink-volume" "@DEFAULT_SINK@" "-5%"; }
+    XF86AudioMute         { spawn "pactl" "set-sink-mute" "@DEFAULT_SINK@" "toggle"; }
+    XF86MonBrightnessUp   { spawn "brightnessctl" "set" "+10%"; }
+    XF86MonBrightnessDown { spawn "brightnessctl" "set" "10%-"; }
+
+    // Скриншоты
+    Print { spawn "sh" "-c" "grim -g \"$(slurp -w 0)\" -t ppm - | satty --filename -"; }
+    
+    // Clipboard (Clipse)
+    Mod+V { spawn "kitty" "--class" "clipse" "clipse"; }
+
+    Mod+M { quit; }
+}
