@@ -151,3 +151,4 @@ eval "$(uv generate-shell-completion zsh)"
 export PATH=$PATH:/home/baltika/.spicetify
 eval "$(uv generate-shell-completion zsh)"
 
+export PATH=$PATH:/home/baltika/.cargo/bin
