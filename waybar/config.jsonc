@@ -202,6 +202,7 @@
         "interval": 3600,
         "exec": "proxychains wttrbar --date-format '%d.%m' --location Volgograd --hide-conditions --lang ru --nerd",
         "return-type": "json",
-        "on-click": "kitty --class wttr.in --hold curl ru.wttr.in/volgograd"
+        "on-click": "kitty --class wttr.in --hold curl ru.wttr.in/volgograd",
+        "on-click-right": "kitty --class wttr.in0 --hold curl ru.wttr.in/volgograd?0"
     }
 }
