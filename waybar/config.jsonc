@@ -1,8 +1,8 @@
 {
     "layer": "top",
-    "modules-left": ["hyprland/workspaces", "custom/menu", "cpu", "custom/gpu", "memory", /*"hyprland/window", */"tray"],
+    "modules-left": ["hyprland/workspaces", "custom/menu", "custom/weather", "cpu", "custom/gpu", "memory", /*"hyprland/window", */"tray"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/weather~", "custom/mediaplayer~", "mpris", "custom/cava", "pulseaudio", "wireplumber~", "backlight", /*"cpu", "memory", */"hyprland/language"],
+    "modules-right": ["custom/mediaplayer~", "mpris", "custom/cava", "pulseaudio", "wireplumber~", "backlight", /*"cpu", "memory", */"hyprland/language"],
     "reload_style_on_change": true,
     "hyprland/window": {
         "max-length": 50
@@ -147,13 +147,6 @@
         // "exec": "echo ' '" // Script in resources folder
         //"exec-if": "pgrep spotify"
     },
-    "custom/weather": {
-        "exec": "~/.config/waybar/scripts/weather.py",
-        "restart-interval": 300,
-        "return-type": "json",
-        "on-click": "xdg-open https://weather.com/ru-RU/weather/today/l/3b28f68de46288e31b588025e9b10e0ec9ab91fd84df10904b50f787551e277a/"
-        // "format-alt": "{alt}"
-    },
     "cava": {
         // "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
         "framerate": 144,
@@ -202,5 +195,13 @@
 		    "playing": "⏸"
 	    }
 	// "ignored-players": ["firefox"]
+    },
+    "custom/weather": {
+        "format": "{}°",
+        "tooltip": true,
+        "interval": 3600,
+        "exec": "proxychains wttrbar --date-format '%d.%m' --location Volgograd --hide-conditions --lang ru --nerd",
+        "return-type": "json",
+        "on-click": "kitty --class wttr.in --hold curl ru.wttr.in/volgograd"
     }
 }
