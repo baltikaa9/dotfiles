@@ -7,24 +7,46 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "agent_servers": {
+    "Qwen Code": {
+      "type": "custom",
+      "command": "qwen",
+      "args": ["--acp"],
+      "env": {},
+    },
+  },
   "prettier": {
-    "allowed": true
+    "allowed": true,
   },
   "vim_mode": false,
-  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_family": ".ZedMono",
   "context_servers": {
     "mcp-server-context7": {
       "enabled": true,
       "settings": {
-        "context7_api_key": "ctx7sk-0636e754-612a-45c2-87cc-35ba61ac1657"
-      }
-    }
+        "context7_api_key": "ctx7sk-0636e754-612a-45c2-87cc-35ba61ac1657",
+      },
+    },
   },
   "icon_theme": "Catppuccin Frappé",
   "terminal": {
-    "dock": "bottom"
+    "dock": "bottom",
   },
   "agent": {
+    "favorite_models": [
+      {
+        "provider": "google",
+        "model": "gemini-2.5-flash",
+      },
+      {
+        "provider": "google",
+        "model": "gemini-2.5-flash-lite",
+      },
+      {
+        "provider": "google",
+        "model": "gemini-3-flash-preview",
+      },
+    ],
     "play_sound_when_agent_done": true,
     "always_allow_tool_actions": true,
     "profiles": {
@@ -41,17 +63,17 @@
           "open": true,
           "grep": true,
           "thinking": true,
-          "web_search": true
+          "web_search": true,
         },
         "enable_all_context_servers": false,
         "context_servers": {
           "mcp-server-context7": {
             "tools": {
               "resolve-library-id": true,
-              "get-library-docs": true
-            }
-          }
-        }
+              "get-library-docs": true,
+            },
+          },
+        },
       },
       "write": {
         "name": "Write",
@@ -72,24 +94,24 @@
           "grep": true,
           "terminal": true,
           "thinking": true,
-          "web_search": true
+          "web_search": true,
         },
         "enable_all_context_servers": true,
         "context_servers": {
           "mcp-server-context7": {
             "tools": {
               "resolve-library-id": true,
-              "get-library-docs": true
-            }
-          }
-        }
-      }
+              "get-library-docs": true,
+            },
+          },
+        },
+      },
     },
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4-5"
+      "provider": "google",
+      "model": "gemini-2.5-flash",
     },
-    "default_profile": "ask"
+    "default_profile": "write",
   },
   "ui_font_size": 16,
   "buffer_font_size": 14,
@@ -100,13 +122,20 @@
     // "background": "#232136b2",
     "syntax": {
       "type": {
-        "color": "#8cb6ff"
-      }
-    }
+        "color": "#8cb6ff",
+      },
+    },
   },
   "base_keymap": "JetBrains",
   "autosave": "on_focus_change",
   "languages": {
+    // "LaTeX": {
+    //   "colorize_brackets": false,
+    //   "indent_guides": {
+    //     "active_line_width": 1,
+    //     "background_coloring": "disabled",
+    //   },
+    // },
     "Python": {
       "show_whitespaces": "selection",
       "format_on_save": "on",
@@ -116,8 +145,8 @@
         "active_line_width": 1,
         "line_width": 1,
         "enabled": true,
-        "coloring": "indent_aware"
-      }
+        "coloring": "indent_aware",
+      },
     },
     "PHP": {
       "format_on_save": "off",
@@ -125,11 +154,30 @@
       "prettier": {
         "allowed": true,
         "plugins": ["@prettier/plugin-php"],
-        "parser": "php"
-      }
-    }
+        "parser": "php",
+      },
+    },
   },
   "proxy": "http://127.0.0.1:1080",
   "formatter": "prettier",
-  "snippet_sort_order": "top"
+  "snippet_sort_order": "top",
+  "lsp": {
+    "texlab": {
+      "settings": {
+        "texlab": {
+          "build": {
+            "onSave": false,
+            // "forwardSearchAfter": true,
+          },
+        },
+      },
+    },
+    // "ltex": {
+    //   "settings": {
+    //     "ltex": {
+    //       "language": "ru-RU",
+    //     },
+    //   },
+    // },
+  },
 }

@@ -7,7 +7,7 @@ secondImg="$HOME/Pictures/wallpapers/minecraft_sakura.gif"
 
 hours=$(date +%k)
 
-if (( hours >= 6 && hours < 18 )); then
+if (( hours >= 9 && hours < 18 )); then
   img="$dayImg"
 else 
   img="$nightImg"
