@@ -7,6 +7,11 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "use_system_prompts": false,
+  "use_system_path_prompts": false,
+  "git_panel": {
+    "tree_view": true,
+  },
   "agent_servers": {
     "Qwen Code": {
       "type": "custom",
@@ -111,7 +116,7 @@
       "provider": "google",
       "model": "gemini-2.5-flash",
     },
-    "default_profile": "write",
+    "default_profile": "ask",
   },
   "ui_font_size": 16,
   "buffer_font_size": 14,
@@ -166,8 +171,8 @@
       "settings": {
         "texlab": {
           "build": {
-            "onSave": false,
-            // "forwardSearchAfter": true,
+            "onSave": true,
+            "forwardSearchAfter": true,
           },
         },
       },
