@@ -9,14 +9,15 @@
   {
     "context": "Workspace",
     "bindings": {
-      // "shift shift": "file_finder::Toggle"
-    }
+      // "shift shift": "file_finder::Toggle",
+      "shift shift": "pane::DeploySearch",
+    },
   },
   {
     "context": "Editor && vim_mode == insert",
     "bindings": {
       // "j k": "vim::NormalBefore"
-    }
+    },
   },
   {
     "context": "Editor",
@@ -28,23 +29,23 @@
       "ctrl-.": [
         "editor::ToggleComments",
         {
-          "advance_downwards": true
-        }
+          "advance_downwards": true,
+        },
       ],
       "ctrl-divide": [
         "editor::ToggleComments",
         {
-          "advance_downwards": true
-        }
+          "advance_downwards": true,
+        },
       ],
-      "ctrl-y": "editor::Redo"
-    }
+      "ctrl-y": "editor::Redo",
+    },
   },
   {
     "context": "Workspace",
     "bindings": {
-      "alt-f10": "task::Rerun"
-    }
+      "alt-f10": "task::Rerun",
+    },
   },
   {
     "context": "Terminal",
@@ -52,7 +53,19 @@
       "shift-f10": "task::Spawn",
       "ctrl-v": "terminal::Paste",
       "ctrl-c": "terminal::Copy",
-      "ctrl-shift-c": ["terminal::SendKeystroke", "ctrl-c"]
-    }
-  }
+      "ctrl-shift-c": ["terminal::SendKeystroke", "ctrl-c"],
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-alt-a": [
+        "task::Spawn",
+        {
+          "task_name": "Forward Search (Zed → Zathura)",
+          "reevaluate_context": true,
+        },
+      ],
+    },
+  },
 ]
