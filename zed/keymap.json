@@ -24,8 +24,6 @@
     "bindings": {
       "shift-f10": "task::Spawn",
       "ctrl-w": "pane::CloseActiveItem",
-      "alt-left": "pane::ActivatePreviousItem",
-      "alt-right": "pane::ActivateNextItem",
       "ctrl-.": [
         "editor::ToggleComments",
         {
