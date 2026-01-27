@@ -122,6 +122,9 @@
   "buffer_font_size": 14,
   "theme": "Catppuccin Frappé (Blur) [Light]",
   "experimental.theme_overrides": {
+    "title_bar.background": "#1a1d23b2",
+    "title_bar.inactive_background": "#1a1d23b2",
+    "status_bar.background": "#1a1d23b2",
     "background": "#1a1d23b2",
     // "background": "#1a1d2380",
     // "background": "#232136b2",
