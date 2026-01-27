@@ -34,7 +34,7 @@ window#waybar {
   background: rgba(26, 29, 35, 0.7);
   padding: 2px 10px;
   margin: 5px;
-  border-radius: 15px;
+  border-radius: 18px;
   font-weight: bold;
   /* box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.6); */
   /* box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.6); */
