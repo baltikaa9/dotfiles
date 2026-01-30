@@ -1,12 +1,14 @@
 * {
   font-family: "JetBrainsMono", monospace;
   font-size: 18px;
+  outline: none;
 }
 
 window {
-  background-color: rgba(26, 29, 35, 0.9);
-  border-radius: 15px;
+  background-color: rgba(26, 29, 35, 0.4);
+  border-radius: 18px;
   /* border: 2px solid white; */
+  border: 1px solid rgba(255, 249, 224, 0.3);
 }
 
 #entry {
@@ -15,14 +17,16 @@ window {
 }
 
 #entry:selected {
-  background-color: #bcd;
+  /* background-color: #bcd; */
   /* background: linear-gradient(90deg, #bcd, #639); */
-  border-radius: 10px;
+  /* border-radius: 10px; */
+  background-color: rgba(187, 204, 221, 0.4);
+  border-radius: 12px;
   margin: 0 10px;
 }
 
 #expander-box {
-  background-color: rgba(26, 29, 35, 0.9);
+  background-color: rgba(26, 29, 35, 0.4);
   /* background-color: #bcd; */
   border-radius: 12px;
 }
@@ -37,15 +41,18 @@ window {
 /* } */
 
 #text:selected {
-  color: #333;
+  /* color: #333; */
+  color: #FFF9E0;
+  /* Текст при выборе становится солнечным */
+  font-weight: bold;
 }
 
 #input {
-  background-color: rgba(10, 13, 19, 1);
+  background-color: rgba(10, 13, 19, 0.4);
   color: white;
   border-radius: 10px;
   margin: 10px;
-  /* border-color: #bcd; */
+  border: 1px solid rgba(255, 249, 224, 0.2);
 }
 
 #img {
