@@ -153,3 +153,6 @@ eval "$(uv generate-shell-completion zsh)"
 
 export PATH=$PATH:/home/baltika/.cargo/bin
 
+
+# NPM global bin (added by Qwen Code installer)
+export PATH="$HOME/.npm-global/bin:$PATH"

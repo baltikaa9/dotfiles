@@ -1,14 +1,17 @@
-background-color=#1A1D23e6
-border-radius=15
-border-size=2
-border-color=#BD9AC5
+background-color=#1A1D2366
+border-radius=18
+border-size=1
+# border-color=#BD9AC5
+border-color=#FFF9E04d
 max-icon-size=48
 font=JetbrainsMono 12
 layer=overlay
 width=300
 height=500
-padding=10
+margin=10
+padding=15
 format=<b><span color="#BD9AC5">%a</span></b>\n<b>%s</b>\n<span weight="light">%b</span>
+# format=<b><span color="#FFF9E0">%a</span></b>\n<b>%s</b>\n<span weight="light">%b</span>
 default-timeout=10000
 output=HDMI-A-1
 progress-color=over #414559

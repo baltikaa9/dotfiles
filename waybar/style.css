@@ -165,12 +165,13 @@ window#waybar.empty #window {
 }
 
 tooltip {
-  border-radius: 15px;
-  background-color: rgba(26, 29, 35, 0.9);
-  border: 2px solid #BD9AC5;
+  background-color: rgba(26, 29, 35, 0.4);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 249, 224, 0.3);
 }
 
 tooltip label {
-  color: #BD9AC5;
+  font-weight: bold;
   color: #CDD6F4;
+  padding: 8px;
 }

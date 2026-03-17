@@ -7,21 +7,37 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  // "proxy": "socks5://127.0.0.1:1080",
+  "tabs": {
+    "file_icons": true,
+    "git_status": true,
+  },
+  "show_whitespaces": "boundary",
+  "agent_buffer_font_size": 14.0,
+  "agent_ui_font_size": 16.0,
+  "buffer_line_height": "comfortable",
+  "buffer_font_weight": 400.0,
+  "inline_code_actions": false,
+  "indent_guides": {
+    "coloring": "fixed",
+    "background_coloring": "disabled",
+  },
+  "lsp_document_colors": "background",
   "use_system_prompts": false,
   "use_system_path_prompts": false,
   "git_panel": {
     "tree_view": true,
   },
   "agent_servers": {
+    "qwen-code": {
+      "type": "registry",
+    },
     "Qwen Code": {
       "type": "custom",
       "command": "qwen",
       "args": ["--acp"],
       "env": {},
     },
-  },
-  "prettier": {
-    "allowed": true,
   },
   "vim_mode": false,
   "buffer_font_family": ".ZedMono",
@@ -38,6 +54,9 @@
     "dock": "bottom",
   },
   "agent": {
+    "tool_permissions": {
+      "default": "allow",
+    },
     "favorite_models": [
       {
         "provider": "google",
@@ -53,7 +72,6 @@
       },
     ],
     "play_sound_when_agent_done": true,
-    "always_allow_tool_actions": true,
     "profiles": {
       "ask": {
         "name": "Ask",
@@ -113,13 +131,13 @@
       },
     },
     "default_model": {
-      "provider": "google",
-      "model": "gemini-2.5-flash",
+      "provider": "x_ai",
+      "model": "grok-3",
     },
     "default_profile": "ask",
   },
-  "ui_font_size": 16,
-  "buffer_font_size": 14,
+  "ui_font_size": 16.0,
+  "buffer_font_size": 14.0,
   "theme": "Catppuccin Frappé (Blur) [Light]",
   "experimental.theme_overrides": {
     "title_bar.background": "#1a1d23b2",
@@ -135,7 +153,11 @@
     },
   },
   "base_keymap": "JetBrains",
-  "autosave": "on_focus_change",
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000,
+    },
+  },
   "languages": {
     // "LaTeX": {
     //   "colorize_brackets": false,
@@ -145,9 +167,6 @@
     //   },
     // },
     "Python": {
-      "show_whitespaces": "selection",
-      "format_on_save": "on",
-      "formatter": "language_server",
       "indent_guides": {
         "background_coloring": "disabled",
         "active_line_width": 1,
@@ -166,8 +185,7 @@
       },
     },
   },
-  "proxy": "http://127.0.0.1:1080",
-  "formatter": "prettier",
+  "format_on_save": "on",
   "snippet_sort_order": "top",
   "lsp": {
     "texlab": {
