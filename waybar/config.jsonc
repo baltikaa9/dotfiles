@@ -1,11 +1,16 @@
 {
     "layer": "top",
-    "modules-left": ["hyprland/workspaces", "custom/menu", "custom/weather", "cpu", "custom/gpu", "memory", /*"hyprland/window", */"tray"],
+    "modules-left": ["hyprland/workspaces", "hyprland/window", /*"custom/menu",*/ "custom/weather", "cpu", "custom/gpu", "memory", "tray"],
     "modules-center": ["clock"],
     "modules-right": ["custom/mediaplayer~", "mpris", "custom/cava", "pulseaudio", "wireplumber~", "backlight", /*"cpu", "memory", */"hyprland/language"],
     "reload_style_on_change": true,
     "hyprland/window": {
-        "max-length": 50
+        "format": "",
+        // "format": "{initialTitle}",
+        "max-length": 100, // Characters count
+        "separate-outputs": true,
+        "icon": true,
+        "icon-size": 15
     },
     "cpu": {
         "interval": 1,
@@ -33,14 +38,6 @@
         // "format": " {}%",
         "format": "󰘚 {percentage}%",
         "tooltip-format": "Memory: {used:0.1f}GB / {total:0.1f}GB\nSwap: {swapUsed:0.1f}GB"
-    },
-    "hyprland/window": {
-        "format": "",
-        // "format": "{initialTitle}",
-        "max-length": 100, // Characters count
-        "separate-outputs": true,
-        "icon": true,
-        "icon-size": 15
     },
     "clock": {
         "format-alt": "{:%a, %d %b  %H:%M:%S}",
@@ -100,7 +97,6 @@
         "orientation": "horizontal",
         "device": "ddcci1"
     },
-    //ddcutil version
     "custom/brightness": {
         "format": "{icon}  {percentage}%",
         "format-icons": ["\uDB80\uDCDE", "\uDB80\uDCDF", "\uDB80\uDCE0"],
@@ -201,7 +197,7 @@
         "interval": 3600,
         "exec": "proxychains wttrbar --date-format '%d.%m' --location Volgograd --hide-conditions --lang ru --nerd",
         "return-type": "json",
-        "on-click": "kitty --class wttr.in --hold curl ru.wttr.in/volgograd",
-        "on-click-right": "kitty --class wttr.in0 --hold curl ru.wttr.in/volgograd?0"
+        "on-click": "kitty --class wttr.in --hold proxychains curl ru.wttr.in/volgograd",
+        "on-click-right": "kitty --class wttr.in0 --hold proxychains curl ru.wttr.in/volgograd?0"
     }
 }

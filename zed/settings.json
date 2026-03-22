@@ -166,6 +166,9 @@
     //     "background_coloring": "disabled",
     //   },
     // },
+    "C++": {
+      "format_on_save": "off"
+    },
     "Python": {
       "indent_guides": {
         "background_coloring": "disabled",
@@ -177,7 +180,7 @@
     },
     "PHP": {
       "format_on_save": "off",
-      "language_servers": ["phpactor", "!intelephense", "!phptools"],
+      "language_servers": ["!phpactor", "intelephense", "!phptools"],
       "prettier": {
         "allowed": true,
         "plugins": ["@prettier/plugin-php"],
