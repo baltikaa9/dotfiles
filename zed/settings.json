@@ -8,13 +8,16 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   // "proxy": "socks5://127.0.0.1:1080",
+  "scrollbar": {
+    "show": "auto",
+  },
   "tabs": {
     "file_icons": true,
     "git_status": true,
   },
   "show_whitespaces": "boundary",
   "agent_buffer_font_size": 14.0,
-  "agent_ui_font_size": 16.0,
+  "agent_ui_font_size": 18.0,
   "buffer_line_height": "comfortable",
   "buffer_font_weight": 400.0,
   "inline_code_actions": false,
@@ -51,6 +54,9 @@
   },
   "icon_theme": "Catppuccin Frappé",
   "terminal": {
+    "scrollbar": {
+      "show": "auto",
+    },
     "dock": "bottom",
   },
   "agent": {
@@ -131,15 +137,17 @@
       },
     },
     "default_model": {
-      "provider": "x_ai",
-      "model": "grok-3",
+      "enable_thinking": true,
+      "provider": "google",
+      "model": "gemini-2.5-flash",
     },
-    "default_profile": "ask",
+    "default_profile": "write",
   },
   "ui_font_size": 16.0,
   "buffer_font_size": 14.0,
   "theme": "Catppuccin Frappé (Blur) [Light]",
   "experimental.theme_overrides": {
+    "scrollbar.thumb.background": "#4f5e72",
     "title_bar.background": "#1a1d23b2",
     "title_bar.inactive_background": "#1a1d23b2",
     "status_bar.background": "#1a1d23b2",
@@ -167,7 +175,7 @@
     //   },
     // },
     "C++": {
-      "format_on_save": "off"
+      "format_on_save": "off",
     },
     "Python": {
       "indent_guides": {

@@ -13,7 +13,8 @@ padding=15
 format=<b><span color="#BD9AC5">%a</span></b>\n<b>%s</b>\n<span weight="light">%b</span>
 # format=<b><span color="#FFF9E0">%a</span></b>\n<b>%s</b>\n<span weight="light">%b</span>
 default-timeout=10000
-output=HDMI-A-1
+# output=HDMI-A-1
+output=DP-1
 progress-color=over #414559
 #group-by=app-name
 
