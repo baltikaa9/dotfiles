@@ -1,0 +1,12 @@
+{
+  version: 2,
+  mediaFileName: '4K Anime Purple Evening Sky - Relaxing Live Wallpaper - 1 Hour Screensaver - Infinite Loop ! [zTK9DhM6OQc].mp4',
+  cutSegments: [
+    {
+      start: 0,
+      end: 13,
+      name: '',
+      selected: true,
+    },
+  ],
+}
