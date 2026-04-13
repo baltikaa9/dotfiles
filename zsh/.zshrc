@@ -156,3 +156,5 @@ export PATH=$PATH:/home/baltika/.cargo/bin
 
 # NPM global bin (added by Qwen Code installer)
 export PATH="$HOME/.npm-global/bin:$PATH"
+
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"
