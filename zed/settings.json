@@ -26,20 +26,20 @@
     "background_coloring": "disabled",
   },
   "lsp_document_colors": "background",
-  "use_system_prompts": false,
-  "use_system_path_prompts": false,
+  "use_system_prompts": true,
+  "use_system_path_prompts": true,
   "git_panel": {
     "tree_view": true,
   },
   "agent_servers": {
-    "qwen-code": {
-      "type": "registry",
-    },
-    "Qwen Code": {
+    "qwen": {
       "type": "custom",
       "command": "qwen",
       "args": ["--acp"],
-      "env": {},
+      "env": {}
+    },
+    "qwen-code": {
+      "type": "registry"
     },
   },
   "vim_mode": false,
@@ -137,9 +137,9 @@
       },
     },
     "default_model": {
-      "enable_thinking": true,
+      "enable_thinking": false,
       "provider": "google",
-      "model": "gemini-2.5-flash",
+      "model": "gemini-3-flash-preview",
     },
     "default_profile": "write",
   },
