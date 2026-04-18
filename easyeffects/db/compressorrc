@@ -1,0 +1,7 @@
+[sie][Compressor#0]
+attack=5
+knee=-14
+release=200
+sidechainMode=1
+threshold=-20
+wet=5
