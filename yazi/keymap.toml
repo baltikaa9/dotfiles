@@ -2,3 +2,7 @@
 on = [ "g", "m" ]
 run = "cd /run/media/baltika"
 desc = "Cd to /run/media"
+
+[[mgr.prepend_keymap]]
+on  = "M"
+run = "plugin mount"
