@@ -7,31 +7,40 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "proxy": "socks5://127.0.0.1:1080",
+  "proxy": "socks5://127.0.0.1:2080",
+  "scrollbar": {
+    "show": "auto",
+  },
+  "tabs": {
+    "file_icons": true,
+    "git_status": true,
+  },
+  "show_whitespaces": "boundary",
+  "agent_buffer_font_size": 14.0,
+  "agent_ui_font_size": 18.0,
+  "buffer_line_height": "comfortable",
+  "buffer_font_weight": 400.0,
   "inline_code_actions": false,
   "indent_guides": {
     "coloring": "fixed",
     "background_coloring": "disabled",
   },
   "lsp_document_colors": "background",
-  "use_system_prompts": false,
-  "use_system_path_prompts": false,
+  "use_system_prompts": true,
+  "use_system_path_prompts": true,
   "git_panel": {
     "tree_view": true,
   },
   "agent_servers": {
-    "qwen-code": {
-      "type": "registry"
-    },
-    "Qwen Code": {
+    "qwen": {
       "type": "custom",
       "command": "qwen",
       "args": ["--acp"],
       "env": {},
     },
-  },
-  "prettier": {
-    "allowed": true,
+    "qwen-code": {
+      "type": "registry",
+    },
   },
   "vim_mode": false,
   "buffer_font_family": ".ZedMono",
@@ -45,9 +54,15 @@
   },
   "icon_theme": "Catppuccin Frappé",
   "terminal": {
+    "scrollbar": {
+      "show": "auto",
+    },
     "dock": "bottom",
   },
   "agent": {
+    "tool_permissions": {
+      "default": "allow",
+    },
     "favorite_models": [
       {
         "provider": "google",
@@ -63,7 +78,6 @@
       },
     ],
     "play_sound_when_agent_done": true,
-    "always_allow_tool_actions": true,
     "profiles": {
       "ask": {
         "name": "Ask",
@@ -123,15 +137,17 @@
       },
     },
     "default_model": {
-      "provider": "x_ai",
-      "model": "grok-3",
+      "enable_thinking": false,
+      "provider": "google",
+      "model": "gemini-3-flash-preview",
     },
-    "default_profile": "ask",
+    "default_profile": "write",
   },
-  "ui_font_size": 16,
-  "buffer_font_size": 14,
+  "ui_font_size": 16.0,
+  "buffer_font_size": 14.0,
   "theme": "Catppuccin Frappé (Blur) [Light]",
   "experimental.theme_overrides": {
+    "scrollbar.thumb.background": "#4f5e72",
     "title_bar.background": "#1a1d23b2",
     "title_bar.inactive_background": "#1a1d23b2",
     "status_bar.background": "#1a1d23b2",
@@ -145,7 +161,11 @@
     },
   },
   "base_keymap": "JetBrains",
-  "autosave": "on_focus_change",
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000,
+    },
+  },
   "languages": {
     // "LaTeX": {
     //   "colorize_brackets": false,
@@ -154,10 +174,10 @@
     //     "background_coloring": "disabled",
     //   },
     // },
+    "C++": {
+      "format_on_save": "off",
+    },
     "Python": {
-      "show_whitespaces": "selection",
-      "format_on_save": "on",
-      "formatter": "language_server",
       "indent_guides": {
         "background_coloring": "disabled",
         "active_line_width": 1,
@@ -168,7 +188,7 @@
     },
     "PHP": {
       "format_on_save": "off",
-      "language_servers": ["phpactor", "!intelephense", "!phptools"],
+      "language_servers": ["!phpactor", "intelephense", "!phptools"],
       "prettier": {
         "allowed": true,
         "plugins": ["@prettier/plugin-php"],
@@ -176,7 +196,7 @@
       },
     },
   },
-  "formatter": "prettier",
+  "format_on_save": "on",
   "snippet_sort_order": "top",
   "lsp": {
     "texlab": {

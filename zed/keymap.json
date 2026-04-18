@@ -36,7 +36,6 @@
           "advance_downwards": true,
         },
       ],
-      "ctrl-y": "editor::Redo",
     },
   },
   {
@@ -66,4 +65,82 @@
       ],
     },
   },
+  {
+    "context": "AgentDiff",
+    "bindings": {
+      "alt-z": "agent::RejectAll"
+    }
+  },
+  {
+    "context": "AgentDiff",
+    "unbind": {
+      "alt-shift-z": "agent::RejectAll"
+    }
+  },
+  {
+    "context": "Editor && editor_agent_diff",
+    "bindings": {
+      "alt-z": "agent::RejectAll"
+    }
+  },
+  {
+    "context": "Editor && editor_agent_diff",
+    "unbind": {
+      "alt-shift-z": "agent::RejectAll"
+    }
+  },
+  {
+    "context": "AcpThread > Editor",
+    "bindings": {
+      "alt-z": "agent::RejectAll"
+    }
+  },
+  {
+    "context": "AcpThread > Editor",
+    "unbind": {
+      "alt-shift-z": "agent::RejectAll"
+    }
+  },
+  {
+    "context": "AgentPanel",
+    "bindings": {
+      "alt-a": "agent::AllowOnce"
+    }
+  },
+  {
+    "context": "AgentPanel",
+    "unbind": {
+      "alt-shift-a": "agent::AllowOnce"
+    }
+  },
+  {
+    "context": "AgentPanel",
+    "bindings": {
+      "alt-x": "agent::RejectOnce"
+    }
+  },
+  {
+    "context": "AgentPanel",
+    "unbind": {
+      "alt-shift-x": "agent::RejectOnce"
+    }
+  },
+  {
+    "context": "AgentPanel",
+    "bindings": {
+      "alt-q": "agent::AllowAlways"
+    }
+  },
+  {
+    "context": "AgentPanel",
+    "unbind": {
+      "alt-shift-q": "agent::AllowAlways"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "ctrl-y": "editor::DeleteLine"
+    }
+  }
 ]

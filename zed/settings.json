@@ -7,7 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  // "proxy": "socks5://127.0.0.1:1080",
+  "proxy": "socks5://127.0.0.1:2080",
   "scrollbar": {
     "show": "auto",
   },
@@ -32,14 +32,17 @@
     "tree_view": true,
   },
   "agent_servers": {
+    "gemini": {
+      "type": "registry"
+    },
     "qwen": {
       "type": "custom",
       "command": "qwen",
       "args": ["--acp"],
-      "env": {}
+      "env": {},
     },
     "qwen-code": {
-      "type": "registry"
+      "type": "registry",
     },
   },
   "vim_mode": false,
@@ -67,21 +70,35 @@
       {
         "provider": "google",
         "model": "gemini-2.5-flash",
+        "enable_thinking": false
       },
       {
         "provider": "google",
         "model": "gemini-2.5-flash-lite",
+        "enable_thinking": false
       },
       {
         "provider": "google",
         "model": "gemini-3-flash-preview",
+        "enable_thinking": false
       },
+      {
+        "provider": "openrouter",
+        "model": "google/gemma-4-31b-it:free",
+        "enable_thinking": false
+      },
+      {
+        "provider": "openrouter",
+        "model": "google/gemma-4-26b-a4b-it:free",
+        "enable_thinking": false
+      }
     ],
     "play_sound_when_agent_done": true,
     "profiles": {
       "ask": {
         "name": "Ask",
         "tools": {
+          "search_web": true,
           "diagnostics": true,
           "fetch": true,
           "list_directory": true,
@@ -92,7 +109,6 @@
           "open": true,
           "grep": true,
           "thinking": true,
-          "web_search": true,
         },
         "enable_all_context_servers": false,
         "context_servers": {
@@ -107,6 +123,7 @@
       "write": {
         "name": "Write",
         "tools": {
+          "search_web": true,
           "copy_path": true,
           "create_directory": true,
           "delete_path": true,
@@ -123,7 +140,6 @@
           "grep": true,
           "terminal": true,
           "thinking": true,
-          "web_search": true,
         },
         "enable_all_context_servers": true,
         "context_servers": {
@@ -137,9 +153,9 @@
       },
     },
     "default_model": {
-      "enable_thinking": false,
+      "enable_thinking": true,
       "provider": "google",
-      "model": "gemini-3-flash-preview",
+      "model": "gemini-2.5-flash",
     },
     "default_profile": "write",
   },
