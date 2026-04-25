@@ -1,140 +1,437 @@
-// --- МОНИТОРЫ ---
-// Твой DP-1 на 144Гц слева от HDMI
+// =============================================================================
+// Niri config — аналог Hyprland конфига
+// ~/.config/niri/config.kdl
+// =============================================================================
+
+
+// ─────────────────────────────────────────────────────────────────────────────
+// МОНИТОРЫ
+// ─────────────────────────────────────────────────────────────────────────────
+
 output "DP-1" {
-    mode "1920x1080@144.00"
+    mode "1920x1080@144.000"
     position x=-1920 y=0
+    scale 1.0
 }
 
 output "HDMI-A-1" {
-    mode "1920x1080@60.00"
+    mode "1920x1080@60.000"
     position x=0 y=0
+    scale 1.0
 }
 
-// --- ВВОД (Клавиатура) ---
+
+// ─────────────────────────────────────────────────────────────────────────────
+// ПЕРЕМЕННЫЕ ОКРУЖЕНИЯ
+// ─────────────────────────────────────────────────────────────────────────────
+
+environment {
+    HYPRCURSOR_THEME "Bibata-Modern-Classic"
+    HYPRCURSOR_SIZE "20"
+    XCURSOR_THEME "Bibata-Modern-Classic"
+    XCURSOR_SIZE "20"
+    LIBVA_DRIVER_NAME "nvidia"
+    __GLX_VENDOR_LIBRARY_NAME "nvidia"
+    LC_TIME "ru_RU.UTF-8"
+    QT_QPA_PLATFORMTHEME "qt6ct"
+    WEBKIT_DISABLE_DMABUF_RENDERER "1"
+    GOOGLE_CLOUD_PROJECT "zed42-484521"
+    EDITOR "nvim"
+}
+
+
+// ─────────────────────────────────────────────────────────────────────────────
+// АВТОЗАПУСК
+// ─────────────────────────────────────────────────────────────────────────────
+
+spawn-at-startup "waybar"
+spawn-at-startup "bash" "-c" "awww-daemon && awww img -o DP-1 --transition-type center --transition-duration 2 /home/baltika/Pictures/wallpapers/Dynamic-Wallpapers/Dark/Forest-Dark.png && awww img -o HDMI-A-1 --transition-type center --transition-duration 2 /home/baltika/Pictures/wallpapers/evening-landscape.jpg"
+spawn-at-startup "mako"
+spawn-at-startup "ydotoold"
+spawn-at-startup "bash" "-c" "sslocal -b 127.0.0.1:1080 --server-url 'ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprNlM5bG56VE45YTA2OUN1SDBFZks5@46.32.186.62:64809/'"
+spawn-at-startup "/usr/lib/hyprpolkitagent/hyprpolkitagent"
+spawn-at-startup "hypridle"
+spawn-at-startup "clipse" "-listen"
+spawn-at-startup "gnome-keyring-daemon" "--start" "--components=secrets"
+spawn-at-startup "hyprsunset"
+spawn-at-startup "nekobox"
+spawn-at-startup "udiskie" "-a" "-N"
+spawn-at-startup "easyeffects" "--service-mode" "-w"
+
+
+// ─────────────────────────────────────────────────────────────────────────────
+// КУРСОР
+// ─────────────────────────────────────────────────────────────────────────────
+
+cursor {
+    xcursor-theme "Bibata-Modern-Classic"
+    xcursor-size 20
+    hide-after-inactive-ms 3000
+}
+
+
+// ─────────────────────────────────────────────────────────────────────────────
+// ВВОД
+// ─────────────────────────────────────────────────────────────────────────────
+
 input {
     keyboard {
         xkb {
             layout "us,ru"
             options "grp:alt_shift_toggle,grp_led:scroll"
         }
+        numlock true
+        repeat-delay 600
+        repeat-rate 25
     }
-    touchpad {
-        tap
-    }
+
     mouse {
-        // Примерная адаптация твоей чувствительности -0.7
         accel-speed -0.7
     }
+
+    touchpad {
+        dwt
+        natural-scroll
+        tap
+    }
+
+    focus-follows-mouse max-scroll-amount="0%"
+    warp-mouse-to-focus
 }
 
-// --- ЛАЙАУТ И ДЕКОРАЦИИ ---
+
+// ─────────────────────────────────────────────────────────────────────────────
+// LAYOUT
+// ─────────────────────────────────────────────────────────────────────────────
+
 layout {
-    gaps 12
-    center-focused-column "never"
-    
+    gaps 10
+
+    struts {
+        left 0
+        right 20
+        top 0
+        bottom 20
+    }
+
+    focus-ring {
+        off
+    }
+
+    border {
+        width 1
+        active-color "#FFF9E0AA"
+        inactive-color "#00000000"
+    }
+
     default-column-width { proportion 0.5; }
 
     preset-column-widths {
         proportion 0.333
         proportion 0.5
-        proportion 0.666
+        proportion 0.667
+        proportion 1.0
     }
 
-    focus-ring {
-        width 2
-        // Твой градиент из Hyprland (приближенно)
-        active-color "#FFF9E0aa"
-        inactive-color "#ffffff00"
+    preset-window-heights {
+        proportion 0.333
+        proportion 0.5
+        proportion 0.667
+        proportion 1.0
     }
 
-    // Твои скругления 18px
+    center-focused-column "never"
+}
+
+
+// ─────────────────────────────────────────────────────────────────────────────
+// АНИМАЦИИ
+// ─────────────────────────────────────────────────────────────────────────────
+
+animations {
+    slowdown 0.7
+
+    workspace-switch {
+        spring damping-ratio=0.8 stiffness=1000 epsilon=0.0001
+    }
+
+    horizontal-view-movement {
+        spring damping-ratio=0.85 stiffness=900 epsilon=0.0001
+    }
+
+    window-open {
+        duration-ms 250
+        curve "ease-out-expo"
+    }
+
+    window-close {
+        duration-ms 150
+        curve "ease-out-quad"
+    }
+
+    config-notification-open-close {
+        spring damping-ratio=0.6 stiffness=1000 epsilon=0.001
+    }
+
+    screenshot-ui-open {
+        duration-ms 200
+        curve "ease-out-quad"
+    }
+}
+
+
+// ─────────────────────────────────────────────────────────────────────────────
+// ПРАВИЛА ДЛЯ ОКОН
+// ─────────────────────────────────────────────────────────────────────────────
+
+// Скругления для всех окон
+window-rule {
     geometry-corner-radius 18
+    clip-to-geometry true
 }
 
-// --- АВТОЗАПУСК ---
-spawn-at-startup "waybar"
-spawn-at-startup "swww-daemon"
-spawn-at-startup "~/.config/bin/live-wallpaper.sh"
-spawn-at-startup "mako"
-spawn-at-startup "ydotoold"
-spawn-at-startup "sslocal" "-b" "127.0.0.1:1080" "--server-url" "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprNlM5bG56VE45YTA2OUN1SDBFZks5@46.32.186.62:64809/"
-spawn-at-startup "/usr/lib/hyprpolkitagent/hyprpolkitagent"
-spawn-at-startup "hypridle"
-spawn-at-startup "clipse" "-listen"
-spawn-at-startup "gnome-keyring-daemon" "--start" "--components=secrets"
-spawn-at-startup "hyprsunset"
-
-// --- ПЕРЕМЕННЫЕ ОКРУЖЕНИЯ (лучше в .zshrc, но можно и здесь) ---
-environment {
-    "QT_QPA_PLATFORMTHEME" "qt6ct"
-    "LIBVA_DRIVER_NAME" "nvidia"
-    "__GLX_VENDOR_LIBRARY_NAME" "nvidia"
+// Тени
+window-rule {
+    shadow {
+        on
+        softness 30
+        spread 2
+        offset x=4 y=6
+        color "#00000033"
+    }
 }
 
-// --- БИНДЫ ---
+// Глобальная прозрачность
+// window-rule {
+    // opacity 0.9
+// }
+
+window-rule {
+    match app-id=r"org\.gnome\.Nautilus"
+    opacity 0.7
+}
+
+window-rule {
+    match app-id=r"Spotify"
+    opacity 0.7
+}
+
+window-rule {
+    match app-id=r"yandex-music"
+    opacity 0.7
+}
+
+window-rule {
+    match app-id=r"com\.obsproject\.Studio"
+    opacity 0.7
+}
+
+window-rule {
+    match app-id=r"kitty"
+    opacity 1.0
+}
+
+window-rule {
+    match app-id=r"zen"
+    opacity 1.0
+}
+
+window-rule {
+    match app-id=r"dev\.zed\.Zed"
+    opacity 1.0
+}
+
+window-rule {
+    match app-id=r"org\.telegram\.desktop"
+    opacity 1.0
+}
+
+// AyuGram — float, центрируется автоматически
+window-rule {
+    match app-id=r"com\.ayugram\.desktop"
+    open-floating true
+}
+
+// Clipse — float, фиксированный размер
+window-rule {
+    match app-id="clipse"
+    open-floating true
+    default-column-width { fixed 622; }
+    default-window-height { fixed 470; }
+}
+
+// Satty
+window-rule {
+    match app-id=r"com\.gabm\.satty"
+    open-floating true
+    min-width 700
+    min-height 350
+}
+
+// qalc
+window-rule {
+    match app-id="qalc"
+    open-floating true
+    default-column-width { fixed 600; }
+    default-window-height { fixed 230; }
+}
+
+// Картинка в картинке — правый нижний угол
+window-rule {
+    match title="Картинка в картинке"
+    open-floating true
+    default-floating-position x=-428 y=-53 relative-to="bottom-right"
+    default-column-width { fixed 400; }
+    default-window-height { fixed 225; }
+}
+
+// wofi
+window-rule {
+    match app-id="wofi"
+    open-floating true
+}
+
+// wttr.in
+window-rule {
+    match app-id=r"wttr\.in"
+    open-floating true
+    default-column-width { fixed 1284; }
+    default-window-height { fixed 950; }
+}
+
+window-rule {
+    match app-id=r"wttr\.in0"
+    open-floating true
+    default-column-width { fixed 310; }
+    default-window-height { fixed 170; }
+}
+
+
+// ─────────────────────────────────────────────────────────────────────────────
+// КЛАВИШИ
+// ─────────────────────────────────────────────────────────────────────────────
+
 binds {
-    // Терминал и программы
+
+    // Приложения
     Mod+Return { spawn "kitty"; }
     Mod+Z { spawn "kitty"; }
-    Mod+B { spawn "zen-browser"; }
-    Mod+E { spawn "nautilus"; }
+    Mod+E { spawn "kitty" "--class" "yazi" "yazi"; }
+    XF86Explorer { spawn "kitty" "--class" "yazi" "yazi"; }
     Mod+X { spawn "wofi" "--show" "drun"; }
-    Mod+T { spawn "telegram-desktop"; }
-    
+    Mod+B { spawn "zen-browser"; }
+    Mod+N { spawn "nekobox"; }
+    Mod+T { spawn "bash" "-c" "Telegram || flatpak run org.telegram.desktop"; }
+
     // Управление окнами
     Mod+C { close-window; }
     Mod+F { toggle-window-floating; }
-    Mod+Alt+F { maximize-column; }
-    Mod+Alt+Space { toggle-fullscreen-view; }
-    
-    // Навигация (Focus)
-    Mod+Left  { focus-column-left; }
+    Mod+Alt+F { fullscreen-window; }
+    Mod+Shift+F { maximize-column; }
+    Mod+Alt+C { center-column; }
+
+    // Фокус
+    Mod+Left { focus-column-left; }
     Mod+Right { focus-column-right; }
-    Mod+Up    { focus-window-up; }
-    Mod+Down  { focus-window-down; }
-    
+    Mod+Up { focus-window-up; }
+    Mod+Down { focus-window-down; }
+
+    Mod+WheelScrollDown { focus-workspace-down; }
+    Mod+WheelScrollUp { focus-workspace-up; }
+
     // Перемещение окон
-    Mod+Alt+Left  { move-column-left; }
+    Mod+Alt+Left { move-column-left; }
     Mod+Alt+Right { move-column-right; }
-    
-    // Ресайз (как в твоем конфиге)
-    Mod+Shift+Left  { set-column-width "-10%"; }
-    Mod+Shift+Right { set-column-width "+10%"; }
-    
-    // Воркспейсы (в niri это переключение между колонками/лентами)
+    Mod+Alt+Up { move-window-up; }
+    Mod+Alt+Down { move-window-down; }
+
+    // Изменение размера
+    Mod+Shift+Left { set-column-width "-60"; }
+    Mod+Shift+Right { set-column-width "+60"; }
+    Mod+Shift+Up { set-window-height "-60"; }
+    Mod+Shift+Down { set-window-height "+60"; }
+
+    Mod+R { switch-preset-column-width; }
+    Mod+Shift+R { switch-preset-window-height; }
+
+    // Workspaces
     Mod+1 { focus-workspace 1; }
     Mod+2 { focus-workspace 2; }
     Mod+3 { focus-workspace 3; }
     Mod+4 { focus-workspace 4; }
-    
-    Mod+Ctrl+1 { move-column-to-workspace 1; }
-    Mod+Ctrl+2 { move-column-to-workspace 2; }
-    
-    // Спец-бинды
-    Mod+V { spawn "kitty" "--class" "clipse" "clipse"; }
-    Print { spawn "grimblast" "edit" "area"; }
-    Mod+L { spawn "hyprlock"; }
-    
-    // Мультимедиа
+    Mod+5 { focus-workspace 5; }
+    Mod+6 { focus-workspace 6; }
+    Mod+7 { focus-workspace 7; }
+    Mod+8 { focus-workspace 8; }
+    Mod+9 { focus-workspace 9; }
+    Mod+0 { focus-workspace 10; }
+
+    Mod+Ctrl+Right { focus-workspace-down; }
+    Mod+Ctrl+Left { focus-workspace-up; }
+    Mod+Ctrl+Up { focus-workspace-up; }
+    Mod+Ctrl+Down { focus-workspace-down; }
+
+    Mod+Ctrl+1 { move-window-to-workspace 1; }
+    Mod+Ctrl+2 { move-window-to-workspace 2; }
+    Mod+Ctrl+3 { move-window-to-workspace 3; }
+    Mod+Ctrl+4 { move-window-to-workspace 4; }
+    Mod+Ctrl+5 { move-window-to-workspace 5; }
+    Mod+Ctrl+6 { move-window-to-workspace 6; }
+    Mod+Ctrl+7 { move-window-to-workspace 7; }
+    Mod+Ctrl+8 { move-window-to-workspace 8; }
+    Mod+Ctrl+9 { move-window-to-workspace 9; }
+    Mod+Ctrl+0 { move-window-to-workspace 10; }
+
+    // Мониторы
+    Mod+Ctrl+Shift+Left { focus-monitor-left; }
+    Mod+Ctrl+Shift+Right { focus-monitor-right; }
+    Mod+Ctrl+Shift+Alt+Left { move-window-to-monitor-left; }
+    Mod+Ctrl+Shift+Alt+Right { move-window-to-monitor-right; }
+
+    // Колонки
+    Mod+J { switch-layout "next"; }
+    Mod+P { toggle-column-tabbed-display; }
+
+    // Громкость
     XF86AudioRaiseVolume { spawn "pactl" "set-sink-volume" "@DEFAULT_SINK@" "+5%"; }
     XF86AudioLowerVolume { spawn "pactl" "set-sink-volume" "@DEFAULT_SINK@" "-5%"; }
-    XF86AudioMute        { spawn "pactl" "set-sink-mute" "@DEFAULT_SINK@" "toggle"; }
-}
+    XF86AudioMute { spawn "pactl" "set-sink-mute" "@DEFAULT_SINK@" "toggle"; }
 
-// --- ПРАВИЛА ОКОН ---
-window-rule {
-    match app-id="org.telegram.desktop"
-    default-column-width { proportion 0.3; }
-}
+    // Яркость
+    XF86MonBrightnessUp { spawn "brightnessctl" "set" "+10%"; }
+    XF86MonBrightnessDown { spawn "brightnessctl" "set" "10%-"; }
 
-window-rule {
-    match app-id="clipse"
-    open-floating true
-    default-floating-width 600
-    default-floating-height 400
-}
+    // Медиа
+    XF86AudioNext { spawn "playerctl" "next"; }
+    XF86AudioPause { spawn "playerctl" "play-pause"; }
+    XF86AudioPlay { spawn "playerctl" "play-pause"; }
+    XF86AudioPrev { spawn "playerctl" "previous"; }
 
-window-rule {
-    match app-id="nautilus"
-    opacity 0.9
+    // Скриншоты
+    Print { spawn "bash" "-c" "GRIMBLAST_EDITOR='satty --filename' SLURP_ARGS='-w 0' grimblast edit area"; }
+    Shift+Print { spawn "bash" "-c" "GRIMBLAST_EDITOR='satty --filename' SLURP_ARGS='-w 0' grimblast --freeze edit area"; }
+
+    // Буфер обмена
+    Mod+V { spawn "kitty" "--class" "clipse" "clipse"; }
+
+    // Waybar
+    Mod+Shift+W { spawn "bash" "-c" "pkill waybar; pkill cava; waybar &"; }
+
+    // Блокировка / питание
+    Mod+L { spawn "hyprlock"; }
+    Mod+F4 { spawn "wlogout" "-b" "2"; }
+    Alt+F4 { spawn "bash" "-c" "~/.config/bin/rofi-power.sh"; }
+    Mod+M { quit; }
+
+    // Утилиты
+    Mod+F12 { spawn "kitty" "--class" "qalc" "qalc"; }
+    XF86Calculator { spawn "kitty" "--class" "qalc" "qalc"; }
+    Mod+F11 { spawn "hyprpicker" "-a"; }
+    Mod+Alt+F9 { spawn "bash" "-c" "~/.config/bin/wfrec-toggle.sh"; }
+    Mod+Period { spawn "rofimoji"; }
+    Mod+Tab { spawn "bash" "-c" "~/.config/bin/window_switcher.sh"; }
+
+    // Эффекты
+    Mod+A { spawn "hyprsnow"; }
+    Mod+Shift+A { spawn "killall" "hyprsnow"; }
 }
