@@ -198,6 +198,7 @@
         "exec": "proxychains wttrbar --date-format '%d.%m' --location Volgograd --hide-conditions --lang ru --nerd",
         "return-type": "json",
         "on-click": "kitty --class wttr.in --hold proxychains curl ru.wttr.in/volgograd",
-        "on-click-right": "kitty --class wttr.in0 --hold proxychains curl ru.wttr.in/volgograd?0"
+        // "on-click-right": "kitty --class wttr.in0 --hold proxychains curl ru.wttr.in/volgograd?0"
+        "on-click-right": "zen-browser https://gismeteo.ru"
     }
 }

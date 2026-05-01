@@ -44,7 +44,8 @@ environment {
 // АВТОЗАПУСК
 // ─────────────────────────────────────────────────────────────────────────────
 
-spawn-at-startup "waybar"
+// spawn-at-startup "waybar"
+spawn-at-startup "qs" "-c" "noctalia-shell"
 spawn-at-startup "bash" "-c" "awww-daemon && awww img -o DP-1 --transition-type center --transition-duration 2 /home/baltika/Pictures/wallpapers/Dynamic-Wallpapers/Dark/Forest-Dark.png && awww img -o HDMI-A-1 --transition-type center --transition-duration 2 /home/baltika/Pictures/wallpapers/evening-landscape.jpg"
 spawn-at-startup "mako"
 spawn-at-startup "ydotoold"
