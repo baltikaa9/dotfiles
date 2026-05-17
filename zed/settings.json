@@ -7,18 +7,41 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "language_models": {
+    "openai_compatible": {
+      "Groq": {
+        "api_url": "https://api.groq.com/openai/v1",
+        "available_models": [
+          {
+            "name": "meta-llama/llama-4-scout-17b-16e-instruct",
+            "max_tokens": 200000,
+            "max_output_tokens": 32000,
+            "max_completion_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+              "chat_completions": true,
+              "interleaved_reasoning": false,
+            },
+          },
+        ],
+      },
+    },
+  },
   "cli_default_open_behavior": "new_window",
   "project_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "outline_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "collaboration_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "ui_font_family": "New York Small",
-  "proxy": "socks5://127.0.0.1:2080",
+  "proxy": "http://127.0.0.1:2080",
   "scrollbar": {
     "show": "auto",
   },
@@ -45,12 +68,16 @@
   },
   "agent_servers": {
     "gemini": {
-      "type": "registry"
+      "type": "registry",
     },
   },
   "vim_mode": false,
   "buffer_font_family": ".ZedMono",
   "context_servers": {
+    "b24-dev-mcp": {
+      "enabled": true,
+      "url": "https://mcp-dev.bitrix24.tech/mcp",
+    },
     "mcp-server-context7": {
       "enabled": true,
       "settings": {
@@ -60,16 +87,26 @@
   },
   "icon_theme": "Catppuccin Frappé",
   "terminal": {
+    "toolbar": {
+      "breadcrumbs": false
+    },
     "scrollbar": {
       "show": "auto",
     },
     "dock": "bottom",
   },
   "agent": {
-    "dock": "right",
+    "sidebar_side": "right",
     "tool_permissions": {
-      "default": "allow",
+      "default": "confirm",
+      "tools": {
+        "edit_file": {
+          "default": "confirm"
+        }
+      }
     },
+    "flexible": true,
+    "dock": "right",
     "favorite_models": [
       {
         "provider": "google",
@@ -95,9 +132,19 @@
         "provider": "openrouter",
         "model": "google/gemma-4-26b-a4b-it:free",
         "enable_thinking": false
+      },
+      {
+        "provider": "openrouter",
+        "model": "deepseek/deepseek-v3.2",
+        "enable_thinking": true
+      },
+      {
+        "provider": "openrouter",
+        "model": "qwen/qwen3-coder-next",
+        "enable_thinking": false
       }
     ],
-    "play_sound_when_agent_done": true,
+    "play_sound_when_agent_done": "always",
     "profiles": {
       "ask": {
         "name": "Ask",
@@ -116,8 +163,18 @@
         },
         "enable_all_context_servers": false,
         "context_servers": {
+          "b24-dev-mcp": {
+            "tools": {
+              "bitrix-app-development-doc-details": true,
+              "bitrix-article-details": true,
+              "bitrix-event-details": true,
+              "bitrix-method-details": true,
+              "bitrix-search": true
+            }
+          },
           "mcp-server-context7": {
             "tools": {
+              "query-docs": true,
               "resolve-library-id": true,
               "get-library-docs": true,
             },
@@ -158,10 +215,10 @@
     },
     "default_model": {
       "enable_thinking": true,
-      "provider": "google",
-      "model": "gemini-2.5-flash",
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-v3.2",
     },
-    "default_profile": "write",
+    "default_profile": "ask",
   },
   "ui_font_size": 16.0,
   "buffer_font_size": 14.0,

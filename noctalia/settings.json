@@ -43,7 +43,7 @@
         "autoHideDelay": 500,
         "autoShowDelay": 150,
         "backgroundOpacity": 0.93,
-        "barType": "simple",
+        "barType": "floating",
         "capsuleColorKey": "none",
         "capsuleOpacity": 1,
         "contentPadding": 2,
@@ -251,7 +251,7 @@
     },
     "colorSchemes": {
         "darkMode": true,
-        "generationMethod": "vibrant",
+        "generationMethod": "tonal-spot",
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
@@ -377,7 +377,7 @@
         "enableLockScreenCountdown": true,
         "enableLockScreenMediaControls": false,
         "enableShadows": true,
-        "forceBlackScreenCorners": false,
+        "forceBlackScreenCorners": true,
         "iRadiusRatio": 1,
         "keybinds": {
             "keyDown": [
@@ -421,7 +421,7 @@
         "shadowOffsetY": 3,
         "showChangelogOnStartup": true,
         "showHibernateOnLockScreen": false,
-        "showScreenCorners": false,
+        "showScreenCorners": true,
         "showSessionButtonsOnLockScreen": true,
         "smoothScrollEnabled": true,
         "telemetryEnabled": false
