@@ -7,6 +7,20 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "diff_view_style": "unified",
+  "ssh_connections": [
+    {
+      "host": "81.163.24.218",
+      "username": "bitrix",
+      "args": [],
+      "projects": [
+        {
+          "paths": ["/home/bitrix/ext_www/dev.intervolga.ru/./"],
+        },
+      ],
+      "nickname": "intervolga2020",
+    },
+  ],
   "language_models": {
     "openai_compatible": {
       "Groq": {
@@ -88,7 +102,7 @@
   "icon_theme": "Catppuccin Frappé",
   "terminal": {
     "toolbar": {
-      "breadcrumbs": false
+      "breadcrumbs": false,
     },
     "scrollbar": {
       "show": "auto",
@@ -96,14 +110,26 @@
     "dock": "bottom",
   },
   "agent": {
+    "inline_assistant_model": {
+      "provider": "google",
+      "model": "gemini-3-flash-preview",
+      "enable_thinking": false,
+    },
     "sidebar_side": "right",
     "tool_permissions": {
       "default": "confirm",
       "tools": {
+        "terminal": {
+          "always_allow": [
+            {
+              "pattern": "^grep\\b",
+            },
+          ],
+        },
         "edit_file": {
-          "default": "confirm"
-        }
-      }
+          "default": "confirm",
+        },
+      },
     },
     "flexible": true,
     "dock": "right",
@@ -111,38 +137,38 @@
       {
         "provider": "google",
         "model": "gemini-2.5-flash",
-        "enable_thinking": false
+        "enable_thinking": false,
       },
       {
         "provider": "google",
         "model": "gemini-2.5-flash-lite",
-        "enable_thinking": false
+        "enable_thinking": false,
       },
       {
         "provider": "google",
         "model": "gemini-3-flash-preview",
-        "enable_thinking": false
+        "enable_thinking": false,
       },
       {
         "provider": "openrouter",
         "model": "google/gemma-4-31b-it:free",
-        "enable_thinking": false
+        "enable_thinking": false,
       },
       {
         "provider": "openrouter",
         "model": "google/gemma-4-26b-a4b-it:free",
-        "enable_thinking": false
+        "enable_thinking": false,
       },
       {
         "provider": "openrouter",
         "model": "deepseek/deepseek-v3.2",
-        "enable_thinking": true
+        "enable_thinking": true,
       },
       {
         "provider": "openrouter",
         "model": "qwen/qwen3-coder-next",
-        "enable_thinking": false
-      }
+        "enable_thinking": false,
+      },
     ],
     "play_sound_when_agent_done": "always",
     "profiles": {
@@ -169,8 +195,8 @@
               "bitrix-article-details": true,
               "bitrix-event-details": true,
               "bitrix-method-details": true,
-              "bitrix-search": true
-            }
+              "bitrix-search": true,
+            },
           },
           "mcp-server-context7": {
             "tools": {
@@ -214,11 +240,11 @@
       },
     },
     "default_model": {
-      "enable_thinking": true,
-      "provider": "openrouter",
-      "model": "deepseek/deepseek-v3.2",
+      "enable_thinking": false,
+      "provider": "google",
+      "model": "gemini-2.5-flash-lite",
     },
-    "default_profile": "ask",
+    "default_profile": "write",
   },
   "ui_font_size": 16.0,
   "buffer_font_size": 14.0,
@@ -282,6 +308,14 @@
           "build": {
             "onSave": true,
             "forwardSearchAfter": true,
+            "executable": "latexmk",
+            "args": [
+              "-pdf",
+              "-shell-escape",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "%f",
+            ],
           },
         },
       },
