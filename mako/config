@@ -1,5 +1,5 @@
 background-color=#1A1D2366
-border-radius=18
+border-radius=18,8,18,18
 border-size=1
 # border-color=#BD9AC5
 border-color=#FFF9E04d
@@ -8,7 +8,7 @@ font=JetbrainsMono 12
 layer=overlay
 width=300
 height=500
-margin=10
+outer-margin=0,20
 padding=15
 format=<b><span color="#BD9AC5">%a</span></b>\n<b>%s</b>\n<span weight="light">%b</span>
 # format=<b><span color="#FFF9E0">%a</span></b>\n<b>%s</b>\n<span weight="light">%b</span>
