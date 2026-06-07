@@ -49,7 +49,8 @@
                 "today": "<span color='#f57'><b>{}</b></span>"
             }
         },
-        "interval": 1
+        "interval": 1,
+        "on-click-right": "kitty --class calcurse sh -c 'calcurse-caldav --oauthfile ~/.config/calcurse/caldav/oauth2.token && calcurse'"
     },
     "pulseaudio": { 
         "format": "{icon} {volume}%", 
