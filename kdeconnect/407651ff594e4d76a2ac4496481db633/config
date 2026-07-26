@@ -1,0 +1,6 @@
+[Plugins]
+kdeconnect_lockdeviceEnabled=true
+kdeconnect_sendnotificationsEnabled=false
+kdeconnect_sftpEnabled=true
+kdeconnect_shareEnabled=true
+kdeconnect_shareinputdevicesEnabled=false

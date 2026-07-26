@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "proxy": "",
   "diff_view_style": "unified",
   "ssh_connections": [
     {
@@ -55,7 +56,6 @@
     "dock": "left",
   },
   "ui_font_family": "New York Small",
-  "proxy": "http://127.0.0.1:2080",
   "scrollbar": {
     "show": "auto",
   },
@@ -320,12 +320,28 @@
         },
       },
     },
-    // "ltex": {
-    //   "settings": {
-    //     "ltex": {
-    //       "language": "ru-RU",
-    //     },
-    //   },
-    // },
+    "gopls": {
+      "initialization_options": {
+        // Включаем мощный нативный линтер staticcheck внутри gopls
+        "staticcheck": true,
+        // Включаем проверку нагло проигнорированных ошибок (типа твоего os.Open)
+        "analyses": {
+          "errcheck": true,
+          "unusedparams": true,
+          "unusedwrite": true,
+          "shadow": true
+        },
+        // Приятный бонус: inlay-хинты для типов и параметров прямо в коде
+        "hints": {
+          "assignVariableTypes": true,
+          "compositeLiteralFields": true,
+          "compositeLiteralTypes": true,
+          "constantValues": true,
+          "functionTypeParameters": true,
+          "parameterNames": true,
+          "rangeVariableTypes": true
+        }
+      }
+    }
   },
 }
