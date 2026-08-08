@@ -1,0 +1,8 @@
+require('conf/programs')
+require('conf/monitors')
+require('conf/autostart')
+require('conf/env')
+require('conf/appearance')
+require('conf/input')
+require('conf/binds')
+require('conf/rules')
