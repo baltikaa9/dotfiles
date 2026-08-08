@@ -7,7 +7,6 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "proxy": "",
   "diff_view_style": "unified",
   "ssh_connections": [
     {
@@ -329,7 +328,7 @@
           "errcheck": true,
           "unusedparams": true,
           "unusedwrite": true,
-          "shadow": true
+          "shadow": true,
         },
         // Приятный бонус: inlay-хинты для типов и параметров прямо в коде
         "hints": {
@@ -339,9 +338,9 @@
           "constantValues": true,
           "functionTypeParameters": true,
           "parameterNames": true,
-          "rangeVariableTypes": true
-        }
-      }
-    }
+          "rangeVariableTypes": true,
+        },
+      },
+    },
   },
 }
