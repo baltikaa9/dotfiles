@@ -6,3 +6,7 @@ require('conf/appearance')
 require('conf/input')
 require('conf/binds')
 require('conf/rules')
+
+local demoTimer = hl.timer(function()
+    hl.notification.create({ text = 'Сделай перерыв, отойди от монитора' })
+end, { timeout = 3600000, type = 'repeating' })
