@@ -43,6 +43,7 @@ window#waybar {
 #workspaces {
   padding: 0px 5px;
   /* box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.6); */
+  margin-left: 10px;
 }
 
 #workspaces button {
@@ -126,6 +127,7 @@ window#waybar.empty #window {
 
 #language {
   /* color: #20B2AA; */
+  margin-right: 10px;
 }
 
 #custom-brightness,
