@@ -96,6 +96,7 @@ hl.bind('Print', hl.dsp.exec_cmd('GRIMBLAST_EDITOR="satty --filename" SLURP_ARGS
 hl.bind('SHIFT + Print',
     hl.dsp.exec_cmd('GRIMBLAST_EDITOR="satty --filename" SLURP_ARGS="-w 0" grimblast --freeze edit area'))
 hl.bind(mainMod .. '+ L', hl.dsp.exec_cmd('loginctl lock-session'))
+hl.bind(mainMod .. '+ SHIFT + L', hl.dsp.dpms(), { locked = true })
 hl.bind(mainMod .. ' + F4', hl.dsp.exec_cmd('wlogout -b 2'))
 hl.bind(mainMod .. ' + F12', hl.dsp.exec_cmd('kitty --class qalc qalc'))
 hl.bind('XF86Calculator', hl.dsp.exec_cmd('kitty --class qalc qalc'))
