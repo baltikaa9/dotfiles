@@ -8,5 +8,6 @@ require('conf/binds')
 require('conf/rules')
 
 local demoTimer = hl.timer(function()
-    hl.notification.create({ text = 'Сделай перерыв, отойди от монитора' })
-end, { timeout = 3600000, type = 'repeating' })
+    hl.notification.create({ text = 'Сделай перерыв, отойди от монитора', timeout = 5000 })
+end, { timeout = 50 * 60 * 1000, type = 'repeat' })
+-- end, { timeout = 6000, type = 'repeat' })
