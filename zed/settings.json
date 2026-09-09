@@ -79,13 +79,9 @@
     "dock": "left",
     "tree_view": true,
   },
-  "agent_servers": {
-    "gemini": {
-      "type": "registry",
-    },
-  },
+  "agent_servers": {},
   "vim_mode": false,
-  "buffer_font_family": ".ZedMono",
+  "buffer_font_family": "JetBrains Mono",
   "context_servers": {
     "b24-dev-mcp": {
       "enabled": true,
@@ -100,6 +96,7 @@
   },
   "icon_theme": "Catppuccin Frappé",
   "terminal": {
+    "font_family": "JetBrains Mono",
     "toolbar": {
       "breadcrumbs": false,
     },
@@ -167,6 +164,12 @@
         "provider": "openrouter",
         "model": "qwen/qwen3-coder-next",
         "enable_thinking": false,
+      },
+      {
+        "provider": "openai-subscribed",
+        "model": "gpt-5.6-luna",
+        "enable_thinking": true,
+        "effort": "medium",
       },
     ],
     "play_sound_when_agent_done": "always",
@@ -239,26 +242,29 @@
       },
     },
     "default_model": {
-      "enable_thinking": false,
-      "provider": "google",
-      "model": "gemini-2.5-flash-lite",
+      "effort": "medium",
+      "enable_thinking": true,
+      "provider": "openai-subscribed",
+      "model": "gpt-5.6-luna",
     },
-    "default_profile": "write",
+    "default_profile": "ask",
   },
   "ui_font_size": 16.0,
   "buffer_font_size": 14.0,
   "theme": "Catppuccin Frappé (Blur) [Light]",
-  "experimental.theme_overrides": {
-    "scrollbar.thumb.background": "#4f5e72",
-    "title_bar.background": "#1a1d23b2",
-    "title_bar.inactive_background": "#1a1d23b2",
-    "status_bar.background": "#1a1d23b2",
-    "background": "#1a1d23b2",
-    // "background": "#1a1d2380",
-    // "background": "#232136b2",
-    "syntax": {
-      "type": {
-        "color": "#8cb6ff",
+  "theme_overrides": {
+    "Catppuccin Frappé (Blur) [Light]": {
+      "scrollbar.thumb.background": "#4f5e72",
+      "title_bar.background": "#1a1d23b2",
+      "title_bar.inactive_background": "#1a1d23b2",
+      "status_bar.background": "#1a1d23b2",
+      "background": "#1a1d23b2",
+      // "background": "#1a1d2380",
+      // "background": "#232136b2",
+      "syntax": {
+        "type": {
+          // "color": "#8cb6ff",
+        },
       },
     },
   },

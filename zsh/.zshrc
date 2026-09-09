@@ -164,3 +164,6 @@ export NVM_DIR="$HOME/.nvm"
 alias cal="calcurse-caldav --oauthfile ~/.config/calcurse/caldav/oauth2.token && calcurse"
 
 export PATH="$PATH:$HOME/go/bin"
+
+# kimi-code
+export PATH="/home/baltika/.kimi-code/bin:$PATH"

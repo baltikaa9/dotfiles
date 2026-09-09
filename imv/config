@@ -1,0 +1,2 @@
+[binds]
+c = exec wl-copy < "$imv_current_file"
