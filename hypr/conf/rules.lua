@@ -27,8 +27,11 @@ hl.window_rule({
 hl.window_rule({
     match = { title = 'Картинка в картинке' },
     float = true,
-    size = '400 225',
-    move = '1492 827',
+    -- size = '400 225',
+    size = '480 270',
+    -- size = '512 288',
+    -- move = '1492 827',
+    move = '1422 792',
 })
 
 hl.window_rule({
