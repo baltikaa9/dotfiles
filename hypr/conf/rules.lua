@@ -31,7 +31,7 @@ hl.window_rule({
     size = '480 270',
     -- size = '512 288',
     -- move = '1492 827',
-    move = '1422 792',
+    move = '1421 791',
 })
 
 hl.window_rule({

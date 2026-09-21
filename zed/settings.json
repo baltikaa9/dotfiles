@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "proxy": "",
   "diff_view_style": "unified",
   "ssh_connections": [
     {
@@ -254,7 +255,7 @@
   "theme": "Catppuccin Frappé (Blur) [Light]",
   "theme_overrides": {
     "Catppuccin Frappé (Blur) [Light]": {
-      "scrollbar.thumb.background": "#4f5e72",
+      // "scrollbar.thumb.background": "#4f5e72",
       "title_bar.background": "#1a1d23b2",
       "title_bar.inactive_background": "#1a1d23b2",
       "status_bar.background": "#1a1d23b2",

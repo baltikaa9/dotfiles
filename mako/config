@@ -8,7 +8,7 @@ font=JetbrainsMono 12
 layer=overlay
 width=300
 height=500
-outer-margin=0,20
+outer-margin=0,10
 padding=15
 format=<b><span color="#BD9AC5">%a</span></b>\n<b>%s</b>\n<span weight="light">%b</span>
 # format=<b><span color="#FFF9E0">%a</span></b>\n<b>%s</b>\n<span weight="light">%b</span>

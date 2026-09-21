@@ -9,57 +9,140 @@
   {
     "context": "Workspace",
     "bindings": {
-      // "shift shift": "file_finder::Toggle"
-    }
+      // "shift shift": "file_finder::Toggle",
+      "shift shift": "pane::DeploySearch",
+    },
   },
   {
     "context": "Editor && vim_mode == insert",
     "bindings": {
       // "j k": "vim::NormalBefore"
-    }
-  },
-  {
-    "context": "Workspace",
-    "bindings": {
-      "alt-f10": "task::Spawn"
-    }
+    },
   },
   {
     "context": "Editor",
     "bindings": {
-      "shift-f10": null
-    }
-  },
-  {
-    "context": "Workspace",
-    "bindings": {
-      "shift-f10": "task::Rerun"
-    }
-  },
-  {
-    "context": "Terminal",
-    "bindings": {
-      "ctrl-v": "terminal::Paste"
-    }
-  },
-  {
-    "context": "Terminal",
-    "bindings": {
-      "ctrl-c": "terminal::Copy"
-    }
-  },
-  {
-    "context": "Terminal",
-    "bindings": {
-      "ctrl-shift-c": ["terminal::SendKeystroke", "ctrl-c"]
-    }
-  },
-  {
-    "context": "Editor",
-    "bindings": {
+      "shift-f10": "task::Spawn",
       "ctrl-w": "pane::CloseActiveItem",
+      "ctrl-.": [
+        "editor::ToggleComments",
+        {
+          "advance_downwards": true,
+        },
+      ],
+      "ctrl-divide": [
+        "editor::ToggleComments",
+        {
+          "advance_downwards": true,
+        },
+      ],
       "alt-left": "pane::ActivatePrevItem",
-      "alt-right": "pane::ActivateNextItem"
-    }
-  }
+      "alt-right": "pane::ActivateNextItem",
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "alt-f10": "task::Rerun",
+    },
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "shift-f10": "task::Spawn",
+      "ctrl-v": "terminal::Paste",
+      "ctrl-c": "terminal::Copy",
+      "ctrl-shift-c": ["terminal::SendKeystroke", "ctrl-c"],
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-alt-a": [
+        "task::Spawn",
+        {
+          "task_name": "Forward Search (Zed → Zathura)",
+          "reevaluate_context": true,
+        },
+      ],
+    },
+  },
+  {
+    "context": "AgentDiff",
+    "bindings": {
+      "alt-z": "agent::RejectAll",
+    },
+  },
+  {
+    "context": "AgentDiff",
+    "unbind": {
+      "alt-shift-z": "agent::RejectAll",
+    },
+  },
+  {
+    "context": "Editor && editor_agent_diff",
+    "bindings": {
+      "alt-z": "agent::RejectAll",
+    },
+  },
+  {
+    "context": "Editor && editor_agent_diff",
+    "unbind": {
+      "alt-shift-z": "agent::RejectAll",
+    },
+  },
+  {
+    "context": "AcpThread > Editor",
+    "bindings": {
+      "alt-z": "agent::RejectAll",
+    },
+  },
+  {
+    "context": "AcpThread > Editor",
+    "unbind": {
+      "alt-shift-z": "agent::RejectAll",
+    },
+  },
+  {
+    "context": "AgentPanel",
+    "bindings": {
+      "alt-a": "agent::AllowOnce",
+    },
+  },
+  {
+    "context": "AgentPanel",
+    "unbind": {
+      "alt-shift-a": "agent::AllowOnce",
+    },
+  },
+  {
+    "context": "AgentPanel",
+    "bindings": {
+      "alt-x": "agent::RejectOnce",
+    },
+  },
+  {
+    "context": "AgentPanel",
+    "unbind": {
+      "alt-shift-x": "agent::RejectOnce",
+    },
+  },
+  {
+    "context": "AgentPanel",
+    "bindings": {
+      "alt-q": "agent::AllowAlways",
+    },
+  },
+  {
+    "context": "AgentPanel",
+    "unbind": {
+      "alt-shift-q": "agent::AllowAlways",
+    },
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "ctrl-y": "editor::DeleteLine",
+    },
+  },
 ]
