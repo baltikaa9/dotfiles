@@ -2,7 +2,7 @@
     "layer": "top",
     "modules-left": ["hyprland/workspaces", "hyprland/window", /*"custom/menu",*/ "custom/weather", "cpu", "custom/gpu", "memory", "tray"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/mediaplayer~", "mpris", "custom/cava", "pulseaudio", "wireplumber~", "backlight", /*"cpu", "memory", */"hyprland/language"],
+    "modules-right": ["custom/tomat", "mpris", "custom/cava", "pulseaudio", "wireplumber~", "backlight", "hyprland/language"],
     "reload_style_on_change": true,
     "hyprland/window": {
         "format": "",
@@ -114,14 +114,6 @@
 		},
         "sort-by-number": true
     },
-    "custom/mediaplayer": {
-        "format": "{}",
-        "max-length": 40,
-        //"interval": 30, // Remove this if your script is endless and write in loop
-        "exec": "~/.config/waybar/scripts/mediaplayer.sh 2> /dev/null" // Script in resources folder
-        // "exec": "echo ' '" // Script in resources folder
-        //"exec-if": "pgrep spotify"
-    },
     "cava": {
         // "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
         "framerate": 144,
@@ -184,5 +176,14 @@
         "on-click": "kitty --class wttr.in --hold curl ru.wttr.in/volgograd?m",
         // "on-click-right": "kitty --class wttr.in0 --hold proxychains curl ru.wttr.in/volgograd?0"
         "on-click-right": "zen-browser https://gismeteo.ru"
+    },
+    "custom/tomat": {
+        "exec": "tomat status",
+        "interval": 1,
+        "return-type": "json",
+        "format": "{}",
+        "on-click": "tomat toggle",
+        "on-click-right": "tomat skip",
+        "on-click-middle": "tomat stop"
     }
 }

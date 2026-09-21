@@ -30,7 +30,8 @@ window#waybar {
 #mpris,
 #cpu,
 #memory,
-#custom-gpu {
+#custom-gpu,
+#custom-tomat {
   background: rgba(26, 29, 35, 0.7);
   padding: 2px 10px;
   margin: 5px;
