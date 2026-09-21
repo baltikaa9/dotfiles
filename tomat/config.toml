@@ -70,3 +70,5 @@ text_format = "{state} {icon} {time}"  # Text display format
 # [hooks.on_pause]
 # cmd = "/home/user/scripts/dim-screen.sh"
 # cwd = "/home/user"
+[hooks.on_complete]
+cmd = "/home/baltika/.config/tomat/bin/counter.sh"
