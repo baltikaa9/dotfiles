@@ -25,13 +25,13 @@ text_format = "{state} {icon} {time}"  # Text display format
 # text_format_idle = "" # Optional: format for idle state (defaults to text_format)
 
 # Customize icons/symbols (optional)
-# [display.icons]
-# work = "🍅"          # Work/Idle phase icon
-# break = "☕"         # Break phase icon
-# long_break = "🏖️"   # Long break phase icon
-# play = "▶"          # Playing state symbol
-# pause = "⏸"         # Paused state symbol
-# stop = "⏹"          # Stopped/Idle state symbol
+[display.icons]
+work = "🍅"          # Work/Idle phase icon
+break = "☕"         # Break phase icon
+long_break = "🏖️"   # Long break phase icon
+pause = "▶"          # Playing state symbol
+play = "⏸"         # Paused state symbol
+stop = "⏹"          # Stopped/Idle state symbol
 
 [hooks]
 # Execute custom commands on timer events (optional)
@@ -58,17 +58,17 @@ text_format = "{state} {icon} {time}"  # Text display format
 #   TOMAT_AUTO_ADVANCE - Auto-advance mode ("none", "all", "to-break", "to-work")
 
 # Example hooks:
-# [hooks.on_work_start]
-# cmd = "notify-send"
-# args = ["🍅 Work Time", "Focus for 25 minutes"]
-#
-# [hooks.on_break_start]
-# cmd = "playerctl"
-# args = ["pause"]
-# timeout = 2
-#
+[hooks.on_work_start]
+cmd = "notify-send"
+args = ["🍅 Work Time", "Focus for 25 minutes"]
+
+[hooks.on_break_start]
+cmd = "playerctl"
+args = ["pause"]
+timeout = 2
+
 # [hooks.on_pause]
 # cmd = "/home/user/scripts/dim-screen.sh"
 # cwd = "/home/user"
-[hooks.on_complete]
+[hooks.on_work_end]
 cmd = "/home/baltika/.config/tomat/bin/counter.sh"
