@@ -72,6 +72,7 @@ end
 -- Full opacity for these apps
 local fullOpacityClasses = {
     '^(kitty)$',
+    '^(btop)$',
     '^(zen)$',
     '^(dev.zed.Zed)$',
     '^(org.telegram.desktop)$',
