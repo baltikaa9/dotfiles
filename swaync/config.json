@@ -37,7 +37,8 @@
     "inhibitors",
     "dnd",
     "mpris",
-    "notifications"
+    "notifications",
+    "calendar"
   ],
   "widget-config": {
     "notifications": {
