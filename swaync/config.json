@@ -62,7 +62,8 @@
       "text": "Label Text"
     },
     "mpris": {
-      "autohide": true
+      "autohide": true,
+      "blacklist": ["playerctld", "kdeconnect.*"]
     }
   }
 }
