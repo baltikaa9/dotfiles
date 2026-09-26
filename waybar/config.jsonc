@@ -2,7 +2,7 @@
     "layer": "top",
     "modules-left": ["hyprland/workspaces", "hyprland/window", /*"custom/menu",*/ "custom/weather", "cpu", "custom/gpu", "memory", "tray"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/tomat", "mpris", "custom/cava", "pulseaudio", "wireplumber~", "backlight", "hyprland/language"],
+    "modules-right": ["custom/tomat", "mpris", "custom/cava", "pulseaudio", "wireplumber~", "backlight", "custom/notification", "hyprland/language"],
     "reload_style_on_change": true,
     "hyprland/window": {
         "format": "",
@@ -185,5 +185,25 @@
         "on-click": "tomat toggle",
         "on-click-right": "tomat skip",
         "on-click-middle": "tomat stop"
+    },
+    "custom/notification": {
+        "tooltip": true,
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "󱅫",
+            "none": "󰂜",
+            "dnd-notification": "󰂠",
+            "dnd-none": "󰪓",
+            "inhibited-notification": "󰂛",
+            "inhibited-none": "󰪑",
+            "dnd-inhibited-notification": "󰂛",
+            "dnd-inhibited-none": "󰪑"
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
     }
 }

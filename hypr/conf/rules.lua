@@ -144,8 +144,23 @@ hl.layer_rule({
     ignore_alpha = 0,
 })
 
+-- mako
 hl.layer_rule({
     match = { namespace = 'notifications' },
+    blur = true,
+    ignore_alpha = 0,
+})
+
+-- swaync
+hl.layer_rule({
+    match = { namespace = 'swaync-notification-window' },
+    blur = true,
+    ignore_alpha = 0,
+})
+
+-- swaync
+hl.layer_rule({
+    match = { namespace = 'swaync-control-center' },
     blur = true,
     ignore_alpha = 0,
 })
