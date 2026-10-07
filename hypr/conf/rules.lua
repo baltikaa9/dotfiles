@@ -123,6 +123,11 @@ hl.window_rule({
     workspace = 'special:magic',
 })
 
+hl.window_rule({
+    match = { class = '^(YandexMusic)$' },
+    workspace = 'special:magic',
+})
+
 -- Some things in Wayland are not windows, but layers - app launchers, status bars, wallpapers, etc.
 -- See https://wiki.hypr.land/Configuring/Basics/Window-Rules/#layer-rules
 

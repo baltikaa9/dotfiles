@@ -84,6 +84,10 @@
   "vim_mode": false,
   "buffer_font_family": "JetBrains Mono",
   "context_servers": {
+    "graphify": {
+      "enabled": true,
+      "url": "https://api.graphify.com/mcp"
+    },
     "b24-dev-mcp": {
       "enabled": true,
       "url": "https://mcp-dev.bitrix24.tech/mcp",
@@ -107,12 +111,14 @@
     "dock": "bottom",
   },
   "agent": {
+    "threads_sidebar": {
+      "position": "right",
+    },
     "inline_assistant_model": {
       "provider": "google",
       "model": "gemini-3-flash-preview",
       "enable_thinking": false,
     },
-    "sidebar_side": "right",
     "tool_permissions": {
       "default": "confirm",
       "tools": {
@@ -192,6 +198,36 @@
         },
         "enable_all_context_servers": false,
         "context_servers": {
+          "graphify": {
+            "tools": {
+              "shortest_path": true,
+              "set_workspace": true,
+              "search": true,
+              "remember": true,
+              "recall": true,
+              "query_graph": true,
+              "memories_about": true,
+              "list_workspaces": true,
+              "list_repositories": true,
+              "impact_and_risk": true,
+              "graphify_trace": true,
+              "graphify_tests_for": true,
+              "graphify_render_subgraph": true,
+              "graphify_references": true,
+              "graphify_rank_files": true,
+              "graphify_node": true,
+              "graphify_imports_exports": true,
+              "graphify_impact": true,
+              "graphify_find_seeds": true,
+              "graphify_find": true,
+              "graphify_file_neighbors": true,
+              "graphify_expand": true,
+              "graphify_callers": true,
+              "graphify_callees": true,
+              "graph_stats": true,
+              "fetch": true
+            }
+          },
           "b24-dev-mcp": {
             "tools": {
               "bitrix-app-development-doc-details": true,
@@ -246,7 +282,7 @@
       "effort": "medium",
       "enable_thinking": true,
       "provider": "openai-subscribed",
-      "model": "gpt-5.6-luna",
+      "model": "gpt-6-luna",
     },
     "default_profile": "ask",
   },

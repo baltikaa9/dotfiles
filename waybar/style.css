@@ -2,8 +2,10 @@
   border: none;
   border-radius: 0px;
   font-family: "JetBrainsMono";
-  font-size: 16px;
-  font-style: normal;
+  /* font-family: "SF Mono"; */
+  /* font-family: "Ndot77JPExtended"; */
+  font-size: 14px;
+  /* font-style: normal; */
   min-height: 0;
   /* color: #CDD6F4; */
 }

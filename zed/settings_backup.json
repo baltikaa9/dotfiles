@@ -7,18 +7,55 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "proxy": "",
+  "diff_view_style": "unified",
+  "ssh_connections": [
+    {
+      "host": "81.163.24.218",
+      "username": "bitrix",
+      "args": [],
+      "projects": [
+        {
+          "paths": ["/home/bitrix/ext_www/dev.intervolga.ru/./"],
+        },
+      ],
+      "nickname": "intervolga2020",
+    },
+  ],
+  "language_models": {
+    "openai_compatible": {
+      "Groq": {
+        "api_url": "https://api.groq.com/openai/v1",
+        "available_models": [
+          {
+            "name": "meta-llama/llama-4-scout-17b-16e-instruct",
+            "max_tokens": 200000,
+            "max_output_tokens": 32000,
+            "max_completion_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+              "chat_completions": true,
+              "interleaved_reasoning": false,
+            },
+          },
+        ],
+      },
+    },
+  },
   "cli_default_open_behavior": "new_window",
   "project_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "outline_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "collaboration_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "ui_font_family": "New York Small",
-  "proxy": "socks5://127.0.0.1:2080",
   "scrollbar": {
     "show": "auto",
   },
@@ -43,17 +80,13 @@
     "dock": "left",
     "tree_view": true,
   },
-  "agent_servers": {
-    "gemini": {
-      "type": "registry"
-    },
-  },
+  "agent_servers": {},
   "vim_mode": false,
-  "buffer_font_family": ".ZedMono",
+  "buffer_font_family": "JetBrains Mono",
   "context_servers": {
     "b24-dev-mcp": {
       "enabled": true,
-      "url": "https://mcp-dev.bitrix24.tech/mcp"
+      "url": "https://mcp-dev.bitrix24.tech/mcp",
     },
     "mcp-server-context7": {
       "enabled": true,
@@ -64,44 +97,83 @@
   },
   "icon_theme": "Catppuccin Frappé",
   "terminal": {
+    "font_family": "JetBrains Mono",
+    "toolbar": {
+      "breadcrumbs": false,
+    },
     "scrollbar": {
       "show": "auto",
     },
     "dock": "bottom",
   },
   "agent": {
-    "dock": "right",
-    "tool_permissions": {
-      "default": "allow",
+    "inline_assistant_model": {
+      "provider": "google",
+      "model": "gemini-3-flash-preview",
+      "enable_thinking": false,
     },
+    "sidebar_side": "right",
+    "tool_permissions": {
+      "default": "confirm",
+      "tools": {
+        "terminal": {
+          "always_allow": [
+            {
+              "pattern": "^grep\\b",
+            },
+          ],
+        },
+        "edit_file": {
+          "default": "confirm",
+        },
+      },
+    },
+    "flexible": true,
+    "dock": "right",
     "favorite_models": [
       {
         "provider": "google",
         "model": "gemini-2.5-flash",
-        "enable_thinking": false
+        "enable_thinking": false,
       },
       {
         "provider": "google",
         "model": "gemini-2.5-flash-lite",
-        "enable_thinking": false
+        "enable_thinking": false,
       },
       {
         "provider": "google",
         "model": "gemini-3-flash-preview",
-        "enable_thinking": false
+        "enable_thinking": false,
       },
       {
         "provider": "openrouter",
         "model": "google/gemma-4-31b-it:free",
-        "enable_thinking": false
+        "enable_thinking": false,
       },
       {
         "provider": "openrouter",
         "model": "google/gemma-4-26b-a4b-it:free",
-        "enable_thinking": false
-      }
+        "enable_thinking": false,
+      },
+      {
+        "provider": "openrouter",
+        "model": "deepseek/deepseek-v3.2",
+        "enable_thinking": true,
+      },
+      {
+        "provider": "openrouter",
+        "model": "qwen/qwen3-coder-next",
+        "enable_thinking": false,
+      },
+      {
+        "provider": "openai-subscribed",
+        "model": "gpt-5.6-luna",
+        "enable_thinking": true,
+        "effort": "medium",
+      },
     ],
-    "play_sound_when_agent_done": true,
+    "play_sound_when_agent_done": "always",
     "profiles": {
       "ask": {
         "name": "Ask",
@@ -120,8 +192,18 @@
         },
         "enable_all_context_servers": false,
         "context_servers": {
+          "b24-dev-mcp": {
+            "tools": {
+              "bitrix-app-development-doc-details": true,
+              "bitrix-article-details": true,
+              "bitrix-event-details": true,
+              "bitrix-method-details": true,
+              "bitrix-search": true,
+            },
+          },
           "mcp-server-context7": {
             "tools": {
+              "query-docs": true,
               "resolve-library-id": true,
               "get-library-docs": true,
             },
@@ -161,26 +243,29 @@
       },
     },
     "default_model": {
-      "enable_thinking": false,
-      "provider": "google",
-      "model": "gemini-3-flash-preview",
+      "effort": "medium",
+      "enable_thinking": true,
+      "provider": "openai-subscribed",
+      "model": "gpt-6-luna",
     },
     "default_profile": "write",
   },
   "ui_font_size": 16.0,
   "buffer_font_size": 14.0,
   "theme": "Catppuccin Frappé (Blur) [Light]",
-  "experimental.theme_overrides": {
-    "scrollbar.thumb.background": "#4f5e72",
-    "title_bar.background": "#1a1d23b2",
-    "title_bar.inactive_background": "#1a1d23b2",
-    "status_bar.background": "#1a1d23b2",
-    "background": "#1a1d23b2",
-    // "background": "#1a1d2380",
-    // "background": "#232136b2",
-    "syntax": {
-      "type": {
-        "color": "#8cb6ff",
+  "theme_overrides": {
+    "Catppuccin Frappé (Blur) [Light]": {
+      // "scrollbar.thumb.background": "#4f5e72",
+      "title_bar.background": "#1a1d23b2",
+      "title_bar.inactive_background": "#1a1d23b2",
+      "status_bar.background": "#1a1d23b2",
+      "background": "#1a1d23b2",
+      // "background": "#1a1d2380",
+      // "background": "#232136b2",
+      "syntax": {
+        "type": {
+          // "color": "#8cb6ff",
+        },
       },
     },
   },
@@ -229,16 +314,40 @@
           "build": {
             "onSave": true,
             "forwardSearchAfter": true,
+            "executable": "latexmk",
+            "args": [
+              "-pdf",
+              "-shell-escape",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "%f",
+            ],
           },
         },
       },
     },
-    // "ltex": {
-    //   "settings": {
-    //     "ltex": {
-    //       "language": "ru-RU",
-    //     },
-    //   },
-    // },
+    "gopls": {
+      "initialization_options": {
+        // Включаем мощный нативный линтер staticcheck внутри gopls
+        "staticcheck": true,
+        // Включаем проверку нагло проигнорированных ошибок (типа твоего os.Open)
+        "analyses": {
+          "errcheck": true,
+          "unusedparams": true,
+          "unusedwrite": true,
+          "shadow": true,
+        },
+        // Приятный бонус: inlay-хинты для типов и параметров прямо в коде
+        "hints": {
+          "assignVariableTypes": true,
+          "compositeLiteralFields": true,
+          "compositeLiteralTypes": true,
+          "constantValues": true,
+          "functionTypeParameters": true,
+          "parameterNames": true,
+          "rangeVariableTypes": true,
+        },
+      },
+    },
   },
 }

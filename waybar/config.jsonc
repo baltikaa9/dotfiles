@@ -1,8 +1,8 @@
 {
     "layer": "top",
-    "modules-left": ["hyprland/workspaces", "hyprland/window", /*"custom/menu",*/ "custom/weather", "cpu", "custom/gpu", "memory", "tray"],
+    "modules-left": ["hyprland/workspaces", "hyprland/window", /*"custom/menu",*/ "custom/weather", "cpu", "custom/gpu", "memory", "tray", "custom/tomat"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/tomat", "mpris", "custom/cava", "pulseaudio", "wireplumber~", "backlight", "custom/notification", "hyprland/language"],
+    "modules-right": ["mpris", "custom/cava", "pulseaudio", "wireplumber~", "backlight", "custom/notification", "hyprland/language"],
     "reload_style_on_change": true,
     "hyprland/window": {
         "format": "",

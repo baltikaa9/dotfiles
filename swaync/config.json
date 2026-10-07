@@ -13,7 +13,6 @@
   "control-center-height": -1,
   "fit-to-screen": true,
   "layer-shell-cover-screen": true,
-  "control-center-preferred-output": "DP-1",
 
   "layer-shell": true,
   "layer": "overlay",
