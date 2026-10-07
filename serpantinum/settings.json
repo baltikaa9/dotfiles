@@ -1,0 +1,174 @@
+{
+  "notifications": {
+    "dnd": false,
+    "position": "top right",
+    "horizontalPosition": 88,
+    "verticalPosition": 15,
+    "sound": true,
+    "soundFile": "/home/baltika/.local/share/serpantinum/src/assets/sounds/notifications/Botanica.wav",
+    "showEmptyGraphic": true
+  },
+  "general": {
+    "location": {
+      "ip": "188.233.84.42",
+      "latitude": 48.719593,
+      "longitude": 44.501718,
+      "city": "Volgograd",
+      "region": "Volgograd Oblast",
+      "region_code": "VGG",
+      "country_name": "Russia",
+      "country_code": "RU",
+      "postal": "404160",
+      "timezone": "Europe/Volgograd",
+      "utc_offset": "+0300",
+      "currency": "RUB",
+      "languages": "ru,tt,xal,cau,ady,kv,ce,tyv,cv,udm,tut,mns,bua,myv,mdf,chm,ba,inh,kbd,krc,av,sah,nog",
+      "asn": "AS39435",
+      "org": "JSC \"ER-Telecom Holding\"",
+      "source": "ipapi.co",
+      "updated_at": 1791398879
+    }
+  },
+  "display": {
+    "monitors": {
+      "DP-1": {
+        "enabled": true,
+        "auto": true
+      },
+      "DP-2": {
+        "enabled": true,
+        "auto": true,
+        "scale": 1
+      }
+    }
+  },
+  "theme": {
+    "fontFamily": "JetBrains Mono",
+    "borderRadius": 20,
+    "activePreset": "Matugen",
+    "matugen": true,
+    "colors": {
+      "base": "#101010",
+      "blue": "#aca2fe",
+      "crust": "#050505",
+      "green": "#99ffe4",
+      "mantle": "#0a0a0a",
+      "maroon": "#f5a191",
+      "mauve": "#caabf7",
+      "overlay0": "#505050",
+      "overlay1": "#6c6c6c",
+      "overlay2": "#888888",
+      "peach": "#ffcfa8",
+      "pink": "#f5a191",
+      "red": "#f5a191",
+      "sapphire": "#98b9f5",
+      "subtext0": "#8b8b8b",
+      "subtext1": "#b3b3b3",
+      "surface0": "#1c1c1c",
+      "surface1": "#282828",
+      "surface2": "#343434",
+      "teal": "#99ffe4",
+      "text": "#ffffff",
+      "yellow": "#ffcfa8"
+    }
+  },
+  "wallpaperDir": "/home/baltika/Pictures/wallpapers",
+  "bar": {
+    "position": "top",
+    "width": 100,
+    "opacity": 100,
+    "style": "modular",
+    "distinctPills": false,
+    "time": {
+      "format": "HH:mm:ss"
+    },
+    "autohide": false,
+    "autohideTimeout": 1000,
+    "groupColors": {
+      "g_vis": "#aec6ff",
+      "g_workspaces": "#583e5a",
+      "g_media": "#bfc6dc"
+    },
+    "modules": {
+      "left": [
+        "left",
+        "workspaces",
+        "sysmon",
+        "weather",
+        "tray"
+      ],
+      "center": [
+        "timedate",
+        "info"
+      ],
+      "right": [
+        [
+          "media",
+          "vis",
+          "vol"
+        ],
+        "kb"
+      ]
+    },
+    "hideEmptyWorkspaces": true,
+    "timeStyle": "material"
+  },
+  "idle": {
+    "enabled": true,
+    "manualInhibit": false,
+    "actions": {
+      "dim": {
+        "id": "dim",
+        "name": "Dim Screen",
+        "timeout": 120,
+        "enabled": true,
+        "respectInhibitors": true,
+        "mprisInhibit": false,
+        "warningTimeout": 0,
+        "warningCommand": "",
+        "beforeCommand": "",
+        "resumeCommand": "",
+        "isCustom": false
+      },
+      "lock": {
+        "id": "lock",
+        "name": "Lock Session",
+        "timeout": 300,
+        "enabled": true,
+        "respectInhibitors": true,
+        "mprisInhibit": false,
+        "warningTimeout": 10,
+        "warningCommand": "",
+        "beforeCommand": "",
+        "resumeCommand": "",
+        "isCustom": false
+      },
+      "dpms": {
+        "id": "dpms",
+        "name": "Display Off (DPMS)",
+        "timeout": 360,
+        "enabled": true,
+        "respectInhibitors": true,
+        "mprisInhibit": false,
+        "warningTimeout": 0,
+        "warningCommand": "",
+        "beforeCommand": "",
+        "resumeCommand": "",
+        "isCustom": false
+      },
+      "suspend": {
+        "id": "suspend",
+        "name": "System Suspend",
+        "timeout": 600,
+        "enabled": true,
+        "respectInhibitors": true,
+        "mprisInhibit": false,
+        "warningTimeout": 30,
+        "warningCommand": "",
+        "isCustom": false
+      }
+    },
+    "customActions": []
+  }
+}
+

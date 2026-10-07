@@ -1,6 +1,6 @@
 {
     "layer": "top",
-    "modules-left": ["hyprland/workspaces", "hyprland/window", /*"custom/menu",*/ "custom/weather", "cpu", "custom/gpu", "memory", "tray", "custom/tomat"],
+    "modules-left": ["hyprland/workspaces", "hyprland/window", "cpu", "custom/gpu", "memory", "custom/weather", "tray", "custom/tomat"],
     "modules-center": ["clock"],
     "modules-right": ["mpris", "custom/cava", "pulseaudio", "wireplumber~", "backlight", "custom/notification", "hyprland/language"],
     "reload_style_on_change": true,
@@ -146,7 +146,7 @@
         // "restart-interval": 1
     },
     "mpris": {
-	    "format": "{status_icon} {player_icon} {title} - {artist}",
+	    "format": "{status_icon} {player_icon} {title} {position}/{length}",
 	    //"format-paused": "{status_icon} <i>{title} - {artist}</i>",
 	    "artist-len": 15,
 	    "title-len": 15,
@@ -160,7 +160,8 @@
 	    "status-icons": {
 	        "paused": "▶",
 		    "playing": "⏸"
-	    }
+	    },
+	    "interval": 1
 	// "ignored-players": ["firefox"]
     },
     "custom/weather": {
