@@ -62,7 +62,7 @@
     },
     "mpris": {
       "autohide": true,
-      "blacklist": ["playerctld", "kdeconnect.*"]
+      "blacklist": ["playerctld", "kdeconnect.mpris_8081eab5167a4f57b3f883453f25c3d1"]
     }
   }
 }
