@@ -1,0 +1,38 @@
+[config]
+
+[templates.kitty]
+input_path = '~/.config/matugen/templates/kitty.conf'
+output_path = '~/.config/kitty/colors.conf'
+post_hook = 'pkill -SIGUSR1 kitty'
+
+[templates.waybar]
+input_path = '~/.config/matugen/templates/waybar.css'
+output_path = '~/.config/waybar/colors.css'
+post_hook = 'pkill -SIGUSR2 waybar'
+
+[templates.zen]
+input_path = '~/.config/matugen/templates/zen-user.js'
+output_path = '~/.zen/7387bicf.Default (release)/colors.js'
+post_hook = '~/.config/matugen/update-zen.sh'
+
+[templates.cava]
+input_path = '~/.config/matugen/templates/cava'
+output_path = '~/.config/cava/themes/matugen'
+post_hook = 'pkill -USR1 cava'
+
+[templates.swaync]
+input_path = '~/.config/matugen/templates/swaync.css'
+output_path = '~/.config/swaync/colors.css'
+post_hook = 'swaync-client -rs'
+
+[templates.wofi]
+input_path = '~/.config/matugen/templates/wofi.css'
+output_path = '~/.config/wofi/style.css'
+
+[templates.zed]
+input_path = '~/.config/matugen/templates/zed.json'
+output_path = '~/.config/zed/themes/matugen.json'
+
+[templates.hyprlock]
+input_path = '~/.config/matugen/templates/hyprlock.conf'
+output_path = '~/.config/hypr/colors.conf'

@@ -30,7 +30,7 @@ hl.config({
             range = 30,
             render_power = 4,
             color = 'rgba(00000033)',
-            offset = { 4, 6 },
+            offset = { 2, 2 },
         },
 
         blur = {
@@ -117,7 +117,7 @@ hl.config({
 hl.config({
     misc = {
         force_default_wallpaper = -1,
-        disable_hyprland_logo = false,
+        disable_hyprland_logo = true,
 
         animate_mouse_windowdragging = true,
     },

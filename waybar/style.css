@@ -1,3 +1,5 @@
+@import "colors.css";
+
 * {
   border: none;
   border-radius: 0px;
@@ -8,12 +10,14 @@
   /* font-style: normal; */
   min-height: 0;
   /* color: #CDD6F4; */
+  /* color: @foreground; */
 }
 
 window#waybar {
   background: transparent;
   /* color: #f4d9e1; */
-  color: #CDD6F4;
+  /* color: #CDD6F4; */
+  color: @foreground;
 }
 
 #workspaces,
@@ -35,7 +39,8 @@ window#waybar {
 #custom-gpu,
 #custom-tomat,
 #custom-notification {
-  background: rgba(26, 29, 35, 0.7);
+  /* background: rgba(26, 29, 35, 0.7); */
+  background-color: @background;
   padding: 2px 10px;
   margin: 5px;
   border-radius: 18px;
@@ -53,7 +58,7 @@ window#waybar {
 #workspaces button {
   padding: 0px 5px;
   border-radius: 10px;
-  color: #CDD6F4;
+  /* color: #CDD6F4; */
   /* color: #928374; */
 }
 
@@ -63,8 +68,10 @@ window#waybar {
 
 #workspaces button:hover {
   /* background-color: #E6B9C6; */
-  background-color: #CDD6F4;
-  color: rgb(26, 29, 35);
+  /* background-color: #CDD6F4; */
+  /* color: rgb(26, 29, 35); */
+  background-color: @foreground;
+  color: @background;
 }
 
 #mpris,
@@ -178,7 +185,8 @@ tooltip {
 
 tooltip label {
   font-weight: bold;
-  color: #CDD6F4;
+  /* color: #CDD6F4; */
+  color: @foreground;
   padding: 8px;
 }
 
@@ -189,25 +197,29 @@ window#waybar.empty #window {
 
 #custom-tomat.work {
   background-color: #ff6b6b;
-  color: rgb(26, 29, 35);
+  /* color: rgb(26, 29, 35); */
+  color: @background;
 }
 #custom-tomat.work-paused {
   background-color: #ff9999;
-  color: rgb(26, 29, 35);
+  /* color: rgb(26, 29, 35); */
+  color: @background;
 }
 #custom-tomat.break {
   background-color: #4ecdc4;
-  color: rgb(26, 29, 35);
+  /* color: rgb(26, 29, 35); */
+  color: @background;
 }
 #custom-tomat.break-paused {
   background-color: #7dd3db;
-  color: rgb(26, 29, 35);
+  /* color: rgb(26, 29, 35); */
+  color: @background;
 }
 #custom-tomat.long-break {
   background-color: #45b7d1;
-  color: rgb(26, 29, 35);
+  color: @background;
 }
 #custom-tomat.long-break-paused {
   background-color: #74c0db;
-  color: rgb(26, 29, 35);
+  color: @background;
 }

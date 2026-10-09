@@ -1,0 +1,5 @@
+:root {
+  --widget-background: {{colors.surface.default.rgba | set_alpha: 0.4}};
+  --border: 1px solid {{colors.outline.default.rgba | set_alpha: 0.4}};
+  --hover: {{colors.surface_variant.default.rgba}};
+}

@@ -1,8 +1,10 @@
+@import url("colors.css");
+
 :root {
   --border-radius: 20px;
   --cc-bg: transparent;
 
-  --widget-background: rgba(26, 29, 35, 0.4);    /* #1A1D2366 */
+  /* --widget-background: rgba(26, 29, 35, 0.4); */ 
   --noti-bg-alpha: 0.6;
 
   --padding: calc(var(--border-radius) / 2);
@@ -16,7 +18,7 @@
 .notification {
   background-color: var(--widget-background);   
   border-radius: 20px 10px 20px 20px;
-  border: 1px solid rgba(255, 249, 224, 0.3); /* #FFF9E04d */
+  border: var(--border);
   padding: var(--padding);
   margin-top: 5px;
   margin-right: 10px;
@@ -24,6 +26,7 @@
 
 .control-center {
   border-radius: 0;
+  background-color: var(--cc-bg);
 }
 
 .widgets > .widget,
@@ -59,7 +62,7 @@
   margin-top: var(--padding);
 }
 .widget-mpris > box > button:hover {
-  background: rgba(46, 46, 46, 1);
+  background: var(--hover);
 }
 .widget-mpris-player {
   box-shadow: none;

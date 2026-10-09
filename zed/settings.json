@@ -86,7 +86,7 @@
   "context_servers": {
     "graphify": {
       "enabled": true,
-      "url": "https://api.graphify.com/mcp"
+      "url": "https://api.graphify.com/mcp",
     },
     "b24-dev-mcp": {
       "enabled": true,
@@ -225,8 +225,8 @@
               "graphify_callers": true,
               "graphify_callees": true,
               "graph_stats": true,
-              "fetch": true
-            }
+              "fetch": true,
+            },
           },
           "b24-dev-mcp": {
             "tools": {
@@ -288,14 +288,15 @@
   },
   "ui_font_size": 16.0,
   "buffer_font_size": 14.0,
-  "theme": "Catppuccin Frappé (Blur) [Light]",
+  "theme": "Matugen",
+  // "theme": "Catppuccin Mocha (Blur) [Light]",
   "theme_overrides": {
-    "Catppuccin Frappé (Blur) [Light]": {
+    "Catppuccin Mocha (Blur) [Light]": {
       // "scrollbar.thumb.background": "#4f5e72",
-      "title_bar.background": "#1a1d23b2",
-      "title_bar.inactive_background": "#1a1d23b2",
-      "status_bar.background": "#1a1d23b2",
-      "background": "#1a1d23b2",
+      "title_bar.background": "#111318B2",
+      "title_bar.inactive_background": "#111318B2",
+      "status_bar.background": "#111318B2",
+      "background": "#111318B2",
       // "background": "#1a1d2380",
       // "background": "#232136b2",
       "syntax": {
