@@ -90,9 +90,9 @@
 
         "panel.background": "{{colors.surface.default.hex}}00",
         "panel.focused_border": "{{colors.primary.default.hex}}00",
-        "panel.indent_guide": "{{colors.outline.default.hex}}77",
-        "panel.indent_guide_active": "{{colors.outline.default.hex}}FF",
-        "panel.indent_guide_hover": "{{colors.primary.default.hex}}FF",
+        "panel.indent_guide": "#31324499",
+        "panel.indent_guide_active": "#585b70",
+        "panel.indent_guide_hover": "#585b70",
         "panel.overlay_background": "{{colors.surface.default.hex}}FF",
 
         "pane.focused_border": "{{colors.outline.default.hex}}1A",
@@ -121,15 +121,15 @@
         "editor.active_line_number": "{{colors.primary.default.hex}}90",
 
         "editor.invisible": "{{colors.outline.default.hex}}66",
-        "editor.wrap_guide": "{{colors.outline.default.hex}}FF",
-        "editor.active_wrap_guide": "{{colors.outline.default.hex}}FF",
+        "editor.wrap_guide": "#585b70",
+        "editor.active_wrap_guide": "#585b70",
 
         "editor.document_highlight.bracket_background": "{{colors.primary.default.hex}}17",
         "editor.document_highlight.read_background": "{{colors.secondary.default.hex}}29",
         "editor.document_highlight.write_background": "{{colors.secondary.default.hex}}29",
 
-        "editor.indent_guide": "{{colors.outline.default.hex}}77",
-        "editor.indent_guide_active": "{{colors.outline.default.hex}}FF",
+        "editor.indent_guide": "#31324499",
+        "editor.indent_guide_active": "#585b70",
 
         "terminal.background": "{{colors.background.default.hex}}00",
         "terminal.ansi.background": "#1e1e2e",
