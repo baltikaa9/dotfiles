@@ -41,3 +41,8 @@ output_path = '~/.config/hypr/colors.conf'
 input_path = '~/.config/matugen/templates/wlogout.css'
 output_path = '~/.config/wlogout/colors.css'
 post_hook = '~/.config/wlogout/recolor-icons.sh'
+
+
+[config.custom_colors.green]
+color = "#a6e3a1"
+blend = true
