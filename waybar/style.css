@@ -197,30 +197,30 @@ window#waybar.empty #window {
 }
 
 #custom-tomat.work {
-  background-color: #ff6b6b;
+  background-color: @tomat-work;
   /* color: rgb(26, 29, 35); */
   color: @background;
 }
 #custom-tomat.work-paused {
-  background-color: #ff9999;
+  background-color: @tomat-work-paused;
   /* color: rgb(26, 29, 35); */
   color: @background;
 }
 #custom-tomat.break {
-  background-color: #4ecdc4;
+  background-color: @tomat-break;
   /* color: rgb(26, 29, 35); */
   color: @background;
 }
 #custom-tomat.break-paused {
-  background-color: #7dd3db;
+  background-color: @tomat-break-paused;
   /* color: rgb(26, 29, 35); */
   color: @background;
 }
 #custom-tomat.long-break {
-  background-color: #45b7d1;
+  background-color: @tomat-long-break;
   color: @background;
 }
 #custom-tomat.long-break-paused {
-  background-color: #74c0db;
+  background-color: @tomat-long-break-paused;
   color: @background;
 }

@@ -1,2 +1,9 @@
 @define-color background rgba(20, 19, 24, 0.7);
 @define-color foreground #e6e1e9;
+
+@define-color tomat-work              #cbbeff;
+@define-color tomat-work-paused       #e7deff;
+@define-color tomat-break             #eeb8cb;
+@define-color tomat-break-paused      #ffd9e5;
+@define-color tomat-long-break        #cac3dc;
+@define-color tomat-long-break-paused #e6dff9;

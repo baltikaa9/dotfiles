@@ -42,7 +42,10 @@ input_path = '~/.config/matugen/templates/wlogout.css'
 output_path = '~/.config/wlogout/colors.css'
 post_hook = '~/.config/wlogout/recolor-icons.sh'
 
+# [config.custom_colors.green]
+# color = "#2f6b57"
+# blend = true
 
-[config.custom_colors.green]
-color = "#a6e3a1"
-blend = true
+# [config.custom_colors.green_light]
+# color = "#a6e5dc"
+# blend = true
