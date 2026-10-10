@@ -36,3 +36,8 @@ output_path = '~/.config/zed/themes/matugen.json'
 [templates.hyprlock]
 input_path = '~/.config/matugen/templates/hyprlock.conf'
 output_path = '~/.config/hypr/colors.conf'
+
+[templates.wlogout]
+input_path = '~/.config/matugen/templates/wlogout.css'
+output_path = '~/.config/wlogout/colors.css'
+post_hook = '~/.config/wlogout/recolor-icons.sh'

@@ -1,3 +1,5 @@
+@import "colors.css";
+
 * {
 	background-image: none;
 	box-shadow: none;
@@ -13,11 +15,13 @@ window {
 }
 
 button {
+	background-color: @bg;
+  color: @fg;
 	border-radius: 0;
 	/* margin: 100px 0 100px 0; */
-	text-decoration-color: #FFFFFF;
-	color: #D4BFF9;
-	background-color: rgba(26, 29, 35, 0.7);
+	/* text-decoration-color: #FFFFFF; */
+	/* color: #D4BFF9; */
+	/* background-color: rgba(26, 29, 35, 0.7); */
 	/* border: 1px solid #bcd; */
 	background-repeat: no-repeat;
 	background-position: center;
@@ -29,20 +33,27 @@ button {
 button:focus,
 button:active,
 button:hover {
-	background-color: #bcd;
+	background-color: @accent;
+	color: @on_accent;
 	outline-style: none;
-	color: #333;
+	/* color: #333; */
 	background-size: 25%;
 	animation: gradient_f 20s ease-in infinite;
 	transition: all 0.3s cubic-bezier(.55, 0.0, .28, 1.682);
 }
 
 #lock {
-	background-image: image(url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
+	background-image: image(url("/home/baltika/.config/wlogout/icons/n/lock.png"));
+}
+
+#lock:focus,
+#lock:active,
+#lock:hover {
+	background-image: image(url("/home/baltika/.config/wlogout/icons/h/lock.png"));
 }
 
 #logout {
-	background-image: image(url("/usr/share/wlogout/icons/logout_l.png"), url("/usr/local/share/wlogout/icons/logout.png"));
+	background-image: image(url("/home/baltika/.config/wlogout/icons/n/logout.png"));
 	border-radius: 0px 0px 45px 0px;
 	margin: 0px 400px 150px 0px;
 }
@@ -50,7 +61,7 @@ button:hover {
 #logout:focus,
 #logout:active,
 #logout:hover {
-	background-image: image(url("/usr/share/wlogout/icons/logout_d.png"), url("/usr/local/share/wlogout/icons/logout.png"));
+	background-image: image(url("/home/baltika/.config/wlogout/icons/h/logout.png"));
 }
 
 #logout:hover {
@@ -59,16 +70,15 @@ button:hover {
 }
 
 #suspend {
-	background-image: image(url("/usr/share/wlogout/icons/pause_l.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
+	background-image: image(url("/home/baltika/.config/wlogout/icons/n/suspend.png"));
 	border-radius: 0px 45px 0px 0px;
 	margin: 150px 400px 0px 0px;
-
 }
 
 #suspend:focus,
 #suspend:active,
 #suspend:hover {
-	background-image: image(url("/usr/share/wlogout/icons/pause_d.png"), url("/usr/local/share/wlogout/icons/logout.png"));
+	background-image: image(url("/home/baltika/.config/wlogout/icons/h/suspend.png"));
 }
 
 #suspend:hover {
@@ -77,11 +87,17 @@ button:hover {
 }
 
 #hibernate {
-	background-image: image(url("/usr/share/wlogout/icons/hibernate.png"), url("/usr/local/share/wlogout/icons/hibernate.png"));
+	background-image: image(url("/home/baltika/.config/wlogout/icons/n/hibernate.png"));
+}
+
+#hibernate:focus,
+#hibernate:active,
+#hibernate:hover {
+	background-image: image(url("/home/baltika/.config/wlogout/icons/h/hibernate.png"));
 }
 
 #shutdown {
-	background-image: image(url("/usr/share/wlogout/icons/shutdown_l.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
+	background-image: image(url("/home/baltika/.config/wlogout/icons/n/shutdown.png"));
 	border-radius: 45px 0px 0px 0px;
 	margin: 150px 0px 0px 400px;
 }
@@ -89,7 +105,7 @@ button:hover {
 #shutdown:focus,
 #shutdown:active,
 #shutdown:hover {
-	background-image: image(url("/usr/share/wlogout/icons/shutdown_d.png"), url("/usr/local/share/wlogout/icons/logout.png"));
+	background-image: image(url("/home/baltika/.config/wlogout/icons/h/shutdown.png"));
 }
 
 #shutdown:hover {
@@ -98,7 +114,7 @@ button:hover {
 }
 
 #reboot {
-	background-image: image(url("/usr/share/wlogout/icons/reboot_l.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
+	background-image: image(url("/home/baltika/.config/wlogout/icons/n/reboot.png"));
 	border-radius: 0px 0px 0px 45px;
 	margin: 0px 0px 150px 400px;
 }
@@ -106,7 +122,7 @@ button:hover {
 #reboot:focus,
 #reboot:active,
 #reboot:hover {
-	background-image: image(url("/usr/share/wlogout/icons/reboot_d.png"), url("/usr/local/share/wlogout/icons/logout.png"));
+	background-image: image(url("/home/baltika/.config/wlogout/icons/h/reboot.png"));
 }
 
 #reboot:hover {

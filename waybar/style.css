@@ -60,6 +60,7 @@ window#waybar {
   border-radius: 10px;
   /* color: #CDD6F4; */
   /* color: #928374; */
+  color: @foreground;
 }
 
 #workspaces button.active {
