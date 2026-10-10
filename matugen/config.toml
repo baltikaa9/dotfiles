@@ -18,7 +18,7 @@ post_hook = '~/.config/matugen/update-zen.sh'
 [templates.cava]
 input_path = '~/.config/matugen/templates/cava'
 output_path = '~/.config/cava/themes/matugen'
-post_hook = 'pkill -USR1 cava'
+post_hook = 'pkill -USR1 cava || true'
 
 [templates.swaync]
 input_path = '~/.config/matugen/templates/swaync.css'
