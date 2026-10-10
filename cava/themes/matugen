@@ -1,9 +1,9 @@
 [color]
-background = '#111318'
-foreground = '#aec6ff'
+background = '#141318'
+foreground = '#cbbeff'
 
 gradient = 1
 gradient_count = 3
-gradient_color_1 = '#aec6ff'
-gradient_color_2 = '#bfc6dc'
-gradient_color_3 = '#dfbbde'
+gradient_color_1 = '#cbbeff'
+gradient_color_2 = '#cac3dc'
+gradient_color_3 = '#eeb8cb'

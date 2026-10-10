@@ -43,6 +43,10 @@ window {
   border: 1px solid {{colors.outline.default.rgba | set_alpha: 0.2}};
 }
 
+#input:focus {
+  border-color: {{colors.primary.default.hex}};
+}
+
 #img {
   margin-left: .25em;
   margin-right: .25em;
