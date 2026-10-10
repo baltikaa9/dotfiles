@@ -18,6 +18,12 @@ FG=$(to_hex "$(get fg)")
 HV=$(to_hex "$(get on_accent)")
 [ -z "$FG" ] || [ -z "$HV" ] && { echo "fg/on_accent не найдены в $D/colors.css" >&2; exit 1; }
 
+STAMP="$D/icons/.colors"
+if [ -f "$STAMP" ] && [ "$(cat "$STAMP")" = "$FG $HV" ] \
+   && [ -f "$D/icons/n/reboot.png" ] && [ -f "$D/icons/h/reboot.png" ]; then
+  exit 0
+fi
+
 mkdir -p "$D/icons/n" "$D/icons/h"
 declare -A SRC=(
   [lock]=lock [logout]=logout_l [suspend]=pause_l
@@ -27,3 +33,5 @@ for n in "${!SRC[@]}"; do
   magick "$S/${SRC[$n]}.png" -fill "$FG" -colorize 100 "$D/icons/n/$n.png"
   magick "$S/${SRC[$n]}.png" -fill "$HV" -colorize 100 "$D/icons/h/$n.png"
 done
+
+echo "$FG $HV" > "$STAMP"
