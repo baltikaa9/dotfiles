@@ -1,1 +1,34 @@
-/usr/share/themes/adw-gtk3-dark/gtk-4.0/gtk.css
+@import url('colors.css');
+
+@define-color window_bg_color @background;
+@define-color window_fg_color @foreground;
+
+@define-color view_bg_color transparent;
+@define-color view_fg_color @on_surface;
+
+@define-color headerbar_bg_color transparent;
+@define-color headerbar_fg_color @on_surface;
+@define-color headerbar_backdrop_color transparent;
+
+@define-color sidebar_bg_color transparent;
+@define-color sidebar_fg_color @on_surface;
+@define-color sidebar_backdrop_color transparent;
+
+@define-color secondary_sidebar_bg_color transparent;
+@define-color secondary_sidebar_backdrop_color transparent;
+
+@define-color card_bg_color @surface_variant;
+@define-color card_fg_color @on_surface;
+@define-color popover_bg_color @surface;
+@define-color popover_fg_color @on_surface;
+@define-color dialog_bg_color @surface;
+@define-color dialog_fg_color @on_surface;
+@define-color accent_bg_color @primary;
+@define-color accent_fg_color @on_primary;
+@define-color destructive_bg_color @error;
+@define-color destructive_fg_color @on_primary;
+
+window.background {
+  background-color: @background;
+  color: @foreground;
+}

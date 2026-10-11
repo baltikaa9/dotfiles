@@ -2,7 +2,7 @@
     "layer": "top",
     "modules-left": ["hyprland/workspaces", "hyprland/window", "cpu", "custom/gpu", "memory", "custom/weather", "tray", "custom/tomat"],
     "modules-center": ["clock"],
-    "modules-right": ["mpris", "custom/cava", "pulseaudio", "wireplumber~", "backlight", "custom/notification", "hyprland/language"],
+    "modules-right": ["mpris", "custom/cava", "pulseaudio", "backlight", "custom/notification", "hyprland/language"],
     "reload_style_on_change": true,
     "hyprland/window": {
         "format": "",
@@ -60,19 +60,15 @@
         },
         "scroll-step": 5,
         "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-        "on-click": "pavucontrol",
+        "on-click": "pwvucontrol",
         "tooltip": false
     },
     "wireplumber": {
-        "format": "{volume}% {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{source_volume}% ",
-        "format-source-muted": " ",
-        "format-icons": {
-            "default": ["", ""]
-        },
-        "on-click": "helvum"
-    },
+    "format": "{volume}% {icon}",
+    "format-muted": "",
+    "format-icons": ["", ""],
+    "on-click": "helvum"
+},
     "tray": {
         "icon-size": 15,
         "spacing": 10

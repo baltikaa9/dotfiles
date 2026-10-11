@@ -23,6 +23,7 @@ window#waybar {
 #workspaces,
 #clock,
 #pulseaudio,
+#wireplumber,
 #custom-brightness,
 #language,
 #tray,
@@ -100,6 +101,7 @@ window#waybar {
 }
 
 #pulseaudio,
+#wireplumber,
 #memory {
   margin-left: 0;
   border-bottom-left-radius: 0;

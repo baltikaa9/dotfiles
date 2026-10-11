@@ -57,7 +57,6 @@ hl.window_rule({
 
 -- Reduced opacity for these apps
 local dimmedClasses = {
-    '^(org.gnome.Nautilus)$',
     '^(Spotify)$',
     '^(yandex-music)$',
     '^(com.obsproject.Studio)$',
@@ -74,8 +73,18 @@ local fullOpacityClasses = {
     '^(kitty)$',
     '^(btop)$',
     '^(zen)$',
-    '^(dev.zed.Zed)$',
-    '^(org.telegram.desktop)$',
+    '^(dev\\.zed\\.Zed)$',
+    '^(org\\.telegram\\.desktop)$',
+    '^(org\\.gnome\\..*)$',
+    '^(com\\.github\\.FontManager\\..*)$',
+    '^(dev\\.land\\.Autoclicker)$',
+    '^(io\\.elementary\\.granite-7\\.demo)$',
+    '^(org\\.pipewire\\.Helvum)$',
+    '^(org\\.pulseaudio\\.pavucontrol|pavucontrol)$',
+    '^(org\\.pwmt\\.zathura.*)$',
+    '^(satty)$',
+    '^(xdg-desktop-portal-gnome)$',
+    '^(com.saivert.pwvucontrol)$',
 }
 for _, class in ipairs(fullOpacityClasses) do
     hl.window_rule({
