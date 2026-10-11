@@ -1,1 +1,44 @@
 @import 'colors.css';
+
+/* Окна и панели */
+@define-color theme_bg_color @background;
+@define-color theme_fg_color @foreground;
+@define-color theme_unfocused_bg_color @background;
+@define-color theme_unfocused_fg_color @foreground;
+@define-color bg_color @background;
+@define-color fg_color @foreground;
+
+/* Поля ввода, списки, области контента */
+@define-color theme_base_color @surface_variant;
+@define-color theme_text_color @on_surface;
+@define-color theme_unfocused_base_color @surface_variant;
+@define-color theme_unfocused_text_color @on_surface;
+@define-color content_view_bg @surface_variant;
+@define-color text_view_bg @surface_variant;
+
+/* Выделение и акценты */
+@define-color theme_selected_bg_color @primary;
+@define-color theme_selected_fg_color @on_primary;
+@define-color theme_unfocused_selected_bg_color @primary;
+@define-color theme_unfocused_selected_fg_color @on_primary;
+
+/* Границы и состояния */
+@define-color borders @outline;
+@define-color unfocused_borders @outline;
+@define-color insensitive_bg_color @surface;
+@define-color insensitive_fg_color @outline;
+@define-color error_color @error;
+
+/* Прозрачные заголовки и сайдбары (аналог headerbar_*/sidebar_* из GTK4) */
+headerbar,
+.titlebar,
+.sidebar,
+placeholder {
+  background-color: transparent;
+  color: @on_surface;
+}
+
+window.background {
+  background-color: @background;
+  color: @foreground;
+}
