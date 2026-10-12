@@ -200,29 +200,29 @@ window#waybar.empty #window {
 
 #custom-tomat.work {
   background-color: @tomat-work;
-  /* color: rgb(26, 29, 35); */
-  color: @background;
+  color: @tomat-work-fg;
 }
 #custom-tomat.work-paused {
   background-color: @tomat-work-paused;
-  /* color: rgb(26, 29, 35); */
-  color: @background;
+  color:  @tomat-work-paused-fg;
 }
 #custom-tomat.break {
   background-color: @tomat-break;
-  /* color: rgb(26, 29, 35); */
-  color: @background;
+  color: @tomat-break-fg;
 }
 #custom-tomat.break-paused {
   background-color: @tomat-break-paused;
-  /* color: rgb(26, 29, 35); */
-  color: @background;
+  color: @tomat-break-paused-fg;
 }
 #custom-tomat.long-break {
   background-color: @tomat-long-break;
-  color: @background;
+  color: @tomat-long-break-fg;
 }
 #custom-tomat.long-break-paused {
   background-color: @tomat-long-break-paused;
-  color: @background;
+  color: @tomat-long-break-paused-fg;
+}
+
+#custom-cava {
+    letter-spacing: 2px;
 }

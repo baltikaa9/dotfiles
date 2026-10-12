@@ -1,9 +1,15 @@
 @define-color background {{colors.surface.default.rgba | set_alpha: 0.7}};
 @define-color foreground {{colors.on_surface.default.hex}};
 
-@define-color tomat-work              {{colors.primary.default.hex}};
-@define-color tomat-work-paused       {{colors.on_primary_container.default.hex}};
-@define-color tomat-break             {{colors.tertiary.default.hex}};
-@define-color tomat-break-paused      {{colors.on_tertiary_container.default.hex}};
-@define-color tomat-long-break        {{colors.secondary.default.hex}};
-@define-color tomat-long-break-paused {{colors.on_secondary_container.default.hex}};
+@define-color tomat-work                 {{colors.primary_container.default.hex}};
+@define-color tomat-work-fg              {{colors.on_primary_container.default.hex}};
+@define-color tomat-work-paused          {{colors.on_primary.default.hex}};
+@define-color tomat-work-paused-fg       {{colors.primary.default.hex}};
+@define-color tomat-break                {{colors.tertiary_container.default.hex}};
+@define-color tomat-break-fg             {{colors.on_tertiary_container.default.hex}};
+@define-color tomat-break-paused         {{colors.on_tertiary.default.hex}};
+@define-color tomat-break-paused-fg      {{colors.tertiary.default.hex}};
+@define-color tomat-long-break           {{colors.secondary_container.default.hex}};
+@define-color tomat-long-break-fg        {{colors.on_secondary_container.default.hex}};
+@define-color tomat-long-break-paused    {{colors.on_secondary.default.hex}};
+@define-color tomat-long-break-paused-fg {{colors.secondary.default.hex}};
