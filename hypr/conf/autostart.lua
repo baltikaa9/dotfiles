@@ -1,6 +1,7 @@
 hl.on('hyprland.start', function()
     -- hl.exec_cmd('waybar')
     hl.exec_cmd('noctalia')
+    hl.exec_cmd('playerctld daemon')
     -- hl.exec_cmd('waypaper --restore')
     -- hl.exec_cmd('hyprpaper')
     -- hl.exec_cmd('linux-wallpaperengine --screen-root DP-2 ~/Pictures/wallpapers/Dynamic-Wallpapers/1501692715')
