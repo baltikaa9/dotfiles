@@ -284,7 +284,7 @@
       "provider": "openai-subscribed",
       "model": "gpt-6-luna",
     },
-    "default_profile": "ask",
+    "default_profile": "write",
   },
   "ui_font_size": 16.0,
   "buffer_font_size": 14.0,

@@ -23,7 +23,7 @@ post_hook = 'pkill -USR1 cava || true'
 [templates.swaync]
 input_path = '~/.config/matugen/templates/swaync.css'
 output_path = '~/.config/swaync/colors.css'
-post_hook = 'swaync-client -rs'
+# post_hook = 'swaync-client -rs'
 
 [templates.wofi]
 input_path = '~/.config/matugen/templates/wofi.css'

@@ -11,7 +11,7 @@ hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd(programs.fileManagerFallback)
 hl.bind('XF86Explorer', hl.dsp.exec_cmd(programs.fileManager))
 hl.bind(mainMod .. " + F", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + ALT + F", hl.dsp.window.fullscreen({ action = "toggle" }))
-hl.bind(mainMod .. " + X", hl.dsp.exec_cmd(programs.menu))
+hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd(programs.menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
 
@@ -80,7 +80,8 @@ hl.bind(mainMod .. " + A", hl.dsp.exec_cmd('hyprsnow'))
 hl.bind(mainMod .. " + SHIFT + A", hl.dsp.exec_cmd('killall hyprsnow'))
 
 -- Clipboard
-hl.bind(mainMod .. " + V", hl.dsp.exec_cmd('kitty --class clipse clipse && wtype -M ctrl v -m ctrl'))
+-- hl.bind(mainMod .. " + V", hl.dsp.exec_cmd('kitty --class clipse clipse && wtype -M ctrl v -m ctrl'))
+hl.bind(mainMod .. " + V", hl.dsp.exec_cmd('noctalia msg panel-toggle clipboard'))
 
 -- Waybar
 hl.bind(mainMod .. " + SHIFT + W", function()
@@ -98,7 +99,8 @@ hl.bind('SHIFT + Print',
     hl.dsp.exec_cmd('GRIMBLAST_EDITOR="satty --filename" SLURP_ARGS="-w 0" grimblast --freeze edit area'))
 hl.bind(mainMod .. '+ L', hl.dsp.exec_cmd('loginctl lock-session'))
 hl.bind(mainMod .. '+ SHIFT + L', hl.dsp.dpms(), { locked = true })
-hl.bind(mainMod .. ' + F4', hl.dsp.exec_cmd('wlogout -b 2'))
+-- hl.bind(mainMod .. ' + F4', hl.dsp.exec_cmd('wlogout -b 2'))
+hl.bind(mainMod .. ' + F4', hl.dsp.exec_cmd('noctalia msg panel-toggle session'))
 hl.bind(mainMod .. ' + F12', hl.dsp.exec_cmd('kitty --class qalc qalc'))
 hl.bind('XF86Calculator', hl.dsp.exec_cmd('kitty --class qalc qalc'))
 hl.bind(mainMod .. ' + F11', hl.dsp.exec_cmd('hyprpicker -a'))
@@ -109,3 +111,11 @@ hl.bind(mainMod .. ' + T', hl.dsp.exec_cmd('Telegram || flatpak run org.telegram
 -- hl.bind(mainMod .. ' + Tab', hl.dsp.exec_cmd('~/.config/bin/window_switcher.sh'))
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd('nekobox'))
 hl.bind('CTRL + SHIFT + Escape', hl.dsp.exec_cmd('kitty --class btop btop'))
+
+local ipc = "noctalia msg "
+
+-- Core binds
+-- hl.bind(mainMod .. "+Space", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"))
+hl.bind(mainMod .. "+X", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center"))
+hl.bind(mainMod .. "+comma", hl.dsp.exec_cmd(ipc .. "settings-toggle"))
+hl.bind("ALT + Tab", hl.dsp.exec_cmd(ipc .. "window-switcher hold"))

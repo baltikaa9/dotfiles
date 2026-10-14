@@ -3,8 +3,8 @@
   "logo": {
     "type": "small",
     "color": {
-      "1": "#aec6ff",
-      "2": "#dfbbde",
+      "1": "#63c6ff",
+      "2": "#63c6dc",
       "3": "#bfc6dc"
     },
     "padding": {
@@ -16,7 +16,16 @@
   "display": {
     "separator": "  ",
     "color": {
-      "separator": "#e2e2e9"
+      "separator": "#e2e2e9",
+      "keys": "#afc6ff",
+      "title": "#bfc6dc"
+    },
+    "percent": {
+      "color": {
+        "green": "#dfbbde",
+        "yellow": "#afc6ff",
+        "red": "#ffb4ab"
+      }
     }
   },
   "modules": [

@@ -25,12 +25,19 @@ hl.config({
         active_opacity = 0.9,
         inactive_opacity = 0.9,
 
+        -- shadow = {
+        --     enabled = true,
+        --     range = 30,
+        --     render_power = 4,
+        --     color = 'rgba(00000033)',
+        --     offset = { 2, 2 },
+        -- },
+
         shadow = {
             enabled = true,
-            range = 30,
-            render_power = 4,
-            color = 'rgba(00000033)',
-            offset = { 2, 2 },
+            range = 4,
+            render_power = 3,
+            color = 0xee1a1a1a,
         },
 
         blur = {
@@ -41,7 +48,7 @@ hl.config({
             new_optimizations = true,
             ignore_opacity = true,
 
-            vibrancy = 0.5,
+            vibrancy = 0.1696,
             vibrancy_darkness = 0.15,
             contrast = 1.2,
             brightness = 1.1,

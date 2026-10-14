@@ -9,4 +9,4 @@ integral = 80
 gravity = 120
 
 [color]
-theme = 'matugen'
+theme = matugen

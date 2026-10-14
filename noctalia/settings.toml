@@ -1,0 +1,4 @@
+[hooks]
+wallpaper_changed = [
+  "matugen image \"$NOCTALIA_WALLPAPER_PATH\" --source-color-index 0",
+]
