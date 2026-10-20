@@ -12,7 +12,7 @@ post_hook = 'pkill -SIGUSR2 waybar'
 
 [templates.zen]
 input_path = '~/.config/matugen/templates/zen-user.js'
-output_path = '~/.zen/7387bicf.Default (release)/colors.js'
+output_path = '~/.config/zen/7387bicf.Default (release)/colors.js'
 post_hook = '~/.config/matugen/update-zen.sh'
 
 [templates.cava]
