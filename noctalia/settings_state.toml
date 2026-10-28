@@ -1,0 +1,540 @@
+config_version = 15
+
+[audio]
+enable_overdrive = true
+
+[bar]
+order = [ "default" ]
+
+    [bar.default]
+    background_opacity = 0.0
+    capsule = true
+    capsule_border_width = 0.0
+    capsule_fill = "surface"
+    capsule_foreground = "on_surface"
+    capsule_opacity = 0.69999998435378075
+    capsule_padding = 10.0
+    capsule_radius = 20
+    compositor_blur = false
+    contact_shadow = true
+    end = [ "group:g2", "brightness", "notifications", "keyboard_layout" ]
+    font_family = "Maple Mono NF"
+    font_weight = 700
+    margin_ends = 0
+    padding = 10
+    shadow = false
+    start = [ "workspaces", "group:g1", "weather", "tray", "widget" ]
+
+        [bar.default.dead_zone.actions]
+        left = "panel-toggle control-center home"
+        right = "annotate"
+
+        [[bar.default.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        border_width = 1.0
+        enabled = true
+        fill = "surface"
+        id = "g2"
+        members = [ "media", "audio_visualizer", "volume" ]
+        opacity = 0.69999998807907104
+        padding = 6.0
+
+        [[bar.default.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        border_width = 0.0
+        enabled = false
+        fill = "surface"
+        foreground = "on_surface"
+        id = "g1"
+        members = [ "cpu", "sysmon", "ram" ]
+        opacity = 0.69999998807907104
+        padding = 10.0
+        radius = 20.0
+
+[brightness]
+enable_ddcutil = true
+sync_all_monitors = true
+
+[calendar]
+enabled = true
+
+    [calendar.account.personal_google]
+    type = "google"
+
+    [calendar.account.schedule]
+    name = "Расписание"
+    server_url = "https://app.volsu.ru/v2/api/schedule/calendar/group.ics?institute=%D0%98%D0%9C%D0%98%D0%A2&group=%D0%9F%D0%A0%D0%98%D0%BC-251"
+    type = "ics"
+
+[control_center]
+hidden_tabs = [ "power", "network", "bluetooth" ]
+show_shortcut_labels = false
+
+    [[control_center.shortcuts]]
+    type = "caffeine"
+
+    [[control_center.shortcuts]]
+    type = "nightlight"
+
+    [[control_center.shortcuts]]
+    type = "notification"
+
+[desktop_widgets]
+schema_version = 2
+widget_order = [ "desktop-widget-0000000000000001", "desktop-widget-0000000000000002", "desktop-widget-0000000000000003" ]
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000001]
+    box_height = 256.0
+    box_width = 1088.0
+    cx = 1792.0
+    cy = 540.0
+    enabled = false
+    flip_x = true
+    output = "DP-2"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = -1.5707963705062866
+    type = "audio_visualizer"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000001.settings]
+        background = false
+        bands = 20
+        centered = false
+        color_2 = "tertiary"
+        reversed = false
+        show_when_idle = false
+
+    [desktop_widgets.widget.desktop-widget-0000000000000002]
+    box_height = 240.0
+    box_width = 1920.0
+    cx = 960.0
+    cy = 120.0
+    enabled = false
+    flip_y = true
+    output = "DP-2"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "audio_visualizer"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000002.settings]
+        background = false
+        bands = 32
+        centered = false
+        color_2 = "tertiary"
+        reversed = false
+        show_when_idle = false
+
+    [desktop_widgets.widget.desktop-widget-0000000000000003]
+    box_height = 256.0
+    box_width = 1088.0
+    cx = 127.99996948242188
+    cy = 540.0
+    enabled = false
+    flip_x = true
+    flip_y = true
+    output = "DP-2"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = -1.5707963705062866
+    type = "audio_visualizer"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000003.settings]
+        background = false
+        bands = 20
+        centered = false
+        color_2 = "tertiary"
+        reversed = false
+        show_when_idle = false
+
+[location]
+address = "волгоград"
+
+[lockscreen]
+blur_intensity = 0.29999999329447746
+blurred_desktop = true
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [
+    "lockscreen-login-box@FALLBACK",
+    "lockscreen-widget-0000000000000004",
+    "lockscreen-login-box@DP-2",
+    "lockscreen-login-box@DP-1",
+    "lockscreen-widget-0000000000000001",
+    "lockscreen-widget-0000000000000003",
+    "lockscreen-widget-000000000000000a",
+    "lockscreen-widget-000000000000000b"
+]
+
+    [lockscreen_widgets.grid]
+    cell_size = 8
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-1"]
+    box_height = 70.0
+    box_width = 400.0
+    cx = 960.0
+    cy = 575.0
+    output = "DP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.0
+        background_radius = 32.0
+        center_password_text = true
+        input_opacity = 0.0
+        input_radius = 32.0
+        layout = "compact"
+        show_caps_lock = true
+        show_keyboard_layout = false
+        show_login_button = false
+        show_media = false
+        show_password_reveal = true
+        show_session_buttons = true
+        show_unlock_hint = false
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-2"]
+    box_height = 70.0
+    box_width = 400.0
+    cx = 960.0
+    cy = 1020.0
+    enabled = false
+    output = "DP-2"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-2".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.0
+        background_radius = 12.0
+        center_password_text = true
+        input_opacity = 0.0
+        input_radius = 6.0
+        layout = "compact"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = false
+        show_media = true
+        show_password_reveal = true
+        show_session_buttons = true
+        show_unlock_hint = false
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@FALLBACK"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 898.0
+    output = "FALLBACK"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@FALLBACK".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_password_reveal = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
+    box_height = 128.0
+    box_width = 320.0
+    cx = 960.0
+    cy = 476.0
+    output = "DP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
+        background = false
+        center_text = true
+        color = "primary"
+        shadow = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000003]
+    box_height = 544.0
+    box_width = 1920.0
+    cx = 960.0
+    cy = 812.0
+    output = "DP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "audio_visualizer"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000003.settings]
+        background = false
+        bands = 24
+        centered = false
+        color_2 = "tertiary"
+        mirrored = true
+        reversed = false
+        show_when_idle = false
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000004]
+    box_height = 1024.0
+    box_width = 1856.0
+    cx = 960.0
+    cy = 540.0
+    output = "DP-2"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "fancy_audio_visualizer"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000004.settings]
+        background = false
+        background_color = "surface"
+        background_opacity = 0.80000000000000004
+        background_padding = 10
+        background_radius = 12
+        bar_width = 0.59999999999999998
+        bloom_intensity = 0.5
+        fade_when_idle = true
+        inner_diameter = 0.69999999999999996
+        primary_color = "primary"
+        ring_opacity = 0.80000000000000004
+        rotation_speed = 0.5
+        secondary_color = "secondary"
+        sensitivity = 1.5
+        visualization_mode = "bars_rings"
+        wave_thickness = 1.0
+
+    [lockscreen_widgets.widget.lockscreen-widget-000000000000000a]
+    box_height = 288.0
+    box_width = 168.0
+    cx = 1804.0
+    cy = 168.0
+    output = "DP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "media_player"
+
+        [lockscreen_widgets.widget.lockscreen-widget-000000000000000a.settings]
+        album_art_background = false
+        audio_visualizer = false
+        background = false
+        color = "primary"
+        hide_when_no_media = true
+        layout = "vertical"
+        shadow = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-000000000000000b]
+    box_height = 160.0
+    box_width = 256.0
+    cx = 160.0
+    cy = 108.0
+    output = "DP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "volume"
+
+        [lockscreen_widgets.widget.lockscreen-widget-000000000000000b.settings]
+        background = false
+        background_color = "surface"
+        background_opacity = 0.80000000000000004
+        background_padding = 10
+        background_radius = 12
+        device = "output"
+        fill_color = "primary"
+        font_family = ""
+        glyph = ""
+        scroll_step = 5
+        shadow = true
+        show_device = false
+        track_color = "on_surface_variant"
+
+[nightlight]
+enabled = true
+temperature_night = 2500
+
+[notification]
+background_opacity = 0.39999999105930328
+follow_focused_output = true
+layer = "overlay"
+
+[osd]
+background_opacity = 0.39999999105930328
+follow_focused_output = true
+
+    [osd.kinds]
+    lock_keys = false
+
+[plugin_settings."tadomika_ari/w-engine"]
+sync_colors = false
+
+[plugin_settings."thepunkoff/pomodoro"]
+panel_placement = "floating"
+use-bundled-alarm-sound = true
+
+[plugins]
+enabled = [ "noctalia/mpvpaper", "0lucasmatheus/awwwall", "tadomika_ari/w-engine", "thepunkoff/pomodoro" ]
+
+[shell]
+app_icon_color = "on_surface"
+app_icon_colorize = true
+avatar_path = "/home/baltika/Pictures/8946bd3dac54fa9740b1c67990bb2be93f6bdc72f189fe80abefa4a61c370c94b2dfec53005da9a023dd87f1ea66d517.jpg"
+font_family = "Nunito Black"
+polkit_agent = true
+settings_show_advanced = false
+settings_window_translucent = true
+
+    [shell.launcher]
+    app_grid = true
+
+    [shell.mpris]
+    blacklist = [ "playerctl", "Виджеты Nothing - Nothing Phone 3", "Firefox - Nothing Phone 3" ]
+
+    [shell.panel]
+    control_center_placement = "floating"
+    open_near_click_clipboard = true
+    open_near_click_control_center = true
+    open_near_click_wallpaper = true
+    transparency_mode = "glass"
+    wallpaper_placement = "floating"
+    wallpaper_position = "center"
+
+    [shell.screenshot]
+    annotate = true
+
+    [shell.window_switcher]
+    show_caption = false
+
+[theme]
+source = "wallpaper"
+wallpaper_scheme = "m3-tonal-spot"
+
+    [theme.templates]
+    builtin_ids = [ "qt" ]
+    community_ids = [
+        "codex",
+        "opencode",
+        "spicetify",
+        "discord",
+        "gimp",
+        "libreoffice",
+        "neovim",
+        "heroiclauncher",
+        "prismlauncher",
+        "steam",
+        "fastfetch",
+        "obs",
+        "thunderbird",
+        "zathura",
+        "hyprtoolkit",
+        "bat",
+        "tmux",
+        "yazi"
+    ]
+
+[wallpaper]
+transition_on_startup = true
+
+    [wallpaper.default]
+    path = "/home/baltika/Pictures/wallpapers/honkai-star-rail-3840x2160-24223.jpg"
+
+    [wallpaper.last]
+    path = "/home/baltika/Pictures/wallpapers/honkai-star-rail-3840x2160-24223.jpg"
+
+    [wallpaper.monitors.DP-1]
+    path = "/home/baltika/Pictures/wallpapers/honkai-star-rail-3840x2160-24223.jpg"
+
+    [wallpaper.monitors.DP-2]
+    path = "/home/baltika/Pictures/wallpapers/honkai-star-rail-3840x2160-24223.jpg"
+
+    [[wallpaper.favorite]]
+    palette_source = "wallpaper"
+    path = "/home/baltika/Pictures/wallpapers/honkai-star-rail-3840x2160-24223.jpg"
+    theme_mode = "dark"
+    wallpaper_scheme = "m3-tonal-spot"
+
+[widget.audio_visualizer]
+centered = false
+color_2 = "tertiary"
+mirrored = false
+width = 100
+
+[widget.brightness]
+show_when_unavailable = true
+
+    [widget.brightness.actions]
+    back = "brightness-set 0"
+    forward = "brightness-set 70"
+    scroll_down = "brightness-down 10"
+    scroll_up = "brightness-up 10"
+
+[widget.clock]
+tooltip_format = "{:%H:%M:%S}"
+
+[widget.cpu]
+glyph = "cpu"
+
+[widget.media]
+hide_artist = true
+hide_when_no_media = true
+rotate_album_art = true
+show_progress = true
+title_scroll = "on_hover"
+
+[widget.notifications]
+hide_when_no_unread = true
+
+    [widget.notifications.actions]
+    back = "notification-clear-history"
+
+[widget.ram]
+glyph = "0xEFC5"
+stat = "ram_pct"
+
+[widget.sysmon]
+stat = "gpu_usage"
+
+[widget.tray]
+detached_panel = true
+
+[widget.volume.actions]
+back = "exec pwvucontrol"
+
+[widget.weather]
+max_length = 200
+
+[widget.widget]
+type = "thepunkoff/pomodoro:widget"
+
+[widget.workspaces]
+pill_scale = 0.70000000000000007
+show_icons = false
+show_labels = false
