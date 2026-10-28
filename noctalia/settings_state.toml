@@ -407,6 +407,7 @@ enabled = [ "noctalia/mpvpaper", "0lucasmatheus/awwwall", "tadomika_ari/w-engine
 app_icon_color = "on_surface"
 app_icon_colorize = true
 avatar_path = "/home/baltika/Pictures/8946bd3dac54fa9740b1c67990bb2be93f6bdc72f189fe80abefa4a61c370c94b2dfec53005da9a023dd87f1ea66d517.jpg"
+corner_radius_scale = 1.0000000149011612
 font_family = "Nunito Black"
 polkit_agent = true
 settings_show_advanced = false
@@ -414,12 +415,16 @@ settings_window_translucent = true
 
     [shell.launcher]
     app_grid = true
+    category_icons_only = true
+    layout = "full"
+    search_position = "bottom"
 
     [shell.mpris]
     blacklist = [ "playerctl", "Виджеты Nothing - Nothing Phone 3", "Firefox - Nothing Phone 3" ]
 
     [shell.panel]
     control_center_placement = "floating"
+    list_item_background = false
     open_near_click_clipboard = true
     open_near_click_control_center = true
     open_near_click_wallpaper = true
@@ -434,6 +439,7 @@ settings_window_translucent = true
     show_caption = false
 
 [theme]
+mode = "dark"
 source = "wallpaper"
 wallpaper_scheme = "m3-tonal-spot"
 
