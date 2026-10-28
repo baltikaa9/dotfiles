@@ -1,59 +1,64 @@
 [config]
 
 [templates.kitty]
-input_path = '~/.config/matugen/templates/kitty.conf'
+input_path = 'templates/kitty.conf'
 output_path = '~/.config/kitty/colors.conf'
 post_hook = 'pkill -SIGUSR1 kitty'
 
 [templates.waybar]
-input_path = '~/.config/matugen/templates/waybar.css'
+input_path = 'templates/waybar.css'
 output_path = '~/.config/waybar/colors.css'
 post_hook = 'pkill -SIGUSR2 waybar'
 
 [templates.zen]
-input_path = '~/.config/matugen/templates/zen-user.js'
+input_path = 'templates/zen-user.js'
 output_path = '~/.config/zen/7387bicf.Default (release)/colors.js'
-post_hook = '~/.config/matugen/update-zen.sh'
+post_hook = '~/.config/matugen/bin/zen.sh'
 
 [templates.cava]
-input_path = '~/.config/matugen/templates/cava'
+input_path = 'templates/cava'
 output_path = '~/.config/cava/themes/matugen'
 post_hook = 'pkill -USR1 cava || true'
 
 [templates.swaync]
-input_path = '~/.config/matugen/templates/swaync.css'
+input_path = 'templates/swaync.css'
 output_path = '~/.config/swaync/colors.css'
 # post_hook = 'swaync-client -rs'
 
 [templates.wofi]
-input_path = '~/.config/matugen/templates/wofi.css'
+input_path = 'templates/wofi.css'
 output_path = '~/.config/wofi/style.css'
 
 [templates.zed]
-input_path = '~/.config/matugen/templates/zed.json'
+input_path = 'templates/zed.json'
 output_path = '~/.config/zed/themes/matugen.json'
 
 [templates.hyprlock]
-input_path = '~/.config/matugen/templates/hyprlock.conf'
+input_path = 'templates/hyprlock.conf'
 output_path = '~/.config/hypr/colors.conf'
 
 [templates.wlogout]
-input_path = '~/.config/matugen/templates/wlogout.css'
+input_path = 'templates/wlogout.css'
 output_path = '~/.config/wlogout/colors.css'
 post_hook = '~/.config/wlogout/recolor-icons.sh'
 
 [templates.gtk3]
-input_path = '~/.config/matugen/templates/gtk3.css'
+input_path = 'templates/gtk3.css'
 output_path = '~/.config/gtk-3.0/colors.css'
 
 [templates.gtk4]
-input_path = '~/.config/matugen/templates/gtk4.css'
+input_path = 'templates/gtk4.css'
 output_path = '~/.config/gtk-4.0/colors.css'
 
+[templates.spicetify]
+input_path = 'templates/spicetify.ini'
+output_path = '~/.config/spicetify/Themes/Comfy/color.ini'
+post_hook = '~/.config/matugen/bin/spicetify.sh'
+
 # [config.custom_colors.green]
-# color = "#2f6b57"
+# color = '#2f6b57'
 # blend = true
 
 # [config.custom_colors.green_light]
-# color = "#a6e5dc"
+# color = '#a6e5dc'
 # blend = true
