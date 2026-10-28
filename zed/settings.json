@@ -7,6 +7,27 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "gutter": {
+    "git_gutter_width": "default"
+  },
+  "mouse_wheel_zoom": true,
+  "buffer_font_family": "Maple Mono NF",
+  "markdown_preview": {
+    "font_family": "Literata"
+  },
+  "ui_font_family": "Literata",
+  "tab_bar": {
+    "show_pinned_tabs_in_separate_row": false
+  },
+  "status_bar": {
+    "line_endings_button": false,
+    "show_active_file": false
+  },
+  "title_bar": {
+    "open_menus_on_hover": false,
+    "show_menus": false,
+    "show_branch_status_icon": true
+  },
   "proxy": "",
   "diff_view_style": "unified",
   "ssh_connections": [
@@ -55,7 +76,6 @@
   "collaboration_panel": {
     "dock": "left",
   },
-  "ui_font_family": "New York Small",
   "scrollbar": {
     "show": "auto",
   },
@@ -67,7 +87,7 @@
   "agent_buffer_font_size": 14.0,
   "agent_ui_font_size": 18.0,
   "buffer_line_height": "comfortable",
-  "buffer_font_weight": 400.0,
+  "buffer_font_weight": 500.0,
   "inline_code_actions": false,
   "indent_guides": {
     "coloring": "fixed",
@@ -80,9 +100,18 @@
     "dock": "left",
     "tree_view": true,
   },
-  "agent_servers": {},
+  "agent_servers": {
+    "claude-acp": {
+      "default_config_options": {
+        "mode": "plan",
+        "effort": "medium",
+        "model": "opus",
+        "fast": false
+      },
+      "type": "registry"
+    }
+  },
   "vim_mode": false,
-  "buffer_font_family": "JetBrains Mono",
   "context_servers": {
     "graphify": {
       "enabled": true,
@@ -101,7 +130,6 @@
   },
   "icon_theme": "Catppuccin Frappé",
   "terminal": {
-    "font_family": "JetBrains Mono",
     "toolbar": {
       "breadcrumbs": false,
     },
@@ -140,44 +168,44 @@
       {
         "provider": "google",
         "model": "gemini-2.5-flash",
-        "enable_thinking": false,
+        "enable_thinking": false
       },
       {
         "provider": "google",
         "model": "gemini-2.5-flash-lite",
-        "enable_thinking": false,
+        "enable_thinking": false
       },
       {
         "provider": "google",
         "model": "gemini-3-flash-preview",
-        "enable_thinking": false,
+        "enable_thinking": false
       },
       {
         "provider": "openrouter",
         "model": "google/gemma-4-31b-it:free",
-        "enable_thinking": false,
+        "enable_thinking": false
       },
       {
         "provider": "openrouter",
         "model": "google/gemma-4-26b-a4b-it:free",
-        "enable_thinking": false,
+        "enable_thinking": false
       },
       {
         "provider": "openrouter",
         "model": "deepseek/deepseek-v3.2",
-        "enable_thinking": true,
+        "enable_thinking": true
       },
       {
         "provider": "openrouter",
         "model": "qwen/qwen3-coder-next",
-        "enable_thinking": false,
+        "enable_thinking": false
       },
       {
         "provider": "openai-subscribed",
-        "model": "gpt-5.6-luna",
+        "model": "gpt-6-luna",
         "enable_thinking": true,
-        "effort": "medium",
-      },
+        "effort": "medium"
+      }
     ],
     "play_sound_when_agent_done": "always",
     "profiles": {
@@ -284,7 +312,7 @@
       "provider": "openai-subscribed",
       "model": "gpt-6-luna",
     },
-    "default_profile": "write",
+    "default_profile": "ask",
   },
   "ui_font_size": 16.0,
   "buffer_font_size": 14.0,
