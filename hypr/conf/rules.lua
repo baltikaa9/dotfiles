@@ -59,7 +59,6 @@ hl.window_rule({
 local dimmedClasses = {
     '^(Spotify)$',
     '^(yandex-music)$',
-    '^(com.obsproject.Studio)$',
 }
 for _, class in ipairs(dimmedClasses) do
     hl.window_rule({
@@ -85,6 +84,7 @@ local fullOpacityClasses = {
     '^(satty)$',
     '^(xdg-desktop-portal-gnome)$',
     '^(com.saivert.pwvucontrol)$',
+    '^(com.obsproject.Studio)$',
 }
 for _, class in ipairs(fullOpacityClasses) do
     hl.window_rule({
