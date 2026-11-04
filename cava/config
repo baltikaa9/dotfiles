@@ -5,8 +5,8 @@ bar_spacing = 1
 autosens = 1
 
 [smoothing]
-integral = 80
-gravity = 120
+monstercat = 1
+waves = 0
 
 [color]
 theme = matugen
