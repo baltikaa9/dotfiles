@@ -149,7 +149,6 @@ if hl.plugin.hyprglass then
         blur_strength = 0.4,
         chromatic_aberration = 0.2, -- радужная кайма на краях (во встроенном pomme 0)
         dark = { brightness = 0.9 }, -- во встроенном pomme 1.1
-        dark = { brightness = 0.9 }
     })
 
     -- Слои (noctalia): pomme без тёмной тонировки и с ослабленным преломлением —
