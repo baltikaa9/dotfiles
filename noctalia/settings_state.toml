@@ -1,4 +1,4 @@
-config_version = 15
+config_version = 16
 
 [audio]
 enable_overdrive = true
@@ -12,9 +12,10 @@ order = [ "default" ]
     capsule_border_width = 0.0
     capsule_fill = "surface"
     capsule_foreground = "on_surface"
-    capsule_opacity = 0.69999998435378075
+    capsule_opacity = 0.29999999999999999
     capsule_padding = 10.0
     capsule_radius = 20
+    center = [ "clock" ]
     compositor_blur = false
     contact_shadow = true
     end = [ "group:g2", "brightness", "notifications", "keyboard_layout" ]
@@ -37,19 +38,19 @@ order = [ "default" ]
         fill = "surface"
         id = "g2"
         members = [ "media", "audio_visualizer", "volume" ]
-        opacity = 0.69999998807907104
+        opacity = 0.29999999999999999
         padding = 6.0
 
         [[bar.default.capsule_group]]
         accordion = false
         accordion_direction = "end"
         border_width = 0.0
-        enabled = false
+        enabled = true
         fill = "surface"
         foreground = "on_surface"
         id = "g1"
         members = [ "cpu", "sysmon", "ram" ]
-        opacity = 0.69999998807907104
+        opacity = 0.29999999999999999
         padding = 10.0
         radius = 20.0
 
@@ -192,7 +193,7 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.0
         background_radius = 32.0
         center_password_text = true
@@ -221,7 +222,7 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@DP-2".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.0
         background_radius = 12.0
         center_password_text = true
@@ -249,7 +250,7 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@FALLBACK".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 12.0
         center_password_text = false
@@ -382,12 +383,13 @@ enabled = true
 temperature_night = 2500
 
 [notification]
-background_opacity = 0.39999999105930328
+background_opacity = 0.0
+border = true
 follow_focused_output = true
 layer = "overlay"
 
 [osd]
-background_opacity = 0.39999999105930328
+background_opacity = 0.29999999999999999
 follow_focused_output = true
 
     [osd.kinds]
@@ -423,11 +425,13 @@ settings_window_translucent = true
     blacklist = [ "playerctl", "Виджеты Nothing - Nothing Phone 3", "Firefox - Nothing Phone 3" ]
 
     [shell.panel]
+    borders = true
     control_center_placement = "floating"
     list_item_background = false
     open_near_click_clipboard = true
     open_near_click_control_center = true
     open_near_click_wallpaper = true
+    shadow = true
     transparency_mode = "glass"
     wallpaper_placement = "floating"
     wallpaper_position = "center"
@@ -490,7 +494,9 @@ transition_on_startup = true
 [widget.audio_visualizer]
 centered = false
 color_2 = "tertiary"
+enabled = true
 mirrored = false
+show_tooltip = true
 width = 100
 
 [widget.brightness]
@@ -507,8 +513,11 @@ tooltip_format = "{:%H:%M:%S}"
 
 [widget.cpu]
 glyph = "cpu"
+show_value = false
+visualization = "gauge"
 
 [widget.media]
+enabled = true
 hide_artist = true
 hide_when_no_media = true
 rotate_album_art = true
@@ -523,9 +532,11 @@ hide_when_no_unread = true
 
 [widget.ram]
 glyph = "0xEFC5"
+show_value = false
 stat = "ram_pct"
 
 [widget.sysmon]
+show_value = false
 stat = "gpu_usage"
 
 [widget.tray]
@@ -536,6 +547,7 @@ back = "exec pwvucontrol"
 
 [widget.weather]
 max_length = 200
+show_condition = false
 
 [widget.widget]
 type = "thepunkoff/pomodoro:widget"

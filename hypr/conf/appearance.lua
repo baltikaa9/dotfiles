@@ -3,7 +3,7 @@ hl.config({
         gaps_in = 5,
         gaps_out = { top = 0, right = 10, bottom = 10, left = 10 },
 
-        border_size = 1,
+        border_size = 0,
 
         col = {
             active_border = { colors = { 'rgba(FFF9E0aa)', 'rgba(ffffff00)', 'rgba(ffffff00)', 'rgba(FFF9E033)' }, angle = 45 },
@@ -35,9 +35,10 @@ hl.config({
 
         shadow = {
             enabled = false,
-            range = 4,
+            range = 0,
             render_power = 3,
-            color = 0xee1a1a1a,
+            -- hyprglass сам включает тени; прозрачный цвет убирает тёмный контур вокруг окон
+            color = 0x00000000,
         },
 
         blur = {
@@ -51,7 +52,7 @@ hl.config({
             vibrancy = 0.1696,
             vibrancy_darkness = 0.15,
             contrast = 1.2,
-            brightness = 1.1,
+            brightness = 1.3,
             noise = 0.02,
         },
     },
@@ -129,3 +130,64 @@ hl.config({
         animate_mouse_windowdragging = true,
     },
 })
+
+if hl.plugin.hyprglass then
+    local hg = hl.plugin.hyprglass
+
+    hg.config({
+        default_theme = "dark",
+        default_preset = "pomme",
+
+        layers = { enabled = true, preset = "layers" },
+
+        focus_light = 0.4,
+        focus_light_color = 0xFFF9E0ff,
+    })
+
+    -- Окна: pomme с размытием послабее (во встроенном 1.0)
+    hg.preset("pomme", {
+        blur_strength = 0.4,
+        chromatic_aberration = 0.2, -- радужная кайма на краях (во встроенном pomme 0)
+        dark = { brightness = 0.9 }, -- во встроенном pomme 1.1
+        dark = { brightness = 0.9 }
+    })
+
+    -- Слои (noctalia): pomme без тёмной тонировки и с ослабленным преломлением —
+    -- сильное преломление на мелких капсулах затягивает в край тёмный контур
+    hg.preset("layers", {
+        inherits = "pomme",
+        refraction_strength = 0.5,
+        -- свечение слабее, чем у окон (pomme: 0.4 / 0.5 / 0.1)
+        specular_strength = 0.2,
+        bevel_strength = 0.25,
+        fresnel_strength = 0.05,
+        dark = {
+            tint_color = 0x00000000,
+            brightness = 1.0,
+            adaptive_dim = 0.0,
+        },
+    })
+
+    -- Слои noctalia, на которых есть стекло (имена: hyprctl layers)
+    for _, ns in ipairs({
+        "noctalia-bar-default",
+        "noctalia-notification",
+        "noctalia-osd",
+        "noctalia-panel",
+        "noctalia-attached-panel",
+        "noctalia-dock",
+        "noctalia-window-switcher",
+    }) do
+        hg.layer(ns, { mask_threshold = 0.05 })
+    end
+
+    -- Центр управления, лаунчер, буфер обмена: у noctalia плотный фон, стекло посветлее
+    hg.preset("panels", {
+        inherits = "layers",
+        dark = { brightness = 1.25 },
+    })
+    hg.layer("noctalia-panel", { preset = "panels", mask_threshold = 0.05 })
+
+    -- Панель: у каждой капсулы свой край стекла
+    hg.layer("noctalia-bar-default", { mask_mode = "contour", mask_threshold = 0.15 })
+end

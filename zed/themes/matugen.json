@@ -47,8 +47,8 @@
 
         "elevated_surface.background": "#111318FF",
 
-        "surface.background": "#111318B2",
-        "background": "#111318B2",
+        "surface.background": "#1113184D",
+        "background": "#1113184D",
 
         "element.background": "#111318FF",
         "element.hover": "#44474fFF",
@@ -76,9 +76,9 @@
         "icon.placeholder": "#585b70",
         "icon.accent": "#cba6f7",
 
-        "status_bar.background": "#111318B2",
-        "title_bar.background": "#111318B2",
-        "title_bar.inactive_background": "#111318B2",
+        "status_bar.background": "#1113184D",
+        "title_bar.background": "#1113184D",
+        "title_bar.inactive_background": "#1113184D",
 
         "toolbar.background": "#11131800",
         "tab_bar.background": "#11131800",

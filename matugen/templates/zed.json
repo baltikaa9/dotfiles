@@ -47,8 +47,8 @@
 
         "elevated_surface.background": "{{colors.surface.default.hex}}FF",
 
-        "surface.background": "{{colors.surface.default.hex}}B2",
-        "background": "{{colors.background.default.hex}}B2",
+        "surface.background": "{{colors.surface.default.hex}}4D",
+        "background": "{{colors.background.default.hex}}4D",
 
         "element.background": "{{colors.surface.default.hex}}FF",
         "element.hover": "{{colors.surface_variant.default.hex}}FF",
@@ -76,9 +76,9 @@
         "icon.placeholder": "#585b70",
         "icon.accent": "#cba6f7",
 
-        "status_bar.background": "{{colors.background.default.hex}}B2",
-        "title_bar.background": "{{colors.background.default.hex}}B2",
-        "title_bar.inactive_background": "{{colors.background.default.hex}}B2",
+        "status_bar.background": "{{colors.background.default.hex}}4D",
+        "title_bar.background": "{{colors.background.default.hex}}4D",
+        "title_bar.inactive_background": "{{colors.background.default.hex}}4D",
 
         "toolbar.background": "{{colors.surface.default.hex}}00",
         "tab_bar.background": "{{colors.surface.default.hex}}00",
