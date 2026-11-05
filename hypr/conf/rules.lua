@@ -34,18 +34,17 @@ hl.window_rule({
     move = '1421 791',
 })
 
-hl.window_rule({
-    match = { class = '^(org.telegram.desktop)$' },
-    pseudo = true,
-    size = '450 800',
-})
-
-hl.window_rule({
-    match = { class = '^(com.ayugram.desktop)$' },
-    float = true,
-    size = '935 600',
-    center = true,
-})
+local telegram = {
+    '^(org.telegram.desktop)$',
+    '^(com.ayugram.desktop)$',
+}
+for _, class in ipairs(telegram) do
+    hl.window_rule({
+        match = { class = class },
+        pseudo = true,
+        size = '450 770',
+    })
+end
 
 hl.window_rule({
     match = { class = '(clipse)' },
