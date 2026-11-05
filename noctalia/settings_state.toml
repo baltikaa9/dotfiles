@@ -15,6 +15,7 @@ order = [ "default" ]
     capsule_opacity = 0.29999999999999999
     capsule_padding = 10.0
     capsule_radius = 20
+    capsule_thickness = 0.76000000000000001
     center = [ "clock" ]
     compositor_blur = false
     contact_shadow = true
@@ -22,9 +23,10 @@ order = [ "default" ]
     font_family = "Maple Mono NF"
     font_weight = 700
     margin_ends = 0
-    padding = 10
+    radius = 12
     shadow = false
     start = [ "workspaces", "group:g1", "weather", "tray", "widget" ]
+    thickness = 34
 
         [bar.default.dead_zone.actions]
         left = "panel-toggle control-center home"
@@ -409,7 +411,6 @@ enabled = [ "noctalia/mpvpaper", "0lucasmatheus/awwwall", "tadomika_ari/w-engine
 app_icon_color = "on_surface"
 app_icon_colorize = true
 avatar_path = "/home/baltika/Pictures/8946bd3dac54fa9740b1c67990bb2be93f6bdc72f189fe80abefa4a61c370c94b2dfec53005da9a023dd87f1ea66d517.jpg"
-corner_radius_scale = 1.0000000149011612
 font_family = "Nunito Black"
 polkit_agent = true
 settings_show_advanced = false
