@@ -1,6 +1,6 @@
 hl.config({
     general = {
-        gaps_in = 5,
+        gaps_in = 4,
         gaps_out = { top = 0, right = 10, bottom = 10, left = 10 },
 
         border_size = 0,
@@ -19,8 +19,8 @@ hl.config({
     },
 
     decoration = {
-        rounding = 20,
-        rounding_power = 2.5,
+        rounding = 26,
+        rounding_power = 4,
 
         active_opacity = 0.9,
         inactive_opacity = 0.9,
@@ -147,7 +147,7 @@ if hl.plugin.hyprglass then
     -- Окна: pomme с размытием послабее (во встроенном 1.0)
     hg.preset("pomme", {
         blur_strength = 0.4,
-        chromatic_aberration = 0.2, -- радужная кайма на краях (во встроенном pomme 0)
+        chromatic_aberration = 0.2,  -- радужная кайма на краях (во встроенном pomme 0)
         dark = { brightness = 0.9 }, -- во встроенном pomme 1.1
     })
 

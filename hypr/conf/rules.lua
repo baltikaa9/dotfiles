@@ -190,3 +190,9 @@ hl.layer_rule({
     blur = true,
     blur_popups = true,
 })
+
+-- Плавающим окнам скругление побольше (у остальных decoration.rounding)
+hl.window_rule({
+    match = { float = true },
+    rounding = 30,
+})
