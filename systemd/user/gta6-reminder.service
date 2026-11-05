@@ -1,0 +1,6 @@
+[Unit]
+Description=GTA 6 clips reminder
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/notify-send -u critical "GTA 6 вышла?" "Пора делать нарезки стримов по GTA 6 (cd ~/code/tiktok && claude)"

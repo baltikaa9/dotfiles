@@ -57,7 +57,7 @@ hl.window_rule({
 
 -- Reduced opacity for these apps
 local dimmedClasses = {
-    '^(Spotify)$',
+    '^(spotify)$',
     '^(yandex-music)$',
 }
 for _, class in ipairs(dimmedClasses) do

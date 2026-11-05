@@ -40,8 +40,8 @@ order = [ "default" ]
         fill = "surface"
         id = "g2"
         members = [ "media", "audio_visualizer", "volume" ]
-        opacity = 0.29999999999999999
-        padding = 6.0
+        opacity = 0.30000001192092896
+        padding = 10.0
 
         [[bar.default.capsule_group]]
         accordion = false
@@ -52,7 +52,7 @@ order = [ "default" ]
         foreground = "on_surface"
         id = "g1"
         members = [ "cpu", "sysmon", "ram" ]
-        opacity = 0.29999999999999999
+        opacity = 0.30000001192092896
         padding = 10.0
         radius = 20.0
 
