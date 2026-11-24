@@ -11,7 +11,7 @@ hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd(programs.fileManagerFallback)
 hl.bind('XF86Explorer', hl.dsp.exec_cmd(programs.fileManager))
 hl.bind(mainMod .. " + F", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + ALT + F", hl.dsp.window.fullscreen({ action = "toggle" }))
-hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd(programs.menu))
+hl.bind(mainMod .. " + X", hl.dsp.exec_cmd(programs.menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
 
@@ -115,6 +115,6 @@ local ipc = "noctalia msg "
 
 -- Core binds
 -- hl.bind(mainMod .. "+Space", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"))
-hl.bind(mainMod .. "+X", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center"))
-hl.bind(mainMod .. "+comma", hl.dsp.exec_cmd(ipc .. "settings-toggle"))
+-- hl.bind(mainMod .. " + X", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center"))
+hl.bind(mainMod .. " + comma", hl.dsp.exec_cmd(ipc .. "settings-toggle"))
 hl.bind("ALT + Tab", hl.dsp.exec_cmd(ipc .. "window-switcher hold"))
