@@ -5,6 +5,10 @@ input_path = 'templates/kitty.conf'
 output_path = '~/.config/kitty/colors.conf'
 post_hook = 'pkill -SIGUSR1 kitty'
 
+[templates.mpv]
+input_path = 'templates/mpv.conf'
+output_path = '~/.config/mpv/colors.conf'
+
 [templates.waybar]
 input_path = 'templates/waybar.css'
 output_path = '~/.config/waybar/colors.css'
