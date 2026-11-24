@@ -1,6 +1,7 @@
-config_version = 16
+config_version = 20
 
 [audio]
+colorize_icons = true
 enable_overdrive = true
 
 [bar]
@@ -74,6 +75,9 @@ enabled = true
 [control_center]
 hidden_tabs = [ "power", "network", "bluetooth" ]
 show_shortcut_labels = false
+
+    [control_center.media]
+    show_visualizer = true
 
     [[control_center.shortcuts]]
     type = "caffeine"
@@ -156,6 +160,9 @@ widget_order = [ "desktop-widget-0000000000000001", "desktop-widget-000000000000
         color_2 = "tertiary"
         reversed = false
         show_when_idle = false
+
+[dock]
+colorize_icons = true
 
 [location]
 address = "волгоград"
@@ -381,12 +388,15 @@ widget_order = [
         track_color = "on_surface_variant"
 
 [nightlight]
-enabled = true
+enabled = false
+force = false
+temperature_day = 10000
 temperature_night = 2500
 
 [notification]
-background_opacity = 0.0
+background_opacity = 0.29999999329447746
 border = true
+colorize_icons = true
 follow_focused_output = true
 layer = "overlay"
 
@@ -409,16 +419,19 @@ enabled = [ "noctalia/mpvpaper", "0lucasmatheus/awwwall", "tadomika_ari/w-engine
 
 [shell]
 app_icon_color = "on_surface"
-app_icon_colorize = true
 avatar_path = "/home/baltika/Pictures/8946bd3dac54fa9740b1c67990bb2be93f6bdc72f189fe80abefa4a61c370c94b2dfec53005da9a023dd87f1ea66d517.jpg"
 font_family = "Nunito Black"
 polkit_agent = true
+polkit_colorize_icons = true
+popup_shadows = true
+screen_time_colorize_icons = true
 settings_show_advanced = false
 settings_window_translucent = true
 
     [shell.launcher]
     app_grid = true
     category_icons_only = true
+    colorize_icons = true
     layout = "full"
     search_position = "bottom"
 
@@ -441,9 +454,11 @@ settings_window_translucent = true
     annotate = true
 
     [shell.window_switcher]
+    colorize_icons = true
     show_caption = false
 
 [theme]
+builtin = "Noctalia"
 mode = "dark"
 source = "wallpaper"
 wallpaper_scheme = "m3-tonal-spot"
@@ -491,6 +506,9 @@ transition_on_startup = true
     path = "/home/baltika/Pictures/wallpapers/honkai-star-rail-3840x2160-24223.jpg"
     theme_mode = "dark"
     wallpaper_scheme = "m3-tonal-spot"
+
+[widget.active_window]
+colorize_icons = true
 
 [widget.audio_visualizer]
 centered = false
@@ -540,7 +558,11 @@ stat = "ram_pct"
 show_value = false
 stat = "gpu_usage"
 
+[widget.taskbar]
+colorize_icons = true
+
 [widget.tray]
+colorize_icons = true
 detached_panel = true
 
 [widget.volume.actions]
@@ -554,6 +576,7 @@ show_condition = false
 type = "thepunkoff/pomodoro:widget"
 
 [widget.workspaces]
+colorize_icons = true
 pill_scale = 0.70000000000000007
 show_icons = false
 show_labels = false
