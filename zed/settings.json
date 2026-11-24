@@ -7,6 +7,15 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "window_decorations": "client",
+  "focus_follows_mouse": {
+    "enabled": false
+  },
+  "centered_layout": {
+    "right_padding": 0.2,
+    "left_padding": 0.2
+  },
+  "bottom_dock_layout": "contained",
   "gutter": {
     "git_gutter_width": "default"
   },
@@ -103,9 +112,9 @@
   "agent_servers": {
     "claude-acp": {
       "default_config_options": {
-        "mode": "plan",
+        "mode": "auto",
         "effort": "medium",
-        "model": "opus",
+        "model": "sonnet",
         "fast": false
       },
       "type": "registry"
@@ -199,12 +208,6 @@
         "provider": "openrouter",
         "model": "qwen/qwen3-coder-next",
         "enable_thinking": false
-      },
-      {
-        "provider": "openai-subscribed",
-        "model": "gpt-6-luna",
-        "enable_thinking": true,
-        "effort": "medium"
       }
     ],
     "play_sound_when_agent_done": "always",
@@ -307,10 +310,11 @@
       },
     },
     "default_model": {
+      "speed": "standard",
       "effort": "medium",
       "enable_thinking": true,
       "provider": "openai-subscribed",
-      "model": "gpt-6-luna",
+      "model": "gpt-6.2-sol",
     },
     "default_profile": "ask",
   },
